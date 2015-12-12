@@ -447,17 +447,6 @@ Türen sind im Nordwesten und Südwesten".
 Section  - Hauptgenerator
 
 Hauptgenerator is a room.
-The Description of Hauptgenerator is "Der Hauptgenerator, das ist die Energiequelle der Forschungsstation.
-Türen sind im Südwesten und Südosten.".
-
-Hilfsgenerator is a supporter. Hilfsgenerator is in Hilfsgeneratorraum. Hilfsgenerator is fixed in place.
-HG-Knopf is a device. HG-Knopf is on Hilfsgenerator. HG-Knopf is switched off.
-HG-Knopf is fixed in place. The description of HG-Knopf is "Hmm... soll dieser Knopf irgendwas mit dem Hilfsgenerator machen??"
-After switching on HG-Knopf:
-	say "Nun ist der Hilfsgenerator eingeschaltet.";
-
-After switching off HG-Knopf:
-	say "Nun ist der Hilfsgenerator abgeschaltet.";
 
 
 Section  - Alpha-KI
@@ -491,6 +480,15 @@ Section  - Hilfsgeneratorraum
 Hilfsgeneratorraum is a room.
 The Description of Hilfsgeneratorraum is "Hier befindet sich der Hilfsgenerator, falls der Hauptgenerator ausfallen sollte.
 Über dir ist das Kommunikationsmodul.".
+
+Hilfsgenerator is a supporter. Hilfsgenerator is in Hilfsgeneratorraum. Hilfsgenerator is fixed in place.
+HG-Knopf is a device. HG-Knopf is on Hilfsgenerator. HG-Knopf is switched off.
+HG-Knopf is fixed in place. The description of HG-Knopf is "Hmm... soll dieser Knopf irgendwas mit dem Hilfsgenerator machen??"
+After switching on HG-Knopf:
+	say "Nun ist der Hilfsgenerator eingeschaltet.";
+
+After switching off HG-Knopf:
+	say "Nun ist der Hilfsgenerator abgeschaltet.";
 
 
 [Türen]
