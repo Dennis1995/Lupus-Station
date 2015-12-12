@@ -52,6 +52,39 @@ Section - Antennenfeld L
 Antennenfeld L is a room. 
 Antennenfeld L is above Kommunikationsmodul.
 The Description of AntennenfeldL is "Über diesem Raum scheinen die Antennen der Forschungsstation zu sein. Ein großer roter Knopf…der scheint wichtig zu sein.".
+[counter für das Abstezen des Notrufes]
+notrufcounter is a number which varies.
+
+Antennenjustierung is in Antennenfeld L. Antennenjustierung is a device. Antennenjustierung is fixed in place. Antennenjustierung is switched off.
+The description of Antennenjustierung is "Das scheint ein Schalter für die automatische Antennenjustierung zu sein. Die Antenne muss erst justiert werden, bevor ein Notruf abgesendet werden kann".
+
+roter Notrufknopf is a device. roter Notrufknopf is fixed in place. roter Notrufknopf is switched off.
+The description of roter Notrufknopf is "Ob man mit diesem Knopf wohl einen Notruf absetzen kann?".
+
+Instead of switching on Antennenjustierung:
+	if notrufcounter is 0 begin;
+		increase notrufcounter by 1;
+		say "Das hat wohl nicht geklappt, vielleicht sollte ich es nochmal probieren?" instead; [instead wird benötigt, damit die zweite Bedingung nicht auch geprüft wird, die wäre ja dann true, also einmal drücken und die Justierung würde dann funktionieren -> Sinn nicht erfüllt]
+	end if;
+	if notrufcounter is 1 begin;
+		now Antennenjustierung is switched on;
+		say "Dieses mal hat es wohl funktioniert und die Antenne ist justiert. Was ist das? Ein roter Knopf? War der vorher auch schon hier?";
+		increase notrufcounter by 1;
+		now roter Notrufknopf is in Antennenfeld L;
+	end if;
+
+[------ Fängt Szenarien ab, in dennen der Hilfsgenerator aus ist und versucht wird der Notruf abzusetzen]
+Before switching on Antennenjustierung:
+	if HG-Knopf is switched off:
+		say "Nichts passiert. Der Raum wirkt auch so gut wie nicht beleuchtet. Komisch, als wäre ein Stromausfall, vielleicht sollte ich erst für eine aussreichende Energieversorgung sorgen." instead.
+		
+Before switching on roter Notrufknopf:
+	if HG-Knopf is switched off:
+		say "Nichts passiert. Der Raum wirkt auch so gut wie nicht beleuchtet. Komisch, als wäre ein Stromausfall, vielleicht sollte ich erst für eine aussreichende Energieversorgung sorgen." instead.
+		
+After switching on roter Notrufknopf:
+	say "Nun wurde der Notruf erfolgreich abgesetzt, hoffentlich kommt bald Hilfe!!!";
+	
 
 Section - Obere Ebene Türen
 
@@ -417,6 +450,14 @@ Hauptgenerator is a room.
 The Description of Hauptgenerator is "Der Hauptgenerator, das ist die Energiequelle der Forschungsstation.
 Türen sind im Südwesten und Südosten.".
 
+Hilfsgenerator is a supporter. Hilfsgenerator is in Hilfsgeneratorraum. Hilfsgenerator is fixed in place.
+HG-Knopf is a device. HG-Knopf is on Hilfsgenerator. HG-Knopf is switched off.
+HG-Knopf is fixed in place. The description of HG-Knopf is "Hmm... soll dieser Knopf irgendwas mit dem Hilfsgenerator machen??"
+After switching on HG-Knopf:
+	say "Nun ist der Hilfsgenerator eingeschaltet.";
+
+After switching off HG-Knopf:
+	say "Nun ist der Hilfsgenerator abgeschaltet.";
 
 
 Section  - Alpha-KI
