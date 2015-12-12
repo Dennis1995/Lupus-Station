@@ -579,7 +579,7 @@ Nach Norden geht’s es zum Labor F.".
 Section - Fluchtkapseln
 
 Fluchtkapseln is a room.
-The Description of Fluchtkapseln is "Falls irgendein Notfall Eintritt, kannst du von hier aus mit einen Fluchtkapsel flüchten.
+The Description of Fluchtkapseln is "Falls irgendein Notfall Eintritt, kannst du von hier aus mit einer Fluchtkapsel flüchten.
 Südlich von dir kannst du den Raum wieder verlassen".
 
 
