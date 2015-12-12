@@ -447,8 +447,8 @@ Türen sind im Nordwesten und Südwesten".
 Section  - Hauptgenerator
 
 Hauptgenerator is a room.
--The Description of Hauptgenerator is "Der Hauptgenerator, das ist die Energiequelle der Forschungsstation.
--Türen sind im Südwesten und Südosten.".
+The Description of Hauptgenerator is "Der Hauptgenerator, das ist die Energiequelle der Forschungsstation.
+Türen sind im Südwesten und Südosten.".
 
 
 Section  - Alpha-KI
