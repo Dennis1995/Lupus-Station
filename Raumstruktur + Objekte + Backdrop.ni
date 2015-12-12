@@ -747,8 +747,8 @@ every turn:
 	end if;	
 
 [Test-Schleife, schließt am Anfang alle Türen auf, so muss man nicht immer alle Türen entsper- 	en, um den Code zu Testen]
-when play begins:	
-	[repeat with i running through doors:
+[when play begins:	
+	repeat with i running through doors:
 		if i is a locked door:
 			now i is unlocked;]
 
