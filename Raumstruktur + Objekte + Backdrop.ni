@@ -1182,7 +1182,7 @@ if the Oxygencounter is not -1 begin;
          say "[paragraph break]";
          end the story;
          end if;
-                 if the notrufcounter  is 2 begin;
+                 if the roter Notrufknopf is switched on begin;
                  say "Du hast noch [Ocounter] Spielzüge Zeit";
                  decrease Oxygencounter by 1; 
                  end if;
