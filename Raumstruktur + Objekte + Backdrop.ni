@@ -804,3 +804,198 @@ The Description of Fenster is "[if Fenster is in Maschinenraum] Der Maschinenker
 [if Fenster is in Delta Kreuzung] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
 [if Fenster is in Gamma-Delta Korridor] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]".
 
+
+The Kontaminierter1 is a person. The Kontaminierter1 is in the Alpha-Beta Korridor.
+
+The Kontaminierter1 can be following. The Kontaminierter1 is not following.
+
+
+Every turn:
+	if the Kontaminierter1 is not following:
+		if the location is the Alpha-Beta Korridor :
+			say "Ein Kontaminierter. Er verfolgt dich.";
+			now the Kontaminierter1 is following;
+	otherwise if the location of the Kontaminierter1 is not the location of the player:
+		if the the player unlock TürLB-DGH:
+			say "Der Kontaminierter ist stehen geblieben. ";
+			now the Kontaminierter1 is not following;
+		otherwise:
+			say "Der Kontaminierter verfolgt dich!";
+			move the Kontaminierter1 to the location of the player.
+			
+			
+The Kontaminierter2 is a person. The Kontaminierter2 is in the Alpha-Delta Korridor.
+
+The Kontaminierter2 can be following. The Kontaminierter2 is not following.
+
+
+Every turn:
+	if the Kontaminierter2 is not following:
+		if the location is the Alpha-Delta Korridor :
+			say "Ein Kontaminierter. Er verfolgt dich.";
+			now the Kontaminierter2 is following;
+	otherwise if the location of the Kontaminierter2 is not the location of the player:
+		if the the player unlock TürLB-DGH:
+			say "Der Kontaminierter ist stehen geblieben. ";
+			now the Kontaminierter2 is not following;
+		otherwise:
+			say "Der Kontaminierter verfolgt dich!";
+			move the Kontaminierter2 to the location of the player.
+			
+			
+The Kontaminierter Arzt is a person. The Kontaminierter Arzt is in the Med-Labor.
+
+The Kontaminierter Arzt can be following. The Kontaminierter Arzt is not following.
+
+
+Every turn:
+	if the Kontaminierter Arzt is not following:
+		if the location is the Med-Labor :
+			say "Ein Kontaminierter. Er verfolgt dich.";
+			now the Kontaminierter Arzt is following;
+	otherwise if the location of the Kontaminierter Arzt is not the location of the player:
+		if the the player unlock TürLB-DGH:
+			say "Der Kontaminierter ist stehen geblieben. ";
+			now the Kontaminierter Arzt is not following;
+		otherwise:
+			say "Der Kontaminierter verfolgt dich!";
+			move the Kontaminierter Arzt to the location of the player.
+
+[------------------3 x Kontaminierte im Besatzungsquartier-----------------------------]			
+
+The Kontaminierter3 is a person. The Kontaminierter3 is in the Besatzungsquartier.
+
+The Kontaminierter3 can be following. The Kontaminierter3 is not following.
+
+
+Every turn:
+	if the Kontaminierter3 is not following:
+		if the location is the Besatzungsquartier :
+			say "Ein Kontaminierter. Er verfolgt dich.";
+			now the Kontaminierter3 is following;
+	otherwise if the location of the Kontaminierter3 is not the location of the player:
+		if the the player unlock TürLB-DGH:
+			say "Der Kontaminierter ist stehen geblieben. ";
+			now the Kontaminierter3 is not following;
+		otherwise:
+			say "Der Kontaminierter verfolgt dich!";
+			move the Kontaminierter3 to the location of the player.
+			
+
+The Kontaminierter4 is a person. The Kontaminierter4 is in the Besatzungsquartier.
+
+The Kontaminierter4 can be following. The Kontaminierter4 is not following.
+
+
+Every turn:
+	if the Kontaminierter4 is not following:
+		if the location is the Besatzungsquartier :
+			say "Ein Kontaminierter. Er verfolgt dich.";
+			now the Kontaminierter4 is following;
+	otherwise if the location of the Kontaminierter4 is not the location of the player:
+		if the the player unlock TürLB-DGH:
+			say "Der Kontaminierter ist stehen geblieben. ";
+			now the Kontaminierter4 is not following;
+		otherwise:
+			say "Der Kontaminierter verfolgt dich!";
+			move the Kontaminierter4 to the location of the player.
+			
+			
+The Kontaminierter5 is a person. The Kontaminierter5 is in the Besatzungsquartier.
+
+The Kontaminierter5 can be following. The Kontaminierter5 is not following.
+
+
+Every turn:
+	if the Kontaminierter5 is not following:
+		if the location is the Besatzungsquartier :
+			say "Ein Kontaminierter. Er verfolgt dich.";
+			now the Kontaminierter5 is following;
+	otherwise if the location of the Kontaminierter5 is not the location of the player:
+		if the the player unlock TürLB-DGH:
+			say "Der Kontaminierter ist stehen geblieben. ";
+			now the Kontaminierter5 is not following;
+		otherwise:
+			say "Der Kontaminierter verfolgt dich!";
+			move the Kontaminierter5 to the location of the player.
+
+
+[---------------2 x Kontaminierte auf der Unteren Ebene---------------]
+
+The Kontaminierter6 is a person. The Kontaminierter6 is in the Delta-Gewächshaus.
+
+The Kontaminierter6 can be following. The Kontaminierter6 is not following.
+
+Every turn:
+	if the Kontaminierter6 is not following:
+		if the location is the Delta-Gewächshaus :
+			say "Ein Kontaminierter. Er verfolgt dich.";
+			now the Kontaminierter6 is following;
+	otherwise if the location of the Kontaminierter6 is not the location of the player:
+		if the the player unlock TürLB-DGH:
+			say "Der Kontaminierter ist stehen geblieben. ";
+			now the Kontaminierter6 is not following;
+		otherwise:
+			say "Der Kontaminierter verfolgt dich!";
+			move the Kontaminierter6 to the location of the player.
+
+
+
+The Kontaminierter7 is a person. The Kontaminierter7 is in the Beta-Gewächshaus.
+
+The Kontaminierter7 can be following. The Kontaminierter7 is not following.
+
+
+Every turn:
+	if the Kontaminierter7 is not following:
+		if the location is the Beta-Gewächshaus :
+			say "Ein Kontaminierter. Er verfolgt dich.";
+			now the Kontaminierter7 is following;
+	otherwise if the location of the Kontaminierter7 is not the location of the player:
+		if the the player unlock TürLB-DGH:
+			say "Der Kontaminierter ist stehen geblieben. ";
+			now the Kontaminierter7 is not following;
+		otherwise:
+			say "Der Kontaminierter verfolgt dich!";
+			move the Kontaminierter7 to the location of the player.
+
+
+[------------------------2 x Kontaminierte auf der Brücke-------------------------------]
+The Kontaminierter Kapitän is a person. The Kontaminierter Kapitän is in the Brücke.
+
+The Kontaminierter Kapitän can be following. The Kontaminierter Kapitän is not following.
+
+
+Every turn:
+	if the Kontaminierter Kapitän is not following:
+		if the location is the Brücke :
+			say "Ein Kontaminierter. Er verfolgt dich.";
+			now the Kontaminierter Kapitän is following;
+	otherwise if the location of the Kontaminierter Kapitän is not the location of the player:
+		if the the player unlock TürLB-DGH:
+			say "Der Kontaminierter ist stehen geblieben. ";
+			now the Kontaminierter Kapitän is not following;
+		otherwise:
+			say "Der Kontaminierter verfolgt dich!";
+			move the Kontaminierter Kapitän to the location of the player.
+			
+			
+			
+The Kontaminierter8 is a person. The Kontaminierter8 is in the Brücke.
+
+The Kontaminierter8 can be following. The Kontaminierter8 is not following.
+
+
+
+Every turn:
+	if the Kontaminierter8 is not following:
+		if the location is the Brücke :
+			say "Ein Kontaminierter. Er verfolgt dich.";
+			now the Kontaminierter8 is following;
+	otherwise if the location of the Kontaminierter8 is not the location of the player:
+		if the the player unlock TürLB-DGH:
+			say "Der Kontaminierter ist stehen geblieben. ";
+			now the Kontaminierter8 is not following;
+		otherwise:
+			say "Der Kontaminierter verfolgt dich!";
+			move the Kontaminierter8 to the location of the player.
