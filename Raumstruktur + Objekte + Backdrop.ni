@@ -128,8 +128,24 @@ Fass is a thing.
 Fass is pushable between rooms.
 Fass is in Andockstation.
 Fass is fixed in Place. 
+ fasszustand is a number which varies.
+ fasszustand is 0. [Die 0 bedeutet das das Fass steht und 1 bedeutet das das Fass liegt]
+
+Understand "flip [something]" as Flipping.
+Flipping is an Action applying to one visible thing.
+
+
+after flipping:
+if something is the Fass begin;
+now fasszustand is 1;
+say "Du hast das Fass umgekippt";
+end if;
+
 
 	instead of pushing the fass:
+	if the fasszustand is 0 begin;
+         say "Du musst erst das Fass umkippen damit du es rollen kannst.";
+	otherwise;
        if the player is in Andockstation begin;
        let L be the list of  unlocked doors in Andockstation;
        let zahl be the number of entries in L;
@@ -235,7 +251,7 @@ Fass is fixed in Place.
 							 say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
 									now the fass is in the other side of entry g in L;
 									end if;
-
+end if;
 
 
 
