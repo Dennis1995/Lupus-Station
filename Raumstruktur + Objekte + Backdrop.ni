@@ -120,6 +120,126 @@ The Description of Andockstation is "Gruselig, alles ist hierverlassen und so ru
 Alles sieht hier sehr durcheinander aus. In der  Ecke ein leckendes Fass…
 Wo führt eigentlich die Wartungsluke hin? Westlich geht es zum Hangar.".
 
+[Regeln für das Rollen des Fasses]
+Fass is a thing.
+Fass is pushable between rooms.
+Fass is in Andockstation.
+Fass is fixed in Place. 
+
+	instead of pushing the fass:
+       if the player is in Andockstation begin;
+       let L be the list of  unlocked doors in Andockstation;
+       let zahl be the number of entries in L;
+       let g be a random number from 1 to zahl;
+       say other side of entry g in L;
+       now the fass is in the other side of entry g in L;
+       end if;
+              if the player is in Hangar begin;
+              say za;
+              let L be the list of unlocked doors in Hangar ;
+              let zahl be the number of entries in L;
+              let g be a random number from 1 to zahl;
+              say other side of entry g in L;
+              now the fass is in the other side of entry g in L;
+              end if;
+                  if the player is in the Gamma Kreuzung begin;
+                          let L be the list of unlocked doors in Gamma Kreuzung;
+                          let zahl be the number of entries in L;
+                          let g be a random number from 1 to zahl;
+                          say other side of entry g in L;
+                          now the fass is in the other side of entry g in L;
+                          end if;
+                                     if the player is in the Gamma-Delta Korridor begin;
+                                     let L be the list of unlocked doors in Gamma-Delta Korridor;
+                                     let zahl be the number of entries in L;
+                                      let g be a random number from 1 to zahl;
+                                     say other side of entry g in L;
+                                     now the fass is in the other side of entry g in L;
+                                     end if;	
+				if the player is in the Alpha-Delta Korridor begin;
+			        let L be the list of unlocked doors in Alpha-Delta Korridor;
+				let zahl be the number of entries in L;
+				let g be a random number from 1 to zahl;
+				say other side of entry g in L;
+				now the fass is in the other side of entry g in L;
+				end if;
+					if the player is in the Alpha Kreuzung begin;
+					let L be the list of unlocked doors in the Alpha Kreuzung;
+					let zahl be the number of entries in L;
+					let g be a random number from 1 to zahl;
+					say other side of entry g in L;
+					now the fass is in the other side of entry g in L;
+					end if;
+						if the player is in the Alpha-Beta Korridor begin;
+						let L be the list of unlocked doors in the Alpha-Beta Korridor;
+						let zahl be the number of entries in L;
+						let g be a random number from 1 to zahl;
+						say other side of entry g in L;
+						now the fass is in the other side of entry g in L;
+						end if;
+							if the player is in the Beta Kreuzung begin;
+							let L be the list of unlocked doors in the Beta Kreuzung;
+							let zahl be the number of entries in L;
+							let g be a random number from 1 to zahl;
+							say other side of entry g in L;
+							now the fass is in the other side of entry g in L;
+							end if;
+								if the player is in the Gamma-Beta Korridor begin;
+								let L be the list of unlocked doors in the Gamma-Beta Korridor;
+								let zahl be the number of entries in L;
+								let g be a random number from 1 to zahl;
+								say other side of entry g in L;
+								now the fass is in the other side of entry g in L;
+								end if;
+									 if the player is in the Maschinenraum begin;
+									let L be the list of unlocked doors in the Maschinenraum;
+									let zahl be the number of entries in L;
+									let g be a random number from 1 to zahl;
+									say other side of entry g in L;
+									now the fass is in the other side of entry g in L;
+									end if;
+					if the player is in the Med-Labor begin;
+					let L be the list of unlocked doors in the Med-Labor;
+					let zahl be the number of entries in L;
+					let g be a random number from 1 to zahl;
+					say other side of entry g in L;
+					now the fass is in the other side of entry g in L;
+					end if;
+						if the player is in the Solar-Labor begin;
+						let L be the list of unlocked doors in the Solar-Labor;
+						let zahl be the number of entries in L;
+						let g be a random number from 1 to zahl;
+						say other side of entry g in L;
+						now the fass is in the other side of entry g in L;
+						end if;
+							if the player is in the Dienstraum begin;
+							let L be the list of unlocked doors in the Dienstraum;
+							let zahl be the number of entries in L;
+							let g be a random number from 1 to zahl;
+							say other side of entry g in L;
+							now the fass is in the other side of entry g in L;
+							end if;
+								if the player is in the  Besatzungsquatier begin;
+								let L be the list of unlocked doors in the  Besatzungsquatier;
+								let zahl be the number of entries in L;
+								let g be a random number from 1 to zahl;
+								say other side of entry g in L;
+								now the fass is in the other side of entry g in L;
+								end if;
+									if the player is in the Umkleideraum begin;
+									let L be the list of unlocked doors in the  Umkleideraum;
+									let zahl be the number of entries in L;
+									let g be a random number from 1 to zahl;
+									say other side of entry g in L;
+									now the fass is in the other side of entry g in L;
+									end if;
+
+
+
+
+ 
+
+
 
 
 Section - Gamma Kreuzung
@@ -338,6 +458,31 @@ The Description of TürGBK-GK is "Tür zwischen Gamma-Beta Korridor und Gamma Kr
 TürGK-XL is west of Gamma Kreuzung. TürGK-XL is east of Xeno-Labor. TürGK-XL is a door.
 TürGK-XL is locked.
 The Description of TürGK-XL is "Tür zwischen Gamma Kreuzung und Xeno-Labor: Du benötigst die Xenokarte um diese Tür zu öffnen. Tür bleibt nur 5 Sekunden geöffnet und schließt dann wieder. Tür kann mit einem Fass blockiert werden, sodass die Tür für immer offen bleibt.".
+
+[Regeln für die Xeno-Lab Tür]
+every turn:
+if the fass is in the Xeno-Labor begin;
+  now TürGK-XL is unlocked;
+  now the fass is not pushable between rooms;
+otherwise;
+    if the panel is unlocked begin; 
+       now TürGK-XL is unlocked;
+       increase panelcounter by 1;
+    end if;
+if panelcounter is  2  begin;
+   decrease panelcounter by 2 ;
+    now türGK-XL is closed;
+    now  türGK-XL  is locked;
+    now the panel is closed;
+    now the panel is locked;
+end if;
+    end if;
+
+before going west:
+    if the fass is not in the Xeno-Labor begin;
+       now TürGK-XL is locked;
+    end if;
+
 
 [Beta Kreuzung <-> Maschinenraum]
 TürBK-MR is north of Beta Kreuzung. TürBK-MR is south of Maschinenraum. TürBK-MR is a door.
