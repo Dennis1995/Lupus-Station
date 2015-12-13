@@ -36,6 +36,37 @@ Brücke is a room.
 The Description of Brücke is "Ein Raum übersäht mit Schaltern und Anzeigen.
 Eine Gegensprechanlage mit einem Mikrofon für Durchsagen auf der Raumstation scheint es hier auch zu geben.".
 
+[Gegensprechanlage]
+Gegensprechanlage is a supporter. Gegensprechanlage is fixed in place.
+Mikrofon is a thing on the Gegensprechanlage. Mikrofon is fixed in place.
+Mikrofonknopf is a device. Mikrofonknopf is switched off.
+mikrofonzaehler is a number which varies.
+mikrofonzaehler is 0.
+
+instead of switching on the Mikrofonknopf:
+ now  mikrofonzaehler is 1;
+ now the player is Percy;
+ now the Player is in Med-Labor;
+
+
+every turn:
+if the mikrofonzaehler is 1 begin;
+if the player is in the Med-Labor begin;
+say "Du musst zum Hangar gehen";
+end if;
+if the player is in the Hangar begin;
+say " Hol dir den Raumanzug aus dem Umkleideraum und gehe zur Andockstation.";
+end if;
+if the  player is in the Andockstation begin;
+say "Gehe zum Kommunikationsmodul";
+end if;
+if the player is in the Kommunikationsmodul begin;
+say "Gehe eine Etage tiefer und schalte den Hilfsgenerator ein";
+end if;
+ if the player is in the Hilfsgeneratorraum begin;
+ say "Schalte den Hilfsgenerator ein"; 
+ end if; 
+end if;
 
 
 Section - Besprechungsraum
@@ -124,28 +155,12 @@ Alles sieht hier sehr durcheinander aus. In der  Ecke ein leckendes Fass…
 Wo führt eigentlich die Wartungsluke hin? Westlich geht es zum Hangar.".
 
 [Regeln für das Rollen des Fasses]
-Fass is a thing.The description is "Das Fass ist stabil genug um eine Tür zu blockieren.".
+Fass is a thing.
 Fass is pushable between rooms.
 Fass is in Andockstation.
 Fass is fixed in Place. 
- fasszustand is a number which varies.
- fasszustand is 0. [Die 0 bedeutet das das Fass steht und 1 bedeutet das das Fass liegt]
-
-Understand "flip [something]" as Flipping.
-Flipping is an Action applying to one visible thing.
-
-
-after flipping:
-if something is the Fass begin;
-now fasszustand is 1;
-say "Du hast das Fass umgekippt";
-end if;
-
 
 	instead of pushing the fass:
-	if the fasszustand is 0 begin;
-         say "Du musst erst das Fass umkippen damit du es rollen kannst.";
-	otherwise;
        if the player is in Andockstation begin;
        let L be the list of  unlocked doors in Andockstation;
        let zahl be the number of entries in L;
@@ -251,7 +266,7 @@ end if;
 							 say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
 									now the fass is in the other side of entry g in L;
 									end if;
-end if;
+
 
 
 
@@ -348,6 +363,49 @@ Maschinenraum is above Schwerkraftkompensator.
 The Description of Maschinenraum is "Es ist sehr sehr laut und schmutzig hier. Eine Tafel zeigt viele nützliche Informationen an, ein alter Akkubohrer mit einem Akku liegt auf  dem Boden. Der Blick auf den Maschinen ist sicherlich für Ingenieure interessant.  Alles riecht nach Öl.
 Ein Glück kann man hier die Etagen Wechseln.".
 
+[Akkubohrer + Akkus Sourcecode]
+
+Akkubohrer is a container in Maschinenraum. carrying capacity of the akkubohrer is 1.
+Understand " use [carried thing]"  as using.
+Using  is an action applying to one carried thing. 
+
+Understand " put [ something] into [carried thing] " as putting.
+Putting is an action applying to one visible thing and one carried thing. 
+
+Akku1 is a thing in Maschinenraum.
+akku1counter is a number which varies.
+akku1counter is 5.
+
+Akku2 is a thing in Spind. 
+akku2counter is a number which varies.
+akku2counter is 5.
+
+instead of using the akkubohrer:
+if the Akku1 in the Akkubohrer begin;
+if the akku1counter is 0 begin;
+say " Der Akku ist leer.";
+otherwise;
+decrease akku1counter by 1;
+end if;
+end if;
+if the Akku2 in the Akkubohrer begin;
+if the akku2counter is 0 begin;
+say " Der Akku ist leer.";
+otherwise;
+decrease akku2counter by 1;
+end if;
+end if;
+
+before putting:
+if the something is not  the akku1 begin;
+if the something is not the akku2 begin;
+say "Dies ist nicht der passende Akku";
+stop the action;
+otherwise;
+say " Du hast einen Akku eingesteckt";
+end if;
+end if;
+
 
 
 Section - Med-Labor
@@ -420,6 +478,74 @@ WC-Damen is a room.
 The Description of WC-Damen is "Die Toilette scheint intakt zu sein. Lediglich das Wasser läuft die ganze Zeit.
 Vielleicht hat der Spülkasten einen defekt.".
 
+Toilette is a supporter. Toilette is in WC-Damen.
+
+Spülkasten is a container. Spülkasten is fixed in place. Spülkasten is on the Toilette.  
+
+the Handlaserwaffe is a thing. Handlaserwaffe is in the Spülkasten.
+
+Understand " shoot with [carried thing ] at [something]" as shooting it with.
+Shooting it with is an action applying to one carried thing and one visible thing.
+
+before of shooting:
+if something is a person begin;
+if the person is Barry begin;
+say " Schlechte Idee ";
+stop the action;
+end if;
+if the person is Percy begin;
+say "Schlechte Idee";
+stop the action;
+end if;
+end if;
+
+beseitigteKontaminierte is a room.
+
+instead of shooting:
+if the carried thing is the Handlaserwaffe begin;
+if something is a person begin;
+if the person is Kontaminierter1 begin; 
+now  Kontaminierter1 is in beseitigteKontaminierte; 
+say " der Komtaminierte hat sich in Staub aufgelöst.";
+end if;
+if the person is Kontaminierter2 begin; 
+now Kontaminierter2 is in beseitigteKontaminierte; 
+say " der Komtaminierte hat sich in Staub aufgelöst.";
+end if;
+if the person is Kontaminierter3 begin; 
+now kontaminierter3 is in beseitigteKontaminierte;
+say " der Komtaminierte hat sich in Staub aufgelöst."; 
+end if;
+if the person is Kontaminierter4 begin; 
+now kontaminierter4 is in beseitigteKontaminierte;
+ say " der Komtaminierte hat sich in Staub aufgelöst.";
+end if;
+if the person is Kontaminierter5 begin; 
+now kontaminierter5 is in beseitigteKontaminierte; 
+ say " der Komtaminierte hat sich in Staub aufgelöst.";
+end if;
+if the person is Kontaminierter6 begin; 
+now kontaminierter6 is in beseitigteKontaminierte; 
+ say " der Komtaminierte hat sich in Staub aufgelöst.";
+end if;
+if the person is Kontaminierter7 begin;
+now Kontaminierter7 is in beseitigteKontaminierte;
+ say " der Komtaminierte hat sich in Staub aufgelöst.";
+end if;
+if the person is Kontaminierter8 begin; 
+now kontaminierter1 is in beseitigteKontaminierte; 
+ say " der Komtaminierte hat sich in Staub aufgelöst.";
+end if;
+if the person is Kontaminierter Kapitän begin;
+now Kontaminierter Kapitän is in beseitigteKontaminierte;
+ say " der Komtaminierte hat sich in Staub aufgelöst.";
+end if;
+if the person is Kontaminierter Arzt begin;
+now Kontaminierter Arzt is in beseitigteKontaminierte;
+ say " der Komtaminierte hat sich in Staub aufgelöst.";
+end if;
+end if;
+end if;
 
 
 Section - Dienstraum
@@ -507,6 +633,7 @@ The Description of TürGBK-GK is "Tür zwischen Gamma-Beta Korridor und Gamma Kr
 TürGK-XL is west of Gamma Kreuzung. TürGK-XL is east of Xeno-Labor. TürGK-XL is a door.
 TürGK-XL is locked.
 The Description of TürGK-XL is "Tür zwischen Gamma Kreuzung und Xeno-Labor: Du benötigst die Xenokarte um diese Tür zu öffnen. Tür bleibt nur 5 Sekunden geöffnet und schließt dann wieder. Tür kann mit einem Fass blockiert werden, sodass die Tür für immer offen bleibt.".
+
 
 [Regeln für die Xeno-Lab Tür]
 
@@ -702,9 +829,13 @@ HG-Knopf is a device. HG-Knopf is on Hilfsgenerator. HG-Knopf is switched off.
 HG-Knopf is fixed in place. The description of HG-Knopf is "Hmm... soll dieser Knopf irgendwas mit dem Hilfsgenerator machen??"
 After switching on HG-Knopf:
 	say "Nun ist der Hilfsgenerator eingeschaltet.";
-
+	now the mikrofonzaehler is 0;
+	now the Player is Barry;
+	now the player is in Brücke;
+	
 After switching off HG-Knopf:
 	say "Nun ist der Hilfsgenerator abgeschaltet.";
+
 
 
 [Türen]
