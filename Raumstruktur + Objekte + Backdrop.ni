@@ -294,7 +294,7 @@ instead of pushing the fass:
 						let zahl be the number of entries in L;
 						   if zahl is 0 begin;
 						   say "Das Fass ist im Solar-Labor";
-						   otherwiese;
+						   otherwise;
 						let g be a random number from 1 to zahl;
 						 say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
 						now the fass is in the other side of entry g in L;
