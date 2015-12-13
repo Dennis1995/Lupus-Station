@@ -587,9 +587,36 @@ Nach Norden geht’s es zum Labor F.".
 
 Section - Fluchtkapseln
 
+[Zählt nach drücken des "FluchtKnopfes" die Anzahl der Kontaminierten, falls größer als 0 -> spieler hat verloren, ansonsten gewonnen]
+KontaCounter is a number which varies.
+
 Fluchtkapseln is a room.
-The Description of Fluchtkapseln is "Falls irgendein Notfall Eintritt, kannst du von hier aus mit einer Fluchtkapsel flüchten.
-Südlich von dir kannst du den Raum wieder verlassen".
+The Description of Fluchtkapseln is "Falls irgendein Notfall Eintritt, kannst du von hier aus mit einen Fluchtkapsel flüchten.
+Südlich von dir kannst du den Raum wieder verlassen.[line break]Hinten links in der Ecke befindet sich noch eine unbenutzte Fluchtkapsel, ob die wohl noch funktioniert?".
+
+Fluchtkapsel is inside of Fluchtkapseln. Launch-Schalter is in Fluchtkapsel. Launch-Schalter is a device. Launch-Schalter is switched off. 
+Launch-Schalter is fixed in place. The description of Launch-Schalter is "Dieser Schalter leitet wahrscheinlich den Start der Fluchkapsel ein."
+
+Before switching on Launch-Schalter:
+	if Percy is not in Fluchtkapsel:
+		say "Willst du wirklich ohne Percy flüchten??" instead.
+		
+Before switching on Launch-Schalter:
+	if Barry is not in Fluchtkapsel:
+		say "Willst du wirklich ohne Barry flüchten??" instead.
+		
+After switching on Launch-Schalter:
+	say "Du drückst den Launch-Knopf und die Fluchtkapsel wird in den Weltraum geschossen.";	
+	repeat with i running through persons:
+	[diese Bedingugen gelten beide für Kontaminierte, also wenn kontaminierte drinnen sind mache folgende aktion....]
+		if i is in Fluchtkapsel:
+			if i is not Barry:
+				if i is not Percy:
+					increase KontaCounter by 1;
+	if KontaCounter is greater than 0:
+		end the story finally saying "Du hast vergessen zu überprüfen, ob Kontaminierte mit in der Fluchtkapsel sind. Barry und Percy werden bei der Flucht kontminiert. Du hast verloren!";
+	else if KontaCounter is 0:
+		end the story finally saying "Barry und Percy flüchten erfolgreich, du hast das Spiel gewonnen!!!".	
 
 
 Section - Kontrollmodul
