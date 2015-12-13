@@ -614,7 +614,7 @@ After switching on Launch-Schalter:
 				if i is not Percy:
 					increase KontaCounter by 1;
 	if KontaCounter is greater than 0:
-		end the story finally saying "Du hast vergessen zu überprüfen, ob Kontaminierte mit in der Fluchtkapsel sind. Barry und Percy werden bei der Flucht kontminiert. Du hast verloren!";
+		end the story finally saying "Du hast vergessen zu überprüfen, ob Kontaminierte mit in der Fluchtkapsel sind. Barry und Percy werden bei der Flucht kontaminiert. Du hast verloren!";
 	else if KontaCounter is 0:
 		end the story finally saying "Barry und Percy flüchten erfolgreich, du hast das Spiel gewonnen!!!".	
 
