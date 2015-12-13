@@ -430,6 +430,15 @@ The Description of Schwerkraftkompensator is "Dieser Raum scheint die Schwerkraf
 Der Transporter sollte dorthin führen.
 Von hier aus gehen Türen in den Nordosten und Nordwesten.".
 
+[------Transporter-------]
+Transporter-RS is inside of Schwerkraftkompensator. The description of Transporter-RS is "Dieses ist der Transporter, durch drücken des hier befindlichen Knopfes gelangt man von der Raumstation zur Forschungsstation."
+
+Knopf-FS is in Transporter-RS. Knopf-FS is a device. Knopf-FS is fixed in place. Knopf-FS is switched off. 
+The description of Knopf-FS is "Dieser Knopf leitet wahrscheinlich den Transport ein..."
+
+instead of switching on Knopf-FS:
+	now the player is in Transporter-FS;
+	say "'Achtung: wir sind an der Forschungsstation angekommen. Sie können hier aussteigen, oder wieder zurück fahren.'";
 
 [Die Lagebeziehung von den Räumen im inneren und äußeren Ring der unteren Ebene, wird durch den folgenden Befehl
 der vorgegebenen Karte angepasst]
@@ -606,11 +615,21 @@ The Description of Transporterraum is "Dies ist die Verbindung zur Raumstation.
 Benutze den Transporter um dorthin zu gelangen.
 Östlich geht’s zum Energiespeicher und über dir zum Kommunikationsmodul F.".
 
+[------Transporter-------]
+Transporter-FS is inside of Transporterraum. The description of Transporter-FS is "Dieses ist der Transporter, durch drücken des hier befindlichen Knopfes gelangt man von der Forschungsstation zur Raumstation."
+
+Knopf-RS is in Transporter-FS. Knopf-RS is a device. Knopf-RS is fixed in place. Knopf-RS is switched off. 
+The description of Knopf-RS is "Dieser Knopf leitet wahrscheinlich den Transport ein..."
+
+instead of switching on Knopf-RS:
+	now the player is in Transporter-RS;
+	say "'Achtung: wir sind an der Raumstation angekommen. Sie können hier aussteigen, oder wieder zurück fahren.'";
+
 
 Section - Energiespeicher
 
 Energiespeicher is a room.
-The Description of Energiespeicher is "Dies ist die Energiequelle der Forschungsstation.
+The Description of Energiespeicher is "Dies ist der primäre Energiespeicher der Forschungsstation.
 Östlich ist eine Tür.".
 
 
