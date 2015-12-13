@@ -1171,3 +1171,21 @@ Every turn:
 		otherwise:
 			say "Der Kontaminierter verfolgt dich!";
 			move the Kontaminierter8 to the location of the player.
+
+[Sauerstoffabfall]
+
+Oxygencounter is a number which varies.
+Oxygencounter is 15.
+every turn:
+if the Oxygencounter is not -1 begin;
+       if Oxygencounter is zero begin;
+         say "Du bist Tod, Spiel vorbei";
+         say "[paragraph break]";
+         end the story;
+         end if;
+                 if the notrufcounter  is 2 begin;
+                 say "Du hast noch [Ocounter] Spielzüge Zeit";
+                 decrease Oxygencounter by 1; 
+                 end if;
+end if;
+
