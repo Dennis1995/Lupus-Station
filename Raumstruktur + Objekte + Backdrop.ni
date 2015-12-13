@@ -159,6 +159,20 @@ Fass is a thing.
 Fass is pushable between rooms.
 Fass is in Andockstation.
 Fass is fixed in Place. 
+ fasszustand is a number which varies.
+ fasszustand is 0. [Die 0 bedeutet das das Fass steht und 1 bedeutet das das Fass liegt]
+
+Understand "flip [something]" as Flipping.
+Flipping is an Action applying to one visible thing.
+
+
+after flipping:
+if something is the Fass begin;
+now fasszustand is 1;
+say "Du hast das Fass umgekippt";
+end if;
+
+
 
 instead of pushing the fass:
 	if fasszustand is 0 begin;
