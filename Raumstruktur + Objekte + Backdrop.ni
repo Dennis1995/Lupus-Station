@@ -11,7 +11,7 @@ The player is Percy.
 [////////Regionen//////////////////////]
 The Raumstation is a region. The  Andockstation, Hangar, Umkleideraum, Gamma-Delta Korridor, Kommunikationsmodul, Alpha-Delta Korridor, Delta Kreuzung, Alpha Kreuzung, Dienstraum, Besatzungsquartier, Alpha-Beta Korridor, Beta Kreuzung, WC-Damen, Gamma-Beta Korridor, Gamma Kreuzung, Xeno-Labor,  Solar-Labor, Med-Labor, Maschinenraum, Besprechungsraum, Brücke, Antennenfeld L, Lagerraum, Mensa, Fitnessraum, Delta-Gewächshaus, Lager, Beta-Gewächshaus, Schwerkraftkompensator, Delta-KI, Hauptgenerator, Umkleideraum, Transporter-RS, Alpha-KI, Hilfsgeneratorraum are in the Raumstation. 
 
-The Forschungsstation is a region. The Transporterraum, Lager F, Beschädigtes Modul, Energiespeicher, Kommunikationsmodul F, Labor F, Kontrollmodul, Fluchtkapseln, Antennenfeld F, Solar-Modul F, Funkmodul, Transporter-FS, Fluchtskapsel and the Pulsator-Modul are in the Forschungsstation.
+The Forschungsstation is a region. The Transporterraum, Lager F, Beschädigtes Modul, Energiespeicher, Kommunikationsmodul F, Labor F, Kontrollmodul, Fluchtkapseln, Antennenfeld F, Solar-Modul F, Funkmodul, Transporter-FS, Fluchtkapsel and the Pulsator-Modul are in the Forschungsstation.
 
 
 [So kann man der Karte eine Lagebeziehung zwischen Raum- und Forschungstation vermitteln, in dem man zwei Räume von je
