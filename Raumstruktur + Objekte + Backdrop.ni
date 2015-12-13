@@ -73,6 +73,10 @@ Instead of switching on Antennenjustierung:
 	end if;
 
 [------ Fängt Szenarien ab, in dennen der Hilfsgenerator aus ist und versucht wird der Notruf abzusetzen]
+
+sauerstoffabfallbeginn is a number which varies.
+sauerstoffabfallbeginn is 0.
+
 Before switching on Antennenjustierung:
 	if HG-Knopf is switched off:
 		say "Nichts passiert. Der Raum wirkt auch so gut wie nicht beleuchtet. Komisch, als wäre ein Stromausfall, vielleicht sollte ich erst für eine aussreichende Energieversorgung sorgen." instead.
@@ -83,7 +87,7 @@ Before switching on roter Notrufknopf:
 		
 After switching on roter Notrufknopf:
 	say "Nun wurde der Notruf erfolgreich abgesetzt, hoffentlich kommt bald Hilfe!!!";
-	
+	 now sauerstoffabfallbeginn is 1;
 
 Section - Obere Ebene Türen
 
@@ -1182,7 +1186,7 @@ if the Oxygencounter is not -1 begin;
          say "[paragraph break]";
          end the story;
          end if;
-                 if the roter Notrufknopf is switched on begin;
+                 if the sauerstoffabfallbeginn is 1 begin;
                  say "Du hast noch [Ocounter] Spielzüge Zeit";
                  decrease Oxygencounter by 1; 
                  end if;
