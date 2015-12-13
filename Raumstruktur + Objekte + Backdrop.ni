@@ -493,6 +493,17 @@ TürGK-XL is locked.
 The Description of TürGK-XL is "Tür zwischen Gamma Kreuzung und Xeno-Labor: Du benötigst die Xenokarte um diese Tür zu öffnen. Tür bleibt nur 5 Sekunden geöffnet und schließt dann wieder. Tür kann mit einem Fass blockiert werden, sodass die Tür für immer offen bleibt.".
 
 [Regeln für die Xeno-Lab Tür]
+
+
+
+Panel is a locked container in Gamma Kreuzung. the panel is lockable. the panel is fixed in place. the card unlocks the panel. the card is carried by the player.
+
+Panel2 is a locked container in the Xeno-Labor. Panel2 is lockable. Panel2 is fixed in place. the card unlocks the Panel2.
+
+the panelcounter is a number which varies. 
+the panel2counter is a number which varies.
+
+
 every turn:
 if the fass is in the Xeno-Labor begin;
   now TürGK-XL is unlocked;
