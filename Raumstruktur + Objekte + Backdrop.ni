@@ -69,7 +69,6 @@ Instead of switching on Antennenjustierung:
 	if notrufcounter is 1 begin;
 		now Antennenjustierung is switched on;
 		say "Dieses mal hat es wohl funktioniert und die Antenne ist justiert. Was ist das? Ein roter Knopf? War der vorher auch schon hier?";
-		increase notrufcounter by 1;
 		now roter Notrufknopf is in Antennenfeld L;
 	end if;
 
