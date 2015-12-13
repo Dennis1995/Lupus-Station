@@ -124,7 +124,7 @@ Alles sieht hier sehr durcheinander aus. In der  Ecke ein leckendes Fass…
 Wo führt eigentlich die Wartungsluke hin? Westlich geht es zum Hangar.".
 
 [Regeln für das Rollen des Fasses]
-Fass is a thing.
+Fass is a thing.The description is "Das Fass ist stabil genug um eine Tür zu blockieren.".
 Fass is pushable between rooms.
 Fass is in Andockstation.
 Fass is fixed in Place. 
