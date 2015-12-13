@@ -352,7 +352,35 @@ Pult is fixed in place.
 
 After switching on Knopf:
 	[Implementation, dass Kontaminierte aufmerksam werden, fehlt]
-	say "Videoblog des Stationsarztes:[paragraph break]'Es fing alles mit einer biologischen Probe von einem nahegelegnen Planeten an. Wir wollten eigentlich nur das Leben auf diesem obskuren Planeten erfroschen. Das Sammeln der Probe verlief auch Reibungslos. Doch dann wurden anscheinend einige Raumanzüge von manchen Mitarbeitern nicht richtig dekontaminiert. Somit konnten einige von ihnen mit einem fremden Erreger kontaminiert werden. Daraufhin standen sie einfach in der Gegend herum und hatten einen starren Blick.[line break]Glücklicherweise habe ich es noch geschafft eine Dekontaminationskabine zu entwerfen und auch zu bauen. Es passt aber nur eine Person gleichzeitig hinein. Die Kontaminierten können durch das Öffnen der Tür der Kabine angelockt werden, da die Tür sehr laut ist, aber eben nur einer gleichzeitig passt in die Kabine. Wenn man die Kabine dann schließt wird der darin befindliche Kontaminierte von dem Erreger befreit und er ist wieder gesund. Ich hoffe ich schaffe es alle zu dekontaminieren, falls nicht und Sie diese Nachricht hören, BITTE HOLEN SIE HILFE!!!'"
+	say "Videoblog des Stationsarztes:[paragraph break]'Es fing alles mit einer biologischen Probe von einem nahegelegnen Planeten an. Wir wollten eigentlich nur das Leben auf diesem obskuren Planeten erfroschen. Das Sammeln der Probe verlief auch Reibungslos. Doch dann wurden anscheinend einige Raumanzüge von manchen Mitarbeitern nicht richtig dekontaminiert. Somit konnten einige von ihnen mit einem fremden Erreger kontaminiert werden. Daraufhin standen sie einfach in der Gegend herum und hatten einen starren Blick.[line break]Glücklicherweise habe ich es noch geschafft eine Dekontaminationskabine zu entwerfen und auch zu bauen. Es passt aber nur eine Person gleichzeitig hinein. Die Kontaminierten können durch das Öffnen der Tür der Kabine angelockt werden, da die Tür sehr laut ist, aber eben nur einer gleichzeitig passt in die Kabine. Wenn man die Kabine dann schließt wird der darin befindliche Kontaminierte von dem Erreger befreit und er ist wieder gesund. Ich hoffe ich schaffe es alle zu dekontaminieren, falls nicht und Sie diese Nachricht hören, BITTE HOLEN SIE HILFE!!!'"[----ALARM----]
+Alarm is a backdrop.
+	 It is in Gamma Kreuzung and in Gamma-Delta Korridor and in Delta Kreuzung and in Alpha-Delta Korridor and in Alpha Kreuzung and in Alpha-Beta Korridor and in Gamma-Beta Korridor and in Beta Kreuzung and in Maschinenraum and in Xeno-Lab and in Solar-Labor and in Med-Labor and in Lagerraum and in Delta-Gewächshaus and in Lager and in Beta-Gewächshaus and in Alpha-KI and in Hauptgenerator and in Delta-KI and in Schwerkraftkompensator.
+	The Description of Alarm is " 
+	[if Alarm is in Gamma Kreuzung] ALARM ALARM [end if]
+	[if Alarm is in Gamma-Delta Korridor] ALARM ALARM [end if]
+	[if Alarm is in Delta Kreuzung] ALARM ALARM [end if]
+	[if Alarm is in Alpha-Delta Korridor] ALARM ALARM [end if]
+	[if Alarm is in Alpha Kreuzung] ALARM  ALARM[end if]
+	[if Alarm is in Alpha-Beta Korridor] ALARM ALARM [end if]
+	[if Alarm is in Gamma-Beta Korridor] ALARM ALARM [end if]
+	[if Alarm is in Beta Kreuzung] ALARM ALARM [end if]
+	[if Alarm is in Maschinenraum] ALARM [end if]
+	[if Alarm is in Med-Labor] ALARM ALARM [end if]
+	[if Alarm is in Solar-Labor] ALARM ALARM [end if]
+	[if Alarm is in Xeno-Labor] ALARM ALARM [end if]
+	[if Alarm is in Lagerraum] ALARM ALARM [end if]
+	[if Alarm is in Lager] ALARM ALARM [end if]
+	[if Alarm is in Delta-KI] ALARM ALARM [end if]
+	[if Alarm is in Alpha-KI] ALARM ALARM [end if]
+	[if Alarm is in Hauptgenerator] ALARM ALARM [end if]
+	[if Alarm is in Delta-Gewächshaus] ALARM ALARM [end if]
+	[if Alarm is in Beta-Gewächshaus] ALARM ALARM [end if]
+	[if Alarm is in Schwerkraftkompensator] ALARM ALARM [end if]".
+	
+[after switching off Blinkender Knof:
+now the alarm is nowhere.
+
+kann nur eingefügt werden wenn der blinkende Knopf eingefügt wurde-]
 
 
 Section - Solar-Labor
