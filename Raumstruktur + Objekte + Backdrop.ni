@@ -1222,3 +1222,8 @@ if the Oxygencounter is not -1 begin;
                  end if;
 end if;
 
+[-----weitere "unwichtige" Gegenstände--------------]
+Anzeigetafel is thing. Anzeigetafel is in Maschinenraum. It is fixed in place.
+The Description of Anzeigetafel is "Es sind keine Fluchtkapseln mehr auf der Lupus Station vorhanden und es befinden sich 10 Kontaminierte im der Lupusstation. Achtung : Bei Kontakt mit Kontaminierten dringend einen Arzt aufsuchen)".
+
+Generator is a thing. It is fixed in place. It is in Hauptgenerator. The Description is "Dies ist der Hauptgenerator, welches die Station mit Strom versorgt.".
