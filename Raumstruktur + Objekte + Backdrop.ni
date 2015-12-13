@@ -1217,7 +1217,7 @@ if the Oxygencounter is not -1 begin;
          end the story;
          end if;
                  if the sauerstoffabfallbeginn is 1 begin;
-                 say "Du hast noch [Ocounter] Spielzüge Zeit";
+                 say "Du hast noch [Oxygencounter] Spielzüge Zeit";
                  decrease Oxygencounter by 1; 
                  end if;
 end if;
