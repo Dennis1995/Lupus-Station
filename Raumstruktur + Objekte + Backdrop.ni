@@ -171,8 +171,12 @@ instead of pushing the fass:
        say " Das Fass ist in der Andockstation";
        otherwise;
        let g be a random number from 1 to zahl;
+          if other side of entry g in L is Kommunikationsmodul begin;
+       say "Das Fass ist gegen eine Wand gerollt";
+       otherwise;
       say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
        now the fass is in the other side of entry g in L;
+       end if;
        end if;
        end if;
               if the player is in Hangar begin;
