@@ -381,6 +381,12 @@ The Description of Gamma-Delta Korridor is "Who the Fu**, was ist hier passiert?
 Ein Raum voller Spuren von Laserbeschuss. Sogar den Türhebel im Nordosten hat es erwischt.
 Ist das eine Leiche vor der Tür im Nordwesten?".
 
+Leiche is a supporter. Leiche is fixed in place.
+Leiche is in the Gamma-Delta Korridor.
+Kittel is a container. Kittel is on the Leiche.
+Xeno-Karte is a thing. Xeno-Karte is in the Kittel.
+Xeno-Karte unlock Panel. 
+
 
 Gamma-Delta Korridor is a room.
 PanelGDK-DK is an open container in Gamma-Delta Korridor. the panelGDK-DK is unopenable. the panelGDK-DK is fixed in place.  
