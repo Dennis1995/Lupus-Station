@@ -1218,11 +1218,7 @@ every turn:
 		end if;
 	end if;	
 
-[Test-Schleife, schließt am Anfang alle Türen auf, so muss man nicht immer alle Türen entsper- 	en, um den Code zu Testen]
-[when play begins:	
-	repeat with i running through doors:
-		if i is a locked door:
-			now i is unlocked;]
+
 
 
 
@@ -1475,3 +1471,10 @@ Anzeigetafel is thing. Anzeigetafel is in Maschinenraum. It is fixed in place.
 The Description of Anzeigetafel is "Es sind keine Fluchtkapseln mehr auf der Lupus Station vorhanden und es befinden sich 10 Kontaminierte im der Lupusstation. Achtung : Bei Kontakt mit Kontaminierten dringend einen Arzt aufsuchen)".
 
 Generator is a thing. It is fixed in place. It is in Hauptgenerator. The Description is "Dies ist der Hauptgenerator, welches die Station mit Strom versorgt.".
+
+
+[Test-Schleife, schließt am Anfang alle Türen auf, so muss man nicht immer alle Türen entsper- 	en, um den Code zu Testen]
+[when play begins:	
+	repeat with i running through doors:
+		if i is a locked door:
+			now i is unlocked;]
