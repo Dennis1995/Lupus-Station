@@ -119,6 +119,7 @@ Before switching on roter Notrufknopf:
 After switching on roter Notrufknopf:
 	say "Nun wurde der Notruf erfolgreich abgesetzt, hoffentlich kommt bald Hilfe!!!";
 	 now sauerstoffabfallbeginn is 1;
+	 say "Der Sauerstoffstatus ist niedrig.";
 
 Section - Obere Ebene Türen
 
@@ -171,6 +172,9 @@ if something is the Fass begin;
 now fasszustand is 1;
 say "Du hast das Fass umgekippt";
 end if;
+
+Check flipping something which is not the Fass:
+say "Du kannst nur das Fass umkippen" instead. 
 
 
 
