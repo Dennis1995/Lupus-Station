@@ -725,12 +725,10 @@ The Description of TürGK-XL is "Tür zwischen Gamma Kreuzung und Xeno-Labor: Du
 
 
 
-Panel is a locked container in Gamma Kreuzung. the panel is lockable. the panel is fixed in place. the card unlocks the panel. the card is carried by the player.
+Panel is a locked container in Gamma Kreuzung. the panel is lockable. the panel is fixed in place.
 
-Panel2 is a locked container in the Xeno-Labor. Panel2 is lockable. Panel2 is fixed in place. the card unlocks the Panel2.
 
-the panelcounter is a number which varies. 
-the panel2counter is a number which varies.
+the panelcounter is a number which varies.
 
 
 every turn:
