@@ -384,6 +384,7 @@ Ist das eine Leiche vor der Tür im Nordwesten?".
 Leiche is a supporter. Leiche is fixed in place.
 Leiche is in the Gamma-Delta Korridor.
 Kittel is a container. Kittel is on the Leiche.
+Kittel is fixed in place.
 Xeno-Karte is a thing. Xeno-Karte is in the Kittel.
 Xeno-Karte unlock Panel. 
 
