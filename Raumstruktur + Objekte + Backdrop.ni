@@ -2,6 +2,10 @@
 
 The player is in Hangar.
 
+Kontaminierter is a kind of person.
+A Kontaminierter has a number called counter. The counter is usually 0.
+A Kontaminierter has a truth state called aufmerksam. Aufmerksam is usually false.
+
 Barry is a person in Hangar. The description of Barry is "[if the player is Barry]Ich bin Barry der Pilot und streife durch die Lupus-Station. [otherwise]Barry ist der Pilot."
 
 Percy is a person in Hangar. The description of Percy is "[if the player is Percy]Ich bin Percy der Ingenieur und streife durch die Lupus-Station. [otherwise]Percy ist der Ingenieur."
@@ -399,13 +403,15 @@ The Description of Delta Kreuzung is "Was sind das hier für Geräusche, kommen 
 
 Section - Alpha-Delta Korridor
 
-
 Alpha-Delta Korridor is a room.
 The Description of Alpha-Delta Korridor is "Ein Raum mit einem Panel zum Öffnen der Tür, lediglich eine Tür im Nordosten und eine im Südwesten.".
 
 PanelADK-DK is an closed container in Alpha-Delta Korridor. the panelADK-DK is unopenable. the panelADK-DK is fixed in place.
 [---------- Von der Delta Kreuzung kommt man nicht nach süd westen, da kein panel dafür da ist, es geht aber von der anderen
 Seite. Das müsste vielleicht noch in einem beschreibenden Text erwähnt werden, wenn ide Tür locked ist]
+
+Kontaminierter Forscher is a Kontaminierter. Kontaminierter Forscher is in Alpha-Delta Korridor.
+
 
 Section - Alpha Kreuzung 
 
@@ -423,8 +429,10 @@ Section - Alpha-Beta Korridor
 Alpha-Beta Korridor is a room.
 The Description of Alpha-Beta Korridor is "Ein schöner Ausblick nach draußen. In weiter Ferne sieht man ein Raumphänomen.
 Eine weitere Tür, die durch ein Panel geschlossen ist,  befindet sich südöstlich.".
-.
+
 PanelABK-AK is an closed container in Alpha-Beta Korridor. the panelABK-AK is unopenable. the panelABK-AK is fixed in place.
+
+Kontaminierter Igenieur is a Kontaminierter. Kontaminierter Igenieur is in Alpha-Beta Korridor.
 
 
 Section - Beta Kreuzung 
@@ -506,6 +514,8 @@ Med-Labor is a room.
 The Description of Med-Labor is "Das Med-Labor ist spärlich ausgestattet.
 Ein Bett, ein Pult und eine riesige Kabine. Dafür hat man den Blick auf den Maschinekern. "
 
+Kontaminierter Arzt is a Kontaminierter. Kontaminierter Arzt is in Med-Labor.
+
 Krankenbett is an enterable supporter in Med-Labor. Krankenbett is fixed in place. 
 The description of Krankenbett is "Ein Bett für jemand Krankes, es sieht nicht wirklich bequem aus."
 [hier muss vielleicht noch eine Bedingung eingefügt werden, sodass letzendlich nur Percy das Bett nutzen kann]
@@ -562,70 +572,25 @@ Toilette is a supporter. Toilette is in WC-Damen.
 
 Spülkasten is a container. Spülkasten is fixed in place. Spülkasten is on the Toilette.  
 
+[-----Handlaserwaffe---------]
 the Handlaserwaffe is a thing. Handlaserwaffe is in the Spülkasten.
-
-Understand " shoot with [carried thing ] at [something]" as shooting it with.
-Shooting it with is an action applying to one carried thing and one visible thing.
-
-before of shooting:
-if something is a person begin;
-if the person is Barry begin;
-say " Schlechte Idee ";
-stop the action;
-end if;
-if the person is Percy begin;
-say "Schlechte Idee";
-stop the action;
-end if;
-end if;
 
 beseitigteKontaminierte is a room.
 
-instead of shooting:
-if the carried thing is the Handlaserwaffe begin;
-if something is a person begin;
-if the person is Kontaminierter1 begin; 
-now  Kontaminierter1 is in beseitigteKontaminierte; 
-say " der Komtaminierte hat sich in Staub aufgelöst.";
-end if;
-if the person is Kontaminierter2 begin; 
-now Kontaminierter2 is in beseitigteKontaminierte; 
-say " der Komtaminierte hat sich in Staub aufgelöst.";
-end if;
-if the person is Kontaminierter3 begin; 
-now kontaminierter3 is in beseitigteKontaminierte;
-say " der Komtaminierte hat sich in Staub aufgelöst."; 
-end if;
-if the person is Kontaminierter4 begin; 
-now kontaminierter4 is in beseitigteKontaminierte;
- say " der Komtaminierte hat sich in Staub aufgelöst.";
-end if;
-if the person is Kontaminierter5 begin; 
-now kontaminierter5 is in beseitigteKontaminierte; 
- say " der Komtaminierte hat sich in Staub aufgelöst.";
-end if;
-if the person is Kontaminierter6 begin; 
-now kontaminierter6 is in beseitigteKontaminierte; 
- say " der Komtaminierte hat sich in Staub aufgelöst.";
-end if;
-if the person is Kontaminierter7 begin;
-now Kontaminierter7 is in beseitigteKontaminierte;
- say " der Komtaminierte hat sich in Staub aufgelöst.";
-end if;
-if the person is Kontaminierter8 begin; 
-now kontaminierter1 is in beseitigteKontaminierte; 
- say " der Komtaminierte hat sich in Staub aufgelöst.";
-end if;
-if the person is Kontaminierter Kapitän begin;
-now Kontaminierter Kapitän is in beseitigteKontaminierte;
- say " der Komtaminierte hat sich in Staub aufgelöst.";
-end if;
-if the person is Kontaminierter Arzt begin;
-now Kontaminierter Arzt is in beseitigteKontaminierte;
- say " der Komtaminierte hat sich in Staub aufgelöst.";
-end if;
-end if;
-end if;
+Understand " shoot at [something]  with [carried thing]" as shooting it with.
+Shooting it with is an action applying to one visible thing and one carried thing.
+
+Check shooting something with a carried thing which is not Handlaserwaffe:
+	say "Damit kannst du nicht schießen." instead;
+
+Check shooting something which is not a Kontaminierter with a carried thing:
+	say "Schlechte Idee" instead;
+
+beseitigteKontaminierte is a room.
+
+Carry out shooting it with:
+	now the noun is in beseitigteKontaminierte; 
+	say " der Komtaminierte hat sich in Staub aufgelöst.";
 
 
 Section - Dienstraum
@@ -647,6 +612,10 @@ Kommunikationsmodul is a room.
 Kommunikationsmodul is above Hilfsgeneratorraum.
 The Description of Kommunikationsmodul is "Dieser Raum scheint für die Kommunikation der Raumstation  zu sein. Soviele Lwl-Kabel und Stromkabel, die nach oben und unten führen.
 Was ist das eigentlich für ein penetrant leuchtender Knopf?".
+
+Kontaminierter Mann is a Kontaminierter. Kontaminierter Mann is in Besatzungsquartier.
+Kontaminierte Frau is a Kontaminierter. Kontaminierte Frau is in Besatzungsquartier.
+Kontaminierter Informatiker is a Kontaminierter. Kontaminierter Informatiker is in Besatzungsquartier.
 
 
 Section - Umkleideraum
@@ -811,6 +780,7 @@ The Description of Delta-Gewächshaus is "Du befindest dich jetzt im Norden des 
 Ein Raum voller Pflanzen, das sieht man selten im Weltall.
 Ob es im Raum Südöstlich von hier genauso aussieht?".
 
+Kontaminierter Gärtner is a Kontaminierter. Kontaminierter Gärtner is in Delta-Gewächshaus.
 
 [Die Lagebeziehung von den Räumen im inneren und äußeren Ring der unteren Ebene, wird durch den folgenden Befehl
 der vorgegebenen Karte angepasst]
@@ -830,6 +800,8 @@ Section  - Beta-Gewächshaus
 Beta-Gewächshaus is a room.
 The Description of Beta-Gewächshaus is "Du befindest dich jetzt im Süden des äußeren Rings der unteren Ebene.
 Ein Raum wie das Delta Gewächshaus, nur es scheint hier Obst angebaut zu werden.".
+
+Kontaminierte Gärtnerin is a Kontaminierter. Kontaminierte Gärtnerin is in Beta-Gewächshaus.
 
 
 [Untere Ebene - Innerer Ring]
@@ -1240,200 +1212,53 @@ The Description of Fenster is "[if Fenster is in Maschinenraum] Der Maschinenker
 [if Fenster is in Gamma-Delta Korridor] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]".
 
 
-The Kontaminierter1 is a person. The Kontaminierter1 is in the Alpha-Beta Korridor.
+[------Regeln der Kontaminierten -----------]
 
-The Kontaminierter1 can be following. The Kontaminierter1 is not following.
+every turn:
+	repeat with i running through the Kontaminierter:
+		if the location of i is not the location of the player:
+			if aufmerksam of i is false:
+				if the counter of i is greater than 0:
+					now the counter of i is 0;
+			else: 
+			[Falls der Kontaminierte aufmerksam ist, lasse ihn dem Spieler folgen, falls er noch eine Aktion im Raum gemacht hat]
+				if counter of i is 2:
+					say "Kontaminierte sind dir in den nächsten Raum gefolgt";
+					move i to the location of the player;
+					now the counter of i is 0;
+					now aufmerksam of i is false;
+				else:
+					now the counter of i is 0;
+					now aufmerksam of i is false;
+	[-----Erhöht zug counter der Kontaminierten, bei zu vielen zügen ist game over-----]
+	repeat with i running through the Kontaminierter in the location of the player:
+		if aufmerksam of i is true:
+			if counter of i is 2:
+				end the story finally saying "Du hast Kontaminierte auf dich aufmerksam gemacht, und hast dann den Raum nicht rechtzeitig verlassen.";
+		if the counter of i is 3:
+			end the story finally saying "Du warst zu lange mit einem Kontaminierten im selben Raum, er hat dich kontaminiert...";
+		[da beim Wechseln in einen anderen Raum der counter auch erhöht wird, wird die überprüfung vor dem erhöhen gemacht, sodass der zähler beim 4. durchlauf dann auf 3 ist und das spiel beendet wird, alternativ könnte man den zähler bei -1 beginnen lassen]
+		increase the counter of i by 1;
+		
 
+["Mache Geräusch" Aktion, um den Kontaminierten aufmerksam zu machen]		
+Understand "make noise" as making noise.
+Understand "mache Geräusch" as making noise.
+Making noise is an action applying to nothing.
 
-Every turn:
-	if the Kontaminierter1 is not following:
-		if the location is the Alpha-Beta Korridor :
-			say "Ein Kontaminierter. Er verfolgt dich.";
-			now the Kontaminierter1 is following;
-	otherwise if the location of the Kontaminierter1 is not the location of the player:
-		if the the player unlock TürLB-DGH:
-			say "Der Kontaminierter ist stehen geblieben. ";
-			now the Kontaminierter1 is not following;
-		otherwise:
-			say "Der Kontaminierter verfolgt dich!";
-			move the Kontaminierter1 to the location of the player.
-			
-			
-The Kontaminierter2 is a person. The Kontaminierter2 is in the Alpha-Delta Korridor.
+Report making noise:
+	say "Nun sind alle Kontaminierten im Raum aufmerksam."
+	
+Before making noise:
+	if Alarm is in the location of the player:
+		say "Der Alarm ist im Moment eingeschaltet, kein normales Geräusch kann ihn übertönen." instead;
+	
+Carry out making noise:
+	[------setzt boolean aufmerksam der Kontaminierten auf true, falls kein Alarm da ist.-----]
+	repeat with i running through the Kontaminierter in the location of the player:
+		now aufmerksam of i is true;
+		now the counter of i is 0;
 
-The Kontaminierter2 can be following. The Kontaminierter2 is not following.
-
-
-Every turn:
-	if the Kontaminierter2 is not following:
-		if the location is the Alpha-Delta Korridor :
-			say "Ein Kontaminierter. Er verfolgt dich.";
-			now the Kontaminierter2 is following;
-	otherwise if the location of the Kontaminierter2 is not the location of the player:
-		if the the player unlock TürLB-DGH:
-			say "Der Kontaminierter ist stehen geblieben. ";
-			now the Kontaminierter2 is not following;
-		otherwise:
-			say "Der Kontaminierter verfolgt dich!";
-			move the Kontaminierter2 to the location of the player.
-			
-			
-The Kontaminierter Arzt is a person. The Kontaminierter Arzt is in the Med-Labor.
-
-The Kontaminierter Arzt can be following. The Kontaminierter Arzt is not following.
-
-
-Every turn:
-	if the Kontaminierter Arzt is not following:
-		if the location is the Med-Labor :
-			say "Ein Kontaminierter. Er verfolgt dich.";
-			now the Kontaminierter Arzt is following;
-	otherwise if the location of the Kontaminierter Arzt is not the location of the player:
-		if the the player unlock TürLB-DGH:
-			say "Der Kontaminierter ist stehen geblieben. ";
-			now the Kontaminierter Arzt is not following;
-		otherwise:
-			say "Der Kontaminierter verfolgt dich!";
-			move the Kontaminierter Arzt to the location of the player.
-
-[------------------3 x Kontaminierte im Besatzungsquartier-----------------------------]			
-
-The Kontaminierter3 is a person. The Kontaminierter3 is in the Besatzungsquartier.
-
-The Kontaminierter3 can be following. The Kontaminierter3 is not following.
-
-
-Every turn:
-	if the Kontaminierter3 is not following:
-		if the location is the Besatzungsquartier :
-			say "Ein Kontaminierter. Er verfolgt dich.";
-			now the Kontaminierter3 is following;
-	otherwise if the location of the Kontaminierter3 is not the location of the player:
-		if the the player unlock TürLB-DGH:
-			say "Der Kontaminierter ist stehen geblieben. ";
-			now the Kontaminierter3 is not following;
-		otherwise:
-			say "Der Kontaminierter verfolgt dich!";
-			move the Kontaminierter3 to the location of the player.
-			
-
-The Kontaminierter4 is a person. The Kontaminierter4 is in the Besatzungsquartier.
-
-The Kontaminierter4 can be following. The Kontaminierter4 is not following.
-
-
-Every turn:
-	if the Kontaminierter4 is not following:
-		if the location is the Besatzungsquartier :
-			say "Ein Kontaminierter. Er verfolgt dich.";
-			now the Kontaminierter4 is following;
-	otherwise if the location of the Kontaminierter4 is not the location of the player:
-		if the the player unlock TürLB-DGH:
-			say "Der Kontaminierter ist stehen geblieben. ";
-			now the Kontaminierter4 is not following;
-		otherwise:
-			say "Der Kontaminierter verfolgt dich!";
-			move the Kontaminierter4 to the location of the player.
-			
-			
-The Kontaminierter5 is a person. The Kontaminierter5 is in the Besatzungsquartier.
-
-The Kontaminierter5 can be following. The Kontaminierter5 is not following.
-
-
-Every turn:
-	if the Kontaminierter5 is not following:
-		if the location is the Besatzungsquartier :
-			say "Ein Kontaminierter. Er verfolgt dich.";
-			now the Kontaminierter5 is following;
-	otherwise if the location of the Kontaminierter5 is not the location of the player:
-		if the the player unlock TürLB-DGH:
-			say "Der Kontaminierter ist stehen geblieben. ";
-			now the Kontaminierter5 is not following;
-		otherwise:
-			say "Der Kontaminierter verfolgt dich!";
-			move the Kontaminierter5 to the location of the player.
-
-
-[---------------2 x Kontaminierte auf der Unteren Ebene---------------]
-
-The Kontaminierter6 is a person. The Kontaminierter6 is in the Delta-Gewächshaus.
-
-The Kontaminierter6 can be following. The Kontaminierter6 is not following.
-
-Every turn:
-	if the Kontaminierter6 is not following:
-		if the location is the Delta-Gewächshaus :
-			say "Ein Kontaminierter. Er verfolgt dich.";
-			now the Kontaminierter6 is following;
-	otherwise if the location of the Kontaminierter6 is not the location of the player:
-		if the the player unlock TürLB-DGH:
-			say "Der Kontaminierter ist stehen geblieben. ";
-			now the Kontaminierter6 is not following;
-		otherwise:
-			say "Der Kontaminierter verfolgt dich!";
-			move the Kontaminierter6 to the location of the player.
-
-
-
-The Kontaminierter7 is a person. The Kontaminierter7 is in the Beta-Gewächshaus.
-
-The Kontaminierter7 can be following. The Kontaminierter7 is not following.
-
-
-Every turn:
-	if the Kontaminierter7 is not following:
-		if the location is the Beta-Gewächshaus :
-			say "Ein Kontaminierter. Er verfolgt dich.";
-			now the Kontaminierter7 is following;
-	otherwise if the location of the Kontaminierter7 is not the location of the player:
-		if the the player unlock TürLB-DGH:
-			say "Der Kontaminierter ist stehen geblieben. ";
-			now the Kontaminierter7 is not following;
-		otherwise:
-			say "Der Kontaminierter verfolgt dich!";
-			move the Kontaminierter7 to the location of the player.
-
-
-[------------------------2 x Kontaminierte auf der Brücke-------------------------------]
-The Kontaminierter Kapitän is a person. The Kontaminierter Kapitän is in the Brücke.
-
-The Kontaminierter Kapitän can be following. The Kontaminierter Kapitän is not following.
-
-
-Every turn:
-	if the Kontaminierter Kapitän is not following:
-		if the location is the Brücke :
-			say "Ein Kontaminierter. Er verfolgt dich.";
-			now the Kontaminierter Kapitän is following;
-	otherwise if the location of the Kontaminierter Kapitän is not the location of the player:
-		if the the player unlock TürLB-DGH:
-			say "Der Kontaminierter ist stehen geblieben. ";
-			now the Kontaminierter Kapitän is not following;
-		otherwise:
-			say "Der Kontaminierter verfolgt dich!";
-			move the Kontaminierter Kapitän to the location of the player.
-			
-			
-			
-The Kontaminierter8 is a person. The Kontaminierter8 is in the Brücke.
-
-The Kontaminierter8 can be following. The Kontaminierter8 is not following.
-
-
-
-Every turn:
-	if the Kontaminierter8 is not following:
-		if the location is the Brücke :
-			say "Ein Kontaminierter. Er verfolgt dich.";
-			now the Kontaminierter8 is following;
-	otherwise if the location of the Kontaminierter8 is not the location of the player:
-		if the the player unlock TürLB-DGH:
-			say "Der Kontaminierter ist stehen geblieben. ";
-			now the Kontaminierter8 is not following;
-		otherwise:
-			say "Der Kontaminierter verfolgt dich!";
-			move the Kontaminierter8 to the location of the player.
 
 [Sauerstoffabfall]
 
