@@ -1232,10 +1232,10 @@ every turn:
 	repeat with i running through the Kontaminierter in the location of the player:
 		if aufmerksam of i is true:
 			if counter of i is 2:
-				end the story finally saying "Du hast Kontaminierte auf dich aufmerksam gemacht, und hast dann den Raum nicht rechtzeitig verlassen.";
+				end the story finally saying "Du hast Kontaminierte auf dich aufmerksam gemacht, und hast dann den Raum nicht rechtzeitig verlassen. Du wurdest somit kontaminiert";
 		if the counter of i is 3:
 			end the story finally saying "Du warst zu lange mit einem Kontaminierten im selben Raum, er hat dich kontaminiert...";
-		[da beim Wechseln in einen anderen Raum der counter auch erhöht wird, wird die überprüfung vor dem erhöhen gemacht, sodass der zähler beim 4. durchlauf dann auf 3 ist und das spiel beendet wird, alternativ könnte man den zähler bei -1 beginnen lassen]
+		[da beim Wechseln in einen anderen Raum der counter auch erhöht wird, wird die überprüfung vor dem erhöhen gemacht, sodass der zähler beim 4. durchlauf(der Schleife, nicht verwechseln, der Spieler kann trotzdem nur 3 Aktionen machen) dann auf 3 ist und das spiel beendet wird, alternativ könnte man den zähler bei -1 beginnen lassen]
 		increase the counter of i by 1;
 		
 
