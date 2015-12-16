@@ -586,8 +586,6 @@ Check shooting something with a carried thing which is not Handlaserwaffe:
 Check shooting something which is not a Kontaminierter with a carried thing:
 	say "Schlechte Idee" instead;
 
-beseitigteKontaminierte is a room.
-
 Carry out shooting it with:
 	now the noun is in beseitigteKontaminierte; 
 	say " der Komtaminierte hat sich in Staub aufgelöst.";
