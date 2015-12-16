@@ -529,7 +529,7 @@ Alarm is a backdrop in Alarm-reg.
 
 every turn:
 	if Alarm is in the location of the player:
-		say "ALARM ALARM";
+		say "ALARM ALARM[paragraph break]";
 	
 [after switching off Blinkender Knof:
 now the alarm is nowhere.
