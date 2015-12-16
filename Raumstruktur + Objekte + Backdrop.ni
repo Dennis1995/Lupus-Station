@@ -908,8 +908,6 @@ HG-Knopf is fixed in place. The description of HG-Knopf is "Hmm... soll dieser K
 After switching on HG-Knopf:
 	say "Nun ist der Hilfsgenerator eingeschaltet.";
 	now the mikrofonzaehler is 0;
-	now the Player is Barry;
-	now the player is in Brücke;
 	
 After switching off HG-Knopf:
 	say "Nun ist der Hilfsgenerator abgeschaltet.";
