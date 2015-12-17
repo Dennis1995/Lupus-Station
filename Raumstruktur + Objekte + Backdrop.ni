@@ -1211,7 +1211,7 @@ The Description of Fenster is "[if Fenster is in Maschinenraum] Der Maschinenker
 
 
 [------Regeln der Kontaminierten -----------]
-
+ausgabe is a truth state that varies. ausgabe is false.
 every turn:
 	repeat with i running through the Kontaminierter:
 		if the location of i is not the location of the player:
@@ -1221,13 +1221,19 @@ every turn:
 			else: 
 			[Falls der Kontaminierte aufmerksam ist, lasse ihn dem Spieler folgen, falls er noch eine Aktion im Raum gemacht hat]
 				if counter of i is 2:
-					say "Kontaminierte sind dir in den nächsten Raum gefolgt";
+					if ausgabe is true:
+						say "Kontaminierte sind dir in den nächsten Raum gefolgt.";
+						now ausgabe is false;
 					move i to the location of the player;
 					now the counter of i is 0;
 					now aufmerksam of i is false;
-				else:
-					now the counter of i is 0;
-					now aufmerksam of i is false;
+		[Else Teil, musste in eine adnere Schleife, damit die ausgabe variable zum richtigen Zeitpunkt zurückgesetzt wird...]
+	repeat with i running through the Kontaminierter:
+		if the location of i is not the location of the player:
+			if the counter of i is greater than 0:
+				now the counter of i is 0;
+				now aufmerksam of i is false;
+				now ausgabe is false;
 	[-----Erhöht zug counter der Kontaminierten, bei zu vielen zügen ist game over-----]
 	repeat with i running through the Kontaminierter in the location of the player:
 		if aufmerksam of i is true:
@@ -1247,15 +1253,29 @@ Making noise is an action applying to nothing.
 Report making noise:
 	say "Nun sind alle Kontaminierten im Raum aufmerksam."
 	
+RoomCounter is a number which varies.
+
 Before making noise:
+	[Wenn kein Kontaminierter im Raum ist, kann die Aktion nicht gemacht werden, ansonsten führt es zu einem Bug...]
+	repeat with i running through the Kontaminierter:
+		if i is in the location of the player:
+			increase RoomCounter by 1;
+	if RoomCounter is 0:
+		say "Kein Kontaminierter kann deine Geräusche hören." instead;
+	if RoomCounter is greater than 0:
+		now RoomCounter is 0;
 	if Alarm is in the location of the player:
 		say "Der Alarm ist im Moment eingeschaltet, kein normales Geräusch kann ihn übertönen." instead;
+	if ausgabe is true:
+		say "Einmal Krach machen reicht." instead;
+	
 	
 Carry out making noise:
 	[------setzt boolean aufmerksam der Kontaminierten auf true, falls kein Alarm da ist.-----]
 	repeat with i running through the Kontaminierter in the location of the player:
 		now aufmerksam of i is true;
 		now the counter of i is 0;
+	now ausgabe is true;
 
 
 [Sauerstoffabfall]
