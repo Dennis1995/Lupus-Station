@@ -95,16 +95,17 @@ The description of Antennenjustierung is "Das scheint ein Schalter für die auto
 roter Notrufknopf is a device. roter Notrufknopf is fixed in place. roter Notrufknopf is switched off.
 The description of roter Notrufknopf is "Ob man mit diesem Knopf wohl einen Notruf absetzen kann?".
 
-Instead of switching on Antennenjustierung:
-	if notrufcounter is 0 begin;
+IInstead of switching on Antennenjustierung:
+	if notrufcounter is 2:
+		say "Die Antenne ist schon justiert.";
+	if notrufcounter is 0:
 		increase notrufcounter by 1;
 		say "Das hat wohl nicht geklappt, vielleicht sollte ich es nochmal probieren?" instead; [instead wird benötigt, damit die zweite Bedingung nicht auch geprüft wird, die wäre ja dann true, also einmal drücken und die Justierung würde dann funktionieren -> Sinn nicht erfüllt]
-	end if;
-	if notrufcounter is 1 begin;
+	if notrufcounter is 1:
 		now Antennenjustierung is switched on;
 		say "Dieses mal hat es wohl funktioniert und die Antenne ist justiert. Was ist das? Ein roter Knopf? War der vorher auch schon hier?";
 		now roter Notrufknopf is in Antennenfeld L;
-	end if;
+		increase notrufcounter by 1;
 
 [------ Fängt Szenarien ab, in dennen der Hilfsgenerator aus ist und versucht wird der Notruf abzusetzen]
 
@@ -116,6 +117,8 @@ Before switching on Antennenjustierung:
 		say "Nichts passiert. Der Raum wirkt auch so gut wie nicht beleuchtet. Komisch, als wäre ein Stromausfall, vielleicht sollte ich erst für eine aussreichende Energieversorgung sorgen." instead.
 		
 Before switching on roter Notrufknopf:
+	if sauerstoffabfallbeginn is 1:
+		say "Der Notruf wurde bereits abgesetzt." instead;
 	if HG-Knopf is switched off:
 		say "Nichts passiert. Der Raum wirkt auch so gut wie nicht beleuchtet. Komisch, als wäre ein Stromausfall, vielleicht sollte ich erst für eine aussreichende Energieversorgung sorgen." instead.
 		
@@ -1317,7 +1320,7 @@ if the Oxygencounter is not -1 begin;
          end the story;
          end if;
                  if the sauerstoffabfallbeginn is 1 begin;
-                 say "Du hast noch [Oxygencounter] Spielzüge Zeit";
+                 say "Du hast noch [Oxygencounter] Spielzüge Zeit, um die Lupus Station zu verlassen.";
                  decrease Oxygencounter by 1; 
                  end if;
 end if;
