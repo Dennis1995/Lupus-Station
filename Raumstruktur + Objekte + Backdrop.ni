@@ -573,6 +573,8 @@ Grüne Phiole is a thing. Grüne Phiole is in Wandpanel.
 After switching on Blinkender Knopf:
 	say "Endlich Ruhe... Warte was hat sich dort geöffnet ...";
 	now Wandpanel is open;
+	now Alarm is nowhere;
+	now Blinkender Knopf is switched off;
 
 Scherben is a thing. Scherben is fixed in place. The description of Scherben is "Was ist denn hier passiert???"
 
