@@ -571,8 +571,11 @@ Wandpanel is a closed container in Xeno-Labor. the Wandpanel is unopenable. the 
 Grüne Phiole is a thing. Grüne Phiole is in Wandpanel. 
 
 After switching on Blinkender Knopf:
-	say "Endlich Ruhe... Warte was hat sich dort geöffnet ...";
-	now Wandpanel is open;
+	if Wandpanel is closed:
+		say "Endlich Ruhe... Warte was hat sich dort geöffnet ...";
+		now Wandpanel is open;
+	if Wandpanel is open:
+		say "Endlich Ruhe...";
 	now Alarm is nowhere;
 	now Blinkender Knopf is switched off;
 
