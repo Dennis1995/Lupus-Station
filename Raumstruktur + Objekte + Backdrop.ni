@@ -560,7 +560,24 @@ The Description of Xeno-Labor is "Beeindruckend, wie blau der leuchtet.
 Was ist das für eine seltsame Maschine, wofür die bloß da ist?
 Schaltet der blinkende Knopf diese an?".
 
+Blinkender Knopf is a device.Blinkender Knopf is on Seltsame Maschine.Blinkender Knopf is fixed in place.
+Blinkender Knopf is switched off. The description of Blinkender Knopf is "Vielleicht hört der Alarm auf, wenn ich den Knopf drücke!". Blinkender Knopf is undescribed.
+Seltsame Maschine is a supporter. Seltsame Maschine is in Xeno-Labor. The description of Seltsame Maschine is "Was das bloß für eine Maschine ist?"
+Seltsame Maschine is fixed in place.
 
+Wandpanel is an closed container in Xeno-Labor. the Wandpanel is unopenable. the Wandpanel is fixed in place. 
+Grüne Phiole is a thing. Grüne Phiole is in Wandpanel. 
+
+After switching on Blinkender Knopf:
+say "Endlich Ruhe... Warte was hat sich dort geöffnet ...";
+now Wandpanel is open;
+
+Scherben is a thing. Scherben is fixed in place.
+
+Instead of taking Grüne Phiole:
+say "Neiiiiin.... Ich habe es fallen gelassen. Was sind das für komische Dämpfe? Oh ... mir ... geht ... es .. garnicht... gut...";
+now Grüne Phiole is nowhere;
+now Scherben is in Xeno-Labor;
 
 Section - WC-Damen
 
