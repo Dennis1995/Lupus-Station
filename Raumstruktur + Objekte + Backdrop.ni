@@ -95,7 +95,7 @@ The description of Antennenjustierung is "Das scheint ein Schalter für die auto
 roter Notrufknopf is a device. roter Notrufknopf is fixed in place. roter Notrufknopf is switched off.
 The description of roter Notrufknopf is "Ob man mit diesem Knopf wohl einen Notruf absetzen kann?".
 
-IInstead of switching on Antennenjustierung:
+Instead of switching on Antennenjustierung:
 	if notrufcounter is 2:
 		say "Die Antenne ist schon justiert.";
 	if notrufcounter is 0:
