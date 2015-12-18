@@ -571,11 +571,11 @@ Wandpanel is a closed container in Xeno-Labor. the Wandpanel is unopenable. the 
 Grüne Phiole is a thing. Grüne Phiole is in Wandpanel. 
 
 After switching on Blinkender Knopf:
+	if Wandpanel is open:
+		say "Endlich Ruhe...";
 	if Wandpanel is closed:
 		say "Endlich Ruhe... Warte was hat sich dort geöffnet ...";
 		now Wandpanel is open;
-	if Wandpanel is open:
-		say "Endlich Ruhe...";
 	now Alarm is nowhere;
 	now Blinkender Knopf is switched off;
 
@@ -1211,7 +1211,7 @@ Szene 1 is a scene. "Szene 1: Böses Willkommen[paragraph break]Die Lupus-Statio
 Szene 1 begins when play begins.
 Szene 1 ends when the player is Barry.
 
-Szene 2 is a scene. "(Du spielst nun Barry) So alles erledigt. Komisch, irgendwie habe ich noch keine Menschenseele auf dieser Station gesehen. Und wo ist überhaupt Percy abgeblieben? Vielleicht sollte ich mal nachschauen wie es bei ihm läuft."
+Szene 2 is a scene. "Szene 2: Percy hat ein Problem[paragraph break](Du spielst nun Barry) So alles erledigt. Komisch, irgendwie habe ich noch keine Menschenseele auf dieser Station gesehen. Und wo ist überhaupt Percy abgeblieben? Vielleicht sollte ich mal nachschauen wie es bei ihm läuft."
 Szene 2 begins when the player is Barry.
 
 [Backdrop]
