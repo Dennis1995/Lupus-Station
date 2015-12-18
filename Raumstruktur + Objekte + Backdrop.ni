@@ -85,7 +85,7 @@ Section - Antennenfeld L
 
 Antennenfeld L is a room. 
 Antennenfeld L is above Kommunikationsmodul.
-The Description of AntennenfeldL is "Über diesem Raum scheinen die Antennen der Forschungsstation zu sein. Ein großer roter Knopf…der scheint wichtig zu sein.".
+The Description of Antennenfeld L is "Über diesem Raum scheinen die Antennen der Forschungsstation zu sein. Ein großer roter Knopf…der scheint wichtig zu sein.".
 [counter für das Abstezen des Notrufes]
 notrufcounter is a number which varies.
 
