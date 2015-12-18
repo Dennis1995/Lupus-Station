@@ -555,29 +555,34 @@ The Description of Solar-Labor is "Dies scheint auch ein Forschungsraum zu sein.
 
 Section - Xeno-Labor
 
+Kontaminierter Percy is a Kontaminierter. The description of Kontaminierter Percy is "Ist das Percy? Was ist mit ihm passiert? Er steht nur da mit einem starren Blick..."
+
 Xeno-Labor is a room.
 The Description of Xeno-Labor is "Beeindruckend, wie blau der leuchtet.
 Was ist das für eine seltsame Maschine, wofür die bloß da ist?
 Schaltet der blinkende Knopf diese an?".
 
-Blinkender Knopf is a device.Blinkender Knopf is on Seltsame Maschine.Blinkender Knopf is fixed in place.
+Blinkender Knopf is a device. Blinkender Knopf is on Seltsame Maschine. Blinkender Knopf is fixed in place.
 Blinkender Knopf is switched off. The description of Blinkender Knopf is "Vielleicht hört der Alarm auf, wenn ich den Knopf drücke!". Blinkender Knopf is undescribed.
 Seltsame Maschine is a supporter. Seltsame Maschine is in Xeno-Labor. The description of Seltsame Maschine is "Was das bloß für eine Maschine ist?"
 Seltsame Maschine is fixed in place.
 
-Wandpanel is an closed container in Xeno-Labor. the Wandpanel is unopenable. the Wandpanel is fixed in place. 
+Wandpanel is a closed container in Xeno-Labor. the Wandpanel is unopenable. the Wandpanel is fixed in place. 
 Grüne Phiole is a thing. Grüne Phiole is in Wandpanel. 
 
 After switching on Blinkender Knopf:
-say "Endlich Ruhe... Warte was hat sich dort geöffnet ...";
-now Wandpanel is open;
+	say "Endlich Ruhe... Warte was hat sich dort geöffnet ...";
+	now Wandpanel is open;
 
-Scherben is a thing. Scherben is fixed in place.
+Scherben is a thing. Scherben is fixed in place. The description of Scherben is "Was ist denn hier passiert???"
 
 Instead of taking Grüne Phiole:
-say "Neiiiiin.... Ich habe es fallen gelassen. Was sind das für komische Dämpfe? Oh ... mir ... geht ... es .. garnicht... gut...";
-now Grüne Phiole is nowhere;
-now Scherben is in Xeno-Labor;
+	say "Neiiiiin.... Ich habe es fallen gelassen. Was sind das für komische Dämpfe? Oh ... mir ... geht ... es .. garnicht... gut...";
+	now Grüne Phiole is nowhere;
+	now Scherben is in Xeno-Labor;
+	now the player is Barry;
+	now Kontaminierter Percy is in Xeno-Labor;
+	now Percy is nowhere;
 
 Section - WC-Damen
 
@@ -1201,7 +1206,7 @@ Szene 1 is a scene. "Szene 1: Böses Willkommen[paragraph break]Die Lupus-Statio
 Szene 1 begins when play begins.
 Szene 1 ends when the player is Barry.
 
-Szene 2 is a scene.
+Szene 2 is a scene. "(Du spielst nun Barry) So alles erledigt. Komisch, irgendwie habe ich noch keine Menschenseele auf dieser Station gesehen. Und wo ist überhaupt Percy abgeblieben? Vielleicht sollte ich mal nachschauen wie es bei ihm läuft."
 Szene 2 begins when the player is Barry.
 
 [Backdrop]
