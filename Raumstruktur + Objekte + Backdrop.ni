@@ -530,9 +530,11 @@ Instead of switching on Dekon-Knopf:
 	let Liste be the list of  Kontaminierter in Med-Labor;
 	let anzahl be the number of entries in Liste;
 	let g be a random number from 1 to anzahl;
-	if Dekontaminationskabine is open:
+	if Szene 2 has ended:
+		say "Durch den Hauptenergieabfall ist die Kabine nicht mehr funktionstüchtig.";
+	else if Dekontaminationskabine is open:
 		now Dekontaminationskabine is closed;
-		say "Die Kabine wurde erfolgreich geschlossen."
+		say "Die Kabine wurde erfolgreich geschlossen, die Dekontamination wird eingeleitet."
 	else if anzahl is 0:
 		say "Es gibt keine Kontaminierten im Raum, welche dekontaminiert werden müssten";
 	else:
