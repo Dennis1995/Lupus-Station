@@ -1249,6 +1249,7 @@ Szene 1 ends when the player is Barry.
 
 Szene 2 is a scene. "Szene 2: Percy hat ein Problem[paragraph break](Du spielst nun Barry) So alles erledigt. Komisch, irgendwie habe ich noch keine Menschenseele auf dieser Station gesehen. Und wo ist überhaupt Percy abgeblieben? Vielleicht sollte ich mal nachschauen wie es bei ihm läuft."
 Szene 2 begins when the player is Barry.
+Szene 2 ends when Percy is on Krankenbett.
 
 Szene 3 is a scene. "Szene 3: Kommt alle zusammen[paragraph break]Percy ist nach der Heilung noch ein wenig verwirrt, lässt sich aber bereitwillig von Barry auf den aktuellen Stand bringen. Allem Anschein sind sonst alle auf der Sation kontaminiert, denn selbst die Brücke reagiert nicht auf Kommunikationsversuche. Sie beschließen, das Personal der Station zu retten. Leider ist Percy noch sehr schwindelig, so dass er sich im Med‐Lab auf das Krankenbett legen muss. Zu allem Unglück stellt Barry nun einen Hauptenergieabfall auf der Station fest (der ehemals blau glühende Maschinenkern leuchtet nun grün). Die Dekontaminationskabine ist damit nun außer Betrieb. Die Beschaltung der Kabine kann er leider nicht ohne eine ganze Wartungsmannschaft umbauen.[line break]Er kommt zu der Einsicht, dass Hilfe von außen hinzukommen muss. Dazu muss ein Notruf abgesetzt werden. Das Kommunikationsmodul hat einen eigenen Hilfsgenerator, so dass das kein Problem sein sollte ‐ aber das ist der zweite Schritt. Zunächst einmal müssen die Dekontaminierten gesammelt werden. Der am besten geeignete Raum scheint das Lager auf dem Unterdeck zu sein. Man muss sie nur alle dorthin locken und die drei Türen schließen."
 Szene 3 begins when Percy is on Krankenbett.
@@ -1256,10 +1257,14 @@ Szene 3 begins when Percy is on Krankenbett.
 [Backdrop]
 	
 Fenster is a backdrop. It is in Maschinenraum and in Solar-Labor and in Xeno-Labor and in Med-Labor and in Alpha-Beta Korridor and in Energiespeicher and in Lagerraum and in Delta-Gewächshaus and in Lager and in Beta-Gewächshaus and in Gamma Kreuzung and in Gamma-Beta Korridor and in Beta Kreuzung and in Alpha-Beta Korridor and in Alpha Kreuzung and in Alpha-Delta Korridor and in Delta Kreuzung and in Gamma-Delta Korridor. 
-The Description of Fenster is "[if Fenster is in Maschinenraum] Der Maschinenkern leuchtet blau.[end if]
-[if Fenster is in Solar-Labor] Der Maschinenkern leuchtet blau [end if]
-[if Fenster is in Xeno-Labor] Der Maschinenkern leuchtet blau.[end if]
-[if Fenster is in Med-Labor] Der Maschinenkern leuchtet blau.[end if] 
+The Description of Fenster is "[if Fenster is in Maschinenraum and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if]
+[if Fenster is in Maschinenraum and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if]
+[if Fenster is in Solar-Labor and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if]
+[if Fenster is in Solar-Labor and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if]
+[if Fenster is in Xeno-Labor and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if]
+[if Fenster is in Xeno-Labor and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if]
+[if Fenster is in Med-Labor and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if] 
+[if Fenster is in Med-Labor and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if] 
 [if Fenster is in Alpha-Beta Korridor] Wow! Das Raumphänomen ist beeindruckend, ich habe nie was spektakuläreres gesehen. Nur Schade, dass dies hier nur ein Text-Adventure ist. [end if]
 [if Fenster is in Energiespeicher] Wow! Das Raumphänomen ist beeindruckend, ich habe nie was spektakuläreres gesehen. Nur Schade, dass dies hier nur ein Text-Adventure ist. [end if]
 [if Fenster is in Lagerraum] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]
