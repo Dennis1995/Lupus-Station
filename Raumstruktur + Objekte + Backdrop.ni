@@ -518,7 +518,7 @@ The Description of Med-Labor is "Das Med-Labor ist spärlich ausgestattet.
 Ein Bett, ein Pult und eine riesige Kabine. Dafür hat man den Blick auf den Maschinekern. "
 
 [---------Dekontaminationskabine---------]
-Dekontaminationskabine is an enterable container in Med-Labor. The carrying capacity of Dekontaminationskabine is 1. 
+Dekontaminationskabine is an enterable container in Med-Labor. The carrying capacity of Dekontaminationskabine is 0. 
 Dekon-Knopf is a device. Dekon-Knopf is fixed in place. The Dekontaminationskabine is openable. Dekontaminationskabine is open.
 Dekon-Knopf is in Med-Labor. The description of Dekon-Knopf is "Dieser Knopf öffnet wohl die Kabine und lockt einen Kontaminierten hinein."
 The description of Dekontaminationskabine is "Mit dieser Kabine können Kontaminierte dekontaminiert werden. Der dazugehöirge Dekon-Knopf öffnet die Kabine.[if Szene 1 is happening] Am besten dekontaminiere ich erstmal meinen Freund Percy."
