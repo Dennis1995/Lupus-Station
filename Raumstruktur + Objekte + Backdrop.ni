@@ -533,8 +533,6 @@ Instead of switching on Dekon-Knopf:
 	if Dekontaminationskabine is open:
 		now Dekontaminationskabine is closed;
 		say "Die Kabine wurde erfolgreich geschlossen."
-	if a Kontaminierter is in Dekontaminationskabine:
-		say "Es ist bereits ein Kontaminierter in der Kabine.";
 	else if anzahl is 0:
 		say "Es gibt keine Kontaminierten im Raum, welche dekontaminiert werden müssten";
 	else:
