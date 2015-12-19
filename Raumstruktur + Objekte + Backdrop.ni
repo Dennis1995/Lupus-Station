@@ -517,6 +517,39 @@ Med-Labor is a room.
 The Description of Med-Labor is "Das Med-Labor ist spärlich ausgestattet.
 Ein Bett, ein Pult und eine riesige Kabine. Dafür hat man den Blick auf den Maschinekern. "
 
+[---------Dekontaminationskabine---------]
+Dekontaminationskabine is an enterable container in Med-Labor. The carrying capacity of Dekontaminationskabine is 1. 
+Dekon-Knopf is a device. Dekon-Knopf is fixed in place. The Dekontaminationskabine is openable. Dekontaminationskabine is open.
+Dekon-Knopf is in Med-Labor. The description of Dekon-Knopf is "Dieser Knopf öffnet wohl die Kabine und lockt einen Kontaminierten hinein."
+The description of Dekontaminationskabine is "Mit dieser Kabine können Kontaminierte dekontaminiert werden. Der dazugehöirge Dekon-Knopf öffnet die Kabine.[if Szene 1 is happening] Am besten dekontaminiere ich erstmal meinen Freund Percy."
+
+Instead of entering Dekontaminationskabine:
+	say "Ich bin doch gar nicht kontaminiert, vielleicht sollte ich den Knopf drücken, damit Kontaminierte angelockt werden."
+	
+Instead of switching on Dekon-Knopf:
+	let Liste be the list of  Kontaminierter in Med-Labor;
+	let anzahl be the number of entries in Liste;
+	let g be a random number from 1 to anzahl;
+	if a Kontaminierter is in Dekontaminationskabine:
+		say "Es ist bereits ein Kontaminierter in der Kabine.";
+	else if Dekontaminationskabine is closed:
+		say "Mit geschlossener Tür kann kein Kontaminierter in die Kabine gelockt werden.";
+	else if anzahl is 0:
+		say "Es gibt keine Kontaminierten im Raum, welche dekontaminiert werden müssten";
+	else:
+		now entry g of Liste is in Dekontaminationskabine;
+		say "Nun ist [entry g of Liste] in der Dekontaminationskabine.[paragraph break]";
+
+every turn:
+[----was passiert, wenn ein Kontaminierter in der Kabine ist und die Tür geschlossen wurde----]
+	if Dekontaminationskabine is closed:
+		if a Kontaminierter is in Dekontaminationskabine:
+			if the person in Dekontaminationskabine is not Kontaminierter Percy:
+				end the story finally saying "Du hast jemand anderes als Percy dekontaminiert, er ist aber der einzige, der dir hätte weiterhelfen können.";
+			else:
+				now Kontaminierter Percy is nowhere;
+				now Percy is on Krankenbett;
+
 Kontaminierter Arzt is a Kontaminierter. Kontaminierter Arzt is in Med-Labor.
 
 Krankenbett is an enterable supporter in Med-Labor. Krankenbett is fixed in place. 
