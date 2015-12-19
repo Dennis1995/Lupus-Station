@@ -519,8 +519,8 @@ Ein Bett, ein Pult und eine riesige Kabine. Dafür hat man den Blick auf den Mas
 
 [---------Dekontaminationskabine---------]
 Dekontaminationskabine is an enterable container in Med-Labor. The carrying capacity of Dekontaminationskabine is 0. 
-Dekon-Knopf is a device. Dekon-Knopf is fixed in place. The Dekontaminationskabine is openable. Dekontaminationskabine is open.
-Dekon-Knopf is in Med-Labor. The description of Dekon-Knopf is "Dieser Knopf öffnet wohl die Kabine und lockt einen Kontaminierten hinein."
+Dekon-Knopf is a device. Dekon-Knopf is fixed in place. The Dekontaminationskabine is openable. Dekontaminationskabine is closed.
+Dekon-Knopf is in Med-Labor. The description of Dekon-Knopf is "Dieser Knopf öffnet wohl die Kabine und lockt einen Kontaminierten hinein. Danach kann man durch erneutes Drücken die Kabine wieder schließen."
 The description of Dekontaminationskabine is "Mit dieser Kabine können Kontaminierte dekontaminiert werden. Der dazugehöirge Dekon-Knopf öffnet die Kabine.[if Szene 1 is happening] Am besten dekontaminiere ich erstmal meinen Freund Percy."
 
 Instead of entering Dekontaminationskabine:
@@ -530,15 +530,23 @@ Instead of switching on Dekon-Knopf:
 	let Liste be the list of  Kontaminierter in Med-Labor;
 	let anzahl be the number of entries in Liste;
 	let g be a random number from 1 to anzahl;
+	if Dekontaminationskabine is open:
+		now Dekontaminationskabine is closed;
+		say "Die Kabine wurde erfolgreich geschlossen."
 	if a Kontaminierter is in Dekontaminationskabine:
 		say "Es ist bereits ein Kontaminierter in der Kabine.";
-	else if Dekontaminationskabine is closed:
-		say "Mit geschlossener Tür kann kein Kontaminierter in die Kabine gelockt werden.";
 	else if anzahl is 0:
 		say "Es gibt keine Kontaminierten im Raum, welche dekontaminiert werden müssten";
 	else:
 		now entry g of Liste is in Dekontaminationskabine;
 		say "Nun ist [entry g of Liste] in der Dekontaminationskabine.[paragraph break]";
+		now Dekontaminationskabine is open;
+		
+Instead of opening Dekontaminationskabine:
+	say "Dafür ist der Dekon-Knopf gedacht.";
+	
+Instead of closing Dekontaminationskabine:
+	say "Dafür ist der Dekon-Knopf gedacht.";
 
 every turn:
 [----was passiert, wenn ein Kontaminierter in der Kabine ist und die Tür geschlossen wurde----]
