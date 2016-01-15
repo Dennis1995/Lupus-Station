@@ -188,54 +188,54 @@ instead of pushing the fass:
 	if fasszustand is 0 begin;
 	say "Du musst erst das Fass umkippen damit du es rollen kannst.";
 	otherwise;
-       if the player is in Andockstation begin;
-       let L be the list of  unlocked doors in Andockstation;
-       let zahl be the number of entries in L;
-       if zahl is 0 begin;
-       say " Das Fass ist in der Andockstation";
-       otherwise;
-       let g be a random number from 1 to zahl;
-          if other side of entry g in L is Kommunikationsmodul begin;
-       say "Das Fass ist gegen eine Wand gerollt";
-       otherwise;
-      say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
-       now the fass is in the other side of entry g in L;
-       end if;
-       end if;
-       end if;
-              if the player is in Hangar begin;
-              let L be the list of unlocked doors in Hangar ;
-              let zahl be the number of entries in L;
-              if zahl is 0 begin;
-              say "Das Fass ist im Hangar ";
-              otherwise;
-              let g be a random number from 1 to zahl;
-               say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
-              now the fass is in the other side of entry g in L;
-              end if;
-              end if;
-                  if the player is in the Gamma Kreuzung begin;
-                          let L be the list of unlocked doors in Gamma Kreuzung;
-                          let zahl be the number of entries in L;
-                          if zahl is 0 begin;
-                          say "Das Fass ist in der Gamma Kreuzung";
-                          otherwise;
-                          let g be a random number from 1 to zahl;
-                          say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
-                          now the fass is in the other side of entry g in L;
-                          end if;
-                          end if;
-                                     if the player is in the Gamma-Delta Korridor begin;
-                                     let L be the list of unlocked doors in Gamma-Delta Korridor;
-                                     let zahl be the number of entries in L;
-                                        if zahl is 0 begin;
-                                        say " Das Fass ist im Gamma-Delta Korridor";
-                                        otherwise;
-                                      let g be a random number from 1 to zahl;
-                                       say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
-                                      now the fass is in the other side of entry g in L;
-                                      end if;
-                                     end if;	
+	   if the player is in Andockstation begin;
+	   let L be the list of  unlocked doors in Andockstation;
+	   let zahl be the number of entries in L;
+	   if zahl is 0 begin;
+	   say " Das Fass ist in der Andockstation";
+	   otherwise;
+	   let g be a random number from 1 to zahl;
+		  if other side of entry g in L is Kommunikationsmodul begin;
+	   say "Das Fass ist gegen eine Wand gerollt";
+	   otherwise;
+	  say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
+	   now the fass is in the other side of entry g in L;
+	   end if;
+	   end if;
+	   end if;
+			  if the player is in Hangar begin;
+			  let L be the list of unlocked doors in Hangar ;
+			  let zahl be the number of entries in L;
+			  if zahl is 0 begin;
+			  say "Das Fass ist im Hangar ";
+			  otherwise;
+			  let g be a random number from 1 to zahl;
+			   say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
+			  now the fass is in the other side of entry g in L;
+			  end if;
+			  end if;
+				  if the player is in the Gamma Kreuzung begin;
+						  let L be the list of unlocked doors in Gamma Kreuzung;
+						  let zahl be the number of entries in L;
+						  if zahl is 0 begin;
+						  say "Das Fass ist in der Gamma Kreuzung";
+						  otherwise;
+						  let g be a random number from 1 to zahl;
+						  say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
+						  now the fass is in the other side of entry g in L;
+						  end if;
+						  end if;
+									 if the player is in the Gamma-Delta Korridor begin;
+									 let L be the list of unlocked doors in Gamma-Delta Korridor;
+									 let zahl be the number of entries in L;
+										if zahl is 0 begin;
+										say " Das Fass ist im Gamma-Delta Korridor";
+										otherwise;
+									  let g be a random number from 1 to zahl;
+									   say " Das Fass ist in den Raum [other side of entry g in L] gerollt";
+									  now the fass is in the other side of entry g in L;
+									  end if;
+									 end if;	
 				if the player is in the Alpha-Delta Korridor begin;
 			        let L be the list of unlocked doors in Alpha-Delta Korridor;
 				let zahl be the number of entries in L;
@@ -426,7 +426,7 @@ Eine weitere Tür, die durch ein Panel geschlossen ist,  befindet sich südöstl
 
 PanelABK-AK is an closed container in Alpha-Beta Korridor. the panelABK-AK is unopenable. the panelABK-AK is fixed in place.
 
-Kontaminierter Igenieur is a Kontaminierter. Kontaminierter Igenieur is in Alpha-Beta Korridor.
+Kontaminierter Ingenieur is a Kontaminierter. Kontaminierter Ingenieur is in Alpha-Beta Korridor.
 
 
 Section - Beta Kreuzung 
@@ -460,10 +460,10 @@ Ein Glück kann man hier die Etagen Wechseln.".
 [Akkubohrer + Akkus Sourcecode]
 
 Akkubohrer is a container in Maschinenraum. carrying capacity of the akkubohrer is 1.
-Understand " use [carried thing]"  as using.
-Using  is an action applying to one carried thing. 
+Understand "use [carried thing] on [something]"  as using it on.
+Using it on is an action applying to one carried thing and one visible thing. 
 
-Understand " put [ something] into [carried thing] " as putting.
+Understand "put [something] into [carried thing] " as putting.
 Putting is an action applying to one visible thing and one carried thing. 
 
 Akku1 is a thing in Maschinenraum.
@@ -474,21 +474,29 @@ Akku2 is a thing in Spind.
 akku2counter is a number which varies.
 akku2counter is 5.
 
-instead of using the akkubohrer:
-if the Akku1 in the Akkubohrer begin;
-if the akku1counter is 0 begin;
-say " Der Akku ist leer.";
-otherwise;
-decrease akku1counter by 1;
-end if;
-end if;
-if the Akku2 in the Akkubohrer begin;
-if the akku2counter is 0 begin;
-say " Der Akku ist leer.";
-otherwise;
-decrease akku2counter by 1;
-end if;
-end if;
+Check using carried thing on something which is not a Kontaminierter:
+	say "Der Akkubohrer sollte nur auf Kontaminierte benutzt werden, ansonsten ist das eine reine Akku-Ladungs-Verschwendung..." instead.
+
+Carry out using:
+	now aufmerksam of the second noun is true;
+	now the counter of the second noun is 1;
+	now ausgabe is true;
+	say "Der Kontaminierte ist jetzt auf dich aufmerksam, du solltest sofort den Raum verlassen, er wird dir aber auch sofort folgen.".
+		
+Before using:
+	if the carried thing is not the Akkubohrer:
+		say "Witzbold, diese Aktion funktioniert nur im Bezug auf den Akkubohrer." instead;
+	else if the Akku1 is in the Akkubohrer:
+		if the akku1counter is 0:
+			say " Der Akku ist leer." instead;
+		otherwise:
+			decrease akku1counter by 1;
+	else if the Akku2 in the Akkubohrer:
+		if the akku2counter is 0:
+			say " Der Akku ist leer." instead;
+		otherwise:
+			decrease akku2counter by 1;
+
 
 before putting:
 if the something is not  the akku1 begin;
@@ -525,7 +533,7 @@ Instead of switching on Dekon-Knopf:
 		say "Durch den Hauptenergieabfall ist die Kabine nicht mehr funktionstüchtig.";
 	else if Dekontaminationskabine is open:
 		now Dekontaminationskabine is closed;
-		say "Die Kabine wurde erfolgreich geschlossen, die Dekontamination wird eingeleitet."
+		say "Die Kabine wurde erfolgreich geschlossen, die Dekontamination wird eingeleitet.";
 	else if anzahl is 0:
 		say "Es gibt keine Kontaminierten im Raum, welche dekontaminiert werden müssten";
 	else:
@@ -759,23 +767,23 @@ if the fass is in the Xeno-Labor begin;
   now TürGK-XL is unlocked;
   now the fass is not pushable between rooms;
 otherwise;
-    if the panel is unlocked begin; 
-       now TürGK-XL is unlocked;
-       increase panelcounter by 1;
-    end if;
+	if the panel is unlocked begin; 
+	   now TürGK-XL is unlocked;
+	   increase panelcounter by 1;
+	end if;
 if panelcounter is  2  begin;
    decrease panelcounter by 2 ;
-    now türGK-XL is closed;
-    now  türGK-XL  is locked;
-    now the panel is closed;
-    now the panel is locked;
+	now türGK-XL is closed;
+	now  türGK-XL  is locked;
+	now the panel is closed;
+	now the panel is locked;
 end if;
-    end if;
+	end if;
 
 before going west:
-    if the fass is not in the Xeno-Labor begin;
-       now TürGK-XL is locked;
-    end if;
+	if the fass is not in the Xeno-Labor begin;
+	   now TürGK-XL is locked;
+	end if;
 
 
 [Beta Kreuzung <-> Maschinenraum]
@@ -1354,15 +1362,15 @@ Oxygencounter is a number which varies.
 Oxygencounter is 15.
 every turn:
 if the Oxygencounter is not -1 begin;
-       if Oxygencounter is zero begin;
-         say "Du bist Tod, Spiel vorbei";
-         say "[paragraph break]";
-         end the story;
-         end if;
-                 if the sauerstoffabfallbeginn is 1 begin;
-                 say "Du hast noch [Oxygencounter] Spielzüge Zeit, um die Lupus Station zu verlassen.";
-                 decrease Oxygencounter by 1; 
-                 end if;
+	   if Oxygencounter is zero begin;
+		 say "Du bist Tod, Spiel vorbei";
+		 say "[paragraph break]";
+		 end the story;
+		 end if;
+				 if the sauerstoffabfallbeginn is 1 begin;
+				 say "Du hast noch [Oxygencounter] Spielzüge Zeit, um die Lupus Station zu verlassen.";
+				 decrease Oxygencounter by 1; 
+				 end if;
 end if;
 
 [-----weitere "unwichtige" Gegenstände--------------]
