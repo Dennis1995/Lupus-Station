@@ -361,15 +361,6 @@ end if;
 
 
 
-
-
-
-
- 
-
-
-
-
 Section - Gamma Kreuzung
 
 Gamma Kreuzung is a room.
