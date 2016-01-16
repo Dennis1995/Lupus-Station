@@ -457,6 +457,23 @@ Maschinenraum is above Schwerkraftkompensator.
 The Description of Maschinenraum is "Es ist sehr sehr laut und schmutzig hier. Eine Tafel zeigt viele nützliche Informationen an, ein alter Akkubohrer mit einem Akku liegt auf  dem Boden. Der Blick auf den Maschinen ist sicherlich für Ingenieure interessant.  Alles riecht nach Öl.
 Ein Glück kann man hier die Etagen Wechseln.".
 
+Anzeigetafel is a thing. Anzeigetafel is fixed in place.
+Anzeigetafel is in the Maschinenraum.The description of the Anzeigetafel is "Es fehlen sämtliche Fluchtkapseln und es sind [lagerkoncount] Kontaminierte in Lager. ".
+Anzeigetafel is in the Maschinenraum.
+
+LagerKonCount is a number which varies.
+LagerKonCount is 0.
+
+every turn:
+if the LagerKonCount is not 0 begin;
+now LagerKonCount is 0; 
+end if;
+
+every turn:
+	repeat with x running through the Kontaminierter:
+		if  the location of x is the Lager,
+		          increase LagerKonCount by 1;
+
 [Akkubohrer + Akkus Sourcecode]
 
 Akkubohrer is a container in Maschinenraum. carrying capacity of the akkubohrer is 1.
@@ -1381,8 +1398,7 @@ if the Oxygencounter is not -1 begin;
 end if;
 
 [-----weitere "unwichtige" Gegenstände--------------]
-Anzeigetafel is thing. Anzeigetafel is in Maschinenraum. It is fixed in place.
-The Description of Anzeigetafel is "Es sind keine Fluchtkapseln mehr auf der Lupus Station vorhanden und es befinden sich 10 Kontaminierte im der Lupusstation. Achtung : Bei Kontakt mit Kontaminierten dringend einen Arzt aufsuchen)".
+
 
 Generator is a thing. It is fixed in place. It is in Hauptgenerator. The Description is "Dies ist der Hauptgenerator, welches die Station mit Strom versorgt.".
 
