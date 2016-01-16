@@ -1321,6 +1321,13 @@ every turn:
 			end the story finally saying "Du warst zu lange mit einem Kontaminierten im selben Raum, er hat dich kontaminiert...";
 		[da beim Wechseln in einen anderen Raum der counter auch erhöht wird, wird die überprüfung vor dem erhöhen gemacht, sodass der zähler beim 4. durchlauf(der Schleife, nicht verwechseln, der Spieler kann trotzdem nur 3 Aktionen machen) dann auf 3 ist und das spiel beendet wird, alternativ könnte man den zähler bei -1 beginnen lassen]
 		increase the counter of i by 1;
+	repeat with i running through the Kontaminierter in Dekontaminationskabine:
+		if the location of the player is Med-Labor:
+			if Dekontaminationskabine is open:
+				if the counter of i is 3:
+					end the story finally saying "Du hast den Kontaminierten in die Kabine gelockt, aber die Tür nicht geschlossen, und dich zulange im Raum aufgehalten, du wurdest kontaminiert";
+				otherwise:
+					increase the counter of i by 1;	
 		
 
 ["Mache Geräusch" Aktion, um den Kontaminierten aufmerksam zu machen]		
