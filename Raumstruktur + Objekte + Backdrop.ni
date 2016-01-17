@@ -1275,8 +1275,27 @@ Szene 2 is a scene. "Szene 2: Percy hat ein Problem[paragraph break](Du spielst 
 Szene 2 begins when the player is Barry.
 Szene 2 ends when Percy is on Krankenbett.
 
-Szene 3 is a scene. "Szene 3: Kommt alle zusammen[paragraph break]Percy ist nach der Heilung noch ein wenig verwirrt, lässt sich aber bereitwillig von Barry auf den aktuellen Stand bringen. Allem Anschein sind sonst alle auf der Sation kontaminiert, denn selbst die Brücke reagiert nicht auf Kommunikationsversuche. Sie beschließen, das Personal der Station zu retten. Leider ist Percy noch sehr schwindelig, so dass er sich im Med‐Lab auf das Krankenbett legen muss. Zu allem Unglück stellt Barry nun einen Hauptenergieabfall auf der Station fest (der ehemals blau glühende Maschinenkern leuchtet nun grün). Die Dekontaminationskabine ist damit nun außer Betrieb. Die Beschaltung der Kabine kann er leider nicht ohne eine ganze Wartungsmannschaft umbauen.[line break]Er kommt zu der Einsicht, dass Hilfe von außen hinzukommen muss. Dazu muss ein Notruf abgesetzt werden. Das Kommunikationsmodul hat einen eigenen Hilfsgenerator, so dass das kein Problem sein sollte ‐ aber das ist der zweite Schritt. Zunächst einmal müssen die Dekontaminierten gesammelt werden. Der am besten geeignete Raum scheint das Lager auf dem Unterdeck zu sein. Man muss sie nur alle dorthin locken und die drei Türen schließen."
+Szene 3 is a scene. "Szene 3: Kommt alle zusammen[paragraph break]Percy ist nach der Heilung noch ein wenig verwirrt, lässt sich aber bereitwillig von Barry auf den aktuellen Stand bringen. Allem Anschein sind sonst alle auf der Sation kontaminiert, denn selbst die Brücke reagiert nicht auf Kommunikationsversuche. Sie beschließen, das Personal der Station zu retten. Leider ist Percy noch sehr schwindelig, so dass er sich im Med‐Lab auf das Krankenbett legen muss. Zu allem Unglück stellt Barry nun einen Hauptenergieabfall auf der Station fest (der ehemals blau glühende Maschinenkern leuchtet nun grün). Die Dekontaminationskabine ist damit nun außer Betrieb. Die Beschaltung der Kabine kann er leider nicht ohne eine ganze Wartungsmannschaft umbauen.[line break]Er kommt zu der Einsicht, dass Hilfe von außen hinzukommen muss. Dazu muss ein Notruf abgesetzt werden. Das Kommunikationsmodul hat einen eigenen Hilfsgenerator, so dass das kein Problem sein sollte ‐ aber das ist der zweite Schritt. Zunächst einmal müssen die Dekontaminierten gesammelt werden. Der am besten geeignete Raum scheint das Lager auf dem Unterdeck zu sein. Man muss sie nur alle dorthin locken und die zwei Türen schließen."
 Szene 3 begins when Percy is on Krankenbett.
+Szene 3 ends when lagerState is true.
+
+lagerState is a truth state that varies.
+lagerState is false.
+lagercounter is a number which varies.
+
+every turn:
+	[nur wenn Szene 3 gerade aktiv ist, soll das Lager 'überprüft' werden]
+	if Szene 3 is happening:
+		repeat with i running through the Kontaminierter in Lager:
+			increase lagercounter by 1;
+		if lagercounter is 7 :
+			now lagerState is true;
+		otherwise:
+			now lagercounter is 0;
+
+Szene 4 is a scene. "Szene 4: Der Notruf[paragraph break]Barry geht zurück in das Med-Labor und berät sich mit Percy. Einer von ihnen muss ins Kommunikationsmodul, um den Hilfsgenerator zu aktivieren, während der andere den Notruf auf der Brücke zeitnah absetzt.
+Um Kontakt zu halten und Befehle zu geben, muss Barry die Gegensprechanlage der Brücke nutzen. Durch das Versammeln der Kontaminierten hat sich der Umkleideraum und das Damen-WC geöffnet...."
+Szene 4 begins when lagerState is true.
 
 [Backdrop]
 	
