@@ -161,9 +161,9 @@ every turn:
 		increase the koncounter by 1;
 		          
 	  every turn:
-	  if the the player carries the MobiTab begin;
+	  if the player carries the MobiTab begin;
 	  if the koncounter is greater than 0 begin;
-	  say "MobiTab: Ein Kontaminierter ist mit in deinem Raum.";
+	  say "MobiTab: Kontaminierte sind mit in deinem Raum.";
 	  now koncounter is 0;     
           end if;
           end if;
