@@ -1067,12 +1067,12 @@ Fluchtkapsel is inside of Fluchtkapseln. Launch-Schalter is in Fluchtkapsel. Lau
 Launch-Schalter is fixed in place. The description of Launch-Schalter is "Dieser Schalter leitet wahrscheinlich den Start der Fluchkapsel ein."
 
 Before switching on Launch-Schalter:
-	if Percy is not in Fluchtkapsel:
-		say "Willst du wirklich ohne Percy flüchten??" instead.
-		
-Before switching on Launch-Schalter:
-	if Barry is not in Fluchtkapsel:
-		say "Willst du wirklich ohne Barry flüchten??" instead.
+	if sauerstoffabfallbeginn is 0:
+		say "Du willst schon flüchten? Versuche doch das Stationspersonal zu dekontaminieren oder wenigstens einen Notruf abzusetzen!" instead;
+	else if Percy is not in Fluchtkapsel:
+		say "Willst du wirklich ohne Percy flüchten??" instead;
+	else if Barry is not in Fluchtkapsel:
+		say "Willst du wirklich ohne Barry flüchten??" instead;
 		
 After switching on Launch-Schalter:
 	say "Du drückst den Launch-Knopf und die Fluchtkapsel wird in den Weltraum geschossen.";	
