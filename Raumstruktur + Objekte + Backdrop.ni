@@ -1296,7 +1296,10 @@ every turn:
 Szene 4 is a scene. "Szene 4: Der Notruf[paragraph break]Barry geht zurück in das Med-Labor und berät sich mit Percy. Einer von ihnen muss ins Kommunikationsmodul, um den Hilfsgenerator zu aktivieren, während der andere den Notruf auf der Brücke zeitnah absetzt.
 Um Kontakt zu halten und Befehle zu geben, muss Barry die Gegensprechanlage der Brücke nutzen. Durch das Versammeln der Kontaminierten hat sich der Umkleideraum und das Damen-WC geöffnet...."
 Szene 4 begins when lagerState is true.
-
+When Szene 4 begins:
+	now TürH-UR is open;
+	now TürBK-WCD is open;
+	
 [Backdrop]
 	
 Fenster is a backdrop. It is in Maschinenraum and in Solar-Labor and in Xeno-Labor and in Med-Labor and in Alpha-Beta Korridor and in Energiespeicher and in Lagerraum and in Delta-Gewächshaus and in Lager and in Beta-Gewächshaus and in Gamma Kreuzung and in Gamma-Beta Korridor and in Beta Kreuzung and in Alpha-Beta Korridor and in Alpha Kreuzung and in Alpha-Delta Korridor and in Delta Kreuzung and in Gamma-Delta Korridor. 
