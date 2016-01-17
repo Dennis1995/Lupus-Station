@@ -152,6 +152,21 @@ The description of Sicherheitskarte is "Eine Sicherheitskarte mit der kann man d
 
 The Mobitab is in Spind. The description is "[if the mobitab is in Spind]Ein MobiTab, das wird sicherlich noch nützlich sein.[otherwise] Im Kleingedruckten steht 'Bitte nicht auf Türpanel anwenden.' Komisch.". 
 
+koncounter is a number which varies.
+koncounter is 0.
+
+every turn:
+	repeat with o running through the Kontaminierter:
+		if  the location of o is the location of the player,
+		increase the koncounter by 1;
+		          
+	  every turn:
+	  if the the player carries the MobiTab begin;
+	  if the koncounter is greater than 0 begin;
+	  say "MobiTab: Ein Kontaminierter ist mit in deinem Raum.";
+	  now koncounter is 0;     
+          end if;
+          end if;
 
 
 Section - Andockstation
