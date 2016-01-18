@@ -220,7 +220,7 @@ if the fasszustand is 0 begin;
 say " Du musst erst das Fass umkippen, bevor du es rollen kannst!";
 otherwise;
 if the player is in the Alarm-reg begin;
-let L be the list of unlocked doors in the location of the player;
+let L be the list of open doors in the location of the player;
 let zahl be the number of entries in L;
 let r be a random number from 1 to zahl;
 now the fass is in the other side of entry r in L; 
@@ -231,7 +231,7 @@ say " Das Fass ist in den Raum [other side of entry r in L] gerollt";
 end if;
 end if;
 if the player is in the Raumstation begin; 
-let L be the list of unlocked  doors in the location of the player;
+let L be the list of open  doors in the location of the player;
 let zahl be the number of entries in L;
 let r be a random number from 1 to zahl;
 if zahl is 0 begin;
@@ -674,6 +674,7 @@ the panelcounter is a number which varies.
 every turn:
 if the fass is in the Xeno-Labor begin;
   now TürGK-XL is unlocked;
+  now TürGK-XL is open;
   now the fass is not pushable between rooms;
 otherwise;
 	if the panel is unlocked begin; 
