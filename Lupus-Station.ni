@@ -124,8 +124,12 @@ Before switching on roter Notrufknopf:
 		
 After switching on roter Notrufknopf:
 	say "Nun wurde der Notruf erfolgreich abgesetzt, hoffentlich kommt bald Hilfe!!!";
-	 now sauerstoffabfallbeginn is 1;
-	 say "Der Sauerstoffstatus ist niedrig.";
+	now sauerstoffabfallbeginn is 1;
+	say "Der Sauerstoffstatus ist niedrig.";
+	say "Da Percy einen Raumanzug hat, ist er von dem Abfall nicht betroffen, du musst nun als Barry zur Beta-Kreuzung gelangen und dort Percy treffen. Er folgt dir dann zur Flucht."
+	now Barry is in Brücke;
+	now the player is Barry;
+
 
 Section - Obere Ebene Türen
 
