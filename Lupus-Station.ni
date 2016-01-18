@@ -719,6 +719,10 @@ TürGDK-KM is northeast of Gamma-Delta Korridor. TürGDK-KM is southwest of Komm
 TürGDK-KM is locked.
 The Description of TürGDK-KM is "Tür zwischen Gamma-Delta-Korridor und Kommunikationsmodul: Hebel auf dieser Seite defekt, Tür kann nur im Kommunikationsmodul geöffnet werden.".
 
+Before opening TürGDK-KM:
+	if the location of the player is not Kommunikationsmodul:
+		say "Von hier lässt sich die Wartungsluke zum Kom-Modul nicht öffnen, da sie durch Laserfeuer beschädigt wurde." instead;
+
 [Hangar <-> Umkleideraum]
 TürH-UR is south of Hangar. TürH-UR is north of Umkleideraum. TürH-UR is a door.
 TürH-UR is locked.
