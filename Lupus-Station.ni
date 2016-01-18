@@ -356,7 +356,7 @@ every turn:
 [So kann Percy den Bohrer nicht benutzen und die Akkus leer machen]
 Before taking Akkubohrer:
 	if Szene 1 is happening:
-		say "Den lasse ich dort besser liegen, ich brauche ihn gerade nicht."
+		say "Den lasse ich dort besser liegen, ich brauche ihn gerade nicht." instead;
 
 Akkubohrer is a container in Maschinenraum. carrying capacity of the akkubohrer is 1.
 Understand "use [carried thing] on [something]"  as using it on.
