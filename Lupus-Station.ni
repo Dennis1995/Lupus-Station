@@ -387,9 +387,6 @@ Akkubohrer is a container in Maschinenraum. carrying capacity of the akkubohrer 
 Understand "use [carried thing] on [something]"  as using it on.
 Using it on is an action applying to one carried thing and one visible thing. 
 
-Understand "put [something] into [carried thing] " as putting.
-Putting is an action applying to one visible thing and one carried thing. 
-
 Akku1 is a thing in Maschinenraum.
 akku1counter is a number which varies.
 akku1counter is 5.
@@ -421,17 +418,18 @@ Before using:
 		otherwise:
 			decrease akku2counter by 1;
 
+before inserting something into Akkubohrer:
+	if the something is not the akku1 begin;
+		if the something is not the akku2 begin;
+			say "Dies ist nicht der passende Akku." instead;
+		end if;
+	end if;
 
-before putting:
-if the something is not  the akku1 begin;
-if the something is not the akku2 begin;
-say "Dies ist nicht der passende Akku";
-stop the action;
-otherwise;
-say " Du hast einen Akku eingesteckt";
-end if;
-end if;
-
+every turn:
+	if Szene 1 is happening:
+		if akku2counter is 0:
+			if akku1counter is 0:
+				end the story finally saying "Du hast alle Akku-Ladungen verbraucht und Percy nicht dekontaminiert, es gibt keine Möglichkeit mehr deinen Freund zu retten, du hast verloren."
 
 
 Section - Med-Labor
