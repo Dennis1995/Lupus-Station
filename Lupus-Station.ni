@@ -172,6 +172,8 @@ every turn:
           end if;
           end if;
 
+Fähre is a thing. Fähre is in Hangar. Fähre is fixed in place. The description of Fähre is "Leider ist der Space-Diesel aufgebraucht. Daher ist die Fähre nicht mehr flugtauglich."
+
 
 Section - Andockstation
 
