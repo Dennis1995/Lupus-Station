@@ -80,7 +80,6 @@ The Description of Besprechungsraum is "Ein Raum voller Besprechungsnotizen und 
 Der Dienstraum hier drunter hatte mehr Charm.".
 
 
-
 Section - Antennenfeld L
 
 Antennenfeld L is a room. 
@@ -126,9 +125,25 @@ After switching on roter Notrufknopf:
 	say "Nun wurde der Notruf erfolgreich abgesetzt, hoffentlich kommt bald Hilfe!!!";
 	now sauerstoffabfallbeginn is 1;
 	say "Der Sauerstoffstatus ist niedrig.";
-	say "Da Percy einen Raumanzug hat, ist er von dem Abfall nicht betroffen, du musst nun als Barry zur Beta-Kreuzung gelangen und dort Percy treffen. Er folgt dir dann zur Flucht."
+	say "Da Percy einen Raumanzug hat, ist er von dem Abfall nicht betroffen, du musst nun als Barry zur Beta-Kreuzung gelangen und dort Percy treffen. Er folgt dir dann zur Flucht.";
 	now Barry is in Brücke;
 	now the player is Barry;
+	now Percy is in Beta Kreuzung;
+
+treffen is a truth state which varies. treffen is false.
+	
+every turn:
+	if sauerstoffabfallbeginn is 1:
+		if the location of the player is Beta Kreuzung:
+			if treffen is false:
+				now treffen is true;
+				say "Du hast dich erfolgreich mit Percy getroffen, er wird dir jetzt bis zur Flucht folgen.";
+				
+every turn:
+	if treffen is true:
+		if Percy is not in the location of the player:
+			now Percy is in the location of the player;
+			say "Percy folgt dir auf Schritt und Tritt.";
 
 
 Section - Obere Ebene Türen
