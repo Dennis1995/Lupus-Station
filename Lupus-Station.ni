@@ -140,6 +140,10 @@ Chapter - Hauptebene
 
 Section - Hangar
 
+Before taking Mobitab:
+	if Szene 1 is happening:
+		say "Was soll ich denn damit? Das lasse ich besser im Spind." instead;
+
 The Hangar is a room.
 The Spind is a container in Hangar. Spind is closed and openable. Spind is fixed in place.
 The description of Spind is "Im Spind lagern die Mitarbeiter ihre Sachen."
