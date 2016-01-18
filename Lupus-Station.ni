@@ -353,6 +353,10 @@ every turn:
 		          increase LagerKonCount by 1;
 
 [Akkubohrer + Akkus Sourcecode]
+[So kann Percy den Bohrer nicht benutzen und die Akkus leer machen]
+Before taking Akkubohrer:
+	if Szene 1 is happening:
+		say "Den lasse ich dort besser liegen, ich brauche ihn gerade nicht."
 
 Akkubohrer is a container in Maschinenraum. carrying capacity of the akkubohrer is 1.
 Understand "use [carried thing] on [something]"  as using it on.
@@ -553,7 +557,7 @@ Check shooting something which is not a Kontaminierter with a carried thing:
 
 Carry out shooting it with:
 	now the noun is in beseitigteKontaminierte; 
-	say " der Komtaminierte hat sich in Staub aufgelöst.";
+	say "der Komtaminierte hat sich in Staub aufgelöst.";
 
 
 Section - Dienstraum
