@@ -515,7 +515,7 @@ Was ist das für eine seltsame Maschine, wofür die bloß da ist?
 Schaltet der blinkende Knopf diese an?".
 
 Blinkender Knopf is a device. Blinkender Knopf is on Seltsame Maschine. Blinkender Knopf is fixed in place.
-Blinkender Knopf is switched off. The description of Blinkender Knopf is "Vielleicht hört der Alarm auf, wenn ich den Knopf drücke!". Blinkender Knopf is undescribed.
+Blinkender Knopf is switched off. The description of Blinkender Knopf is "Vielleicht hört der Alarm auf, wenn ich den Knopf drücke!".
 Seltsame Maschine is a supporter. Seltsame Maschine is in Xeno-Labor. The description of Seltsame Maschine is "Was das bloß für eine Maschine ist?"
 Seltsame Maschine is fixed in place.
 
