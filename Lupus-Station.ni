@@ -537,6 +537,7 @@ Instead of taking Grüne Phiole:
 	say "Neiiiiin.... Ich habe es fallen gelassen. Was sind das für komische Dämpfe? Oh ... mir ... geht ... es .. garnicht... gut...";
 	now Grüne Phiole is nowhere;
 	now Scherben is in Xeno-Labor;
+	now everything carried is in Xeno-Labor;
 	now the player is Barry;
 	now Kontaminierter Percy is in Xeno-Labor;
 	now Percy is nowhere;
