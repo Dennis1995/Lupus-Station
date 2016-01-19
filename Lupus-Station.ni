@@ -626,7 +626,7 @@ Before closing TürH-GK:
 	if Szene 2 is happening:
 		if the player is not carrying mobitab:
 			if the player is not carrying the Sicherheitskarte:
-				say "Du brauchst entweder das Mobitab oder die Sicherheitskarte, um diese Tür zu entsperren und zu passieren." instead;
+				say "Du brauchst entweder das Mobitab oder die Sicherheitskarte, um diese Tür zu schließen." instead;
 	otherwise:
 		if the player is not carrying the Sicherheitskarte:
 			say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
