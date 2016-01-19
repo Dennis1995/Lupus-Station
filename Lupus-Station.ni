@@ -1196,10 +1196,12 @@ every turn:
 	if Szene 3 is happening:
 		repeat with i running through the Kontaminierter in Lager:
 			increase lagercounter by 1;
-		if lagercounter is 7 :
-			now lagerState is true;
-		otherwise:
-			now lagercounter is 0;
+		if lagercounter is 7:
+		[Die zwei Türen müssen geschlossen sein]
+			if TürLB-DGH is closed:
+				if TürBGH-LB is closed:
+					now lagerState is true;
+		now lagercounter is 0;
 
 Szene 4 is a scene. "Szene 4: Der Notruf[paragraph break]Barry geht zurück in das Med-Labor und berät sich mit Percy. Einer von ihnen muss ins Kommunikationsmodul, um den Hilfsgenerator zu aktivieren, während der andere den Notruf auf der Brücke zeitnah absetzt.
 Um Kontakt zu halten und Befehle zu geben, muss Barry die Gegensprechanlage der Brücke nutzen. Durch das Versammeln der Kontaminierten hat sich der Umkleideraum und das Damen-WC geöffnet...."
