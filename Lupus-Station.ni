@@ -620,7 +620,7 @@ Before opening TürH-GK:
 				say "Du brauchst entweder das Mobitab oder die Sicherheitskarte, um diese Tür zu entsperren und zu passieren." instead;
 	otherwise:
 		if the player is not carrying the Sicherheitskarte:
-			say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die SIcherheitskarte bei sich tragen." instead;
+			say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die Sicherheitskarte bei sich tragen." instead;
 
 Before closing TürH-GK:
 	if Szene 2 is happening:
