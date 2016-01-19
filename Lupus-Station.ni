@@ -392,7 +392,7 @@ Carry out using:
 	say "Der Kontaminierte ist jetzt auf dich aufmerksam, du solltest sofort den Raum verlassen, er wird dir aber auch sofort folgen.".
 		
 Before using:
-	if the carried thing is not the Akkubohrer:
+	if the noun is not the Akkubohrer:
 		say "Witzbold, diese Aktion funktioniert nur im Bezug auf den Akkubohrer." instead;
 	else if the Akku1 is in the Akkubohrer:
 		if the akku1counter is 0:
