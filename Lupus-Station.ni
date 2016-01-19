@@ -610,7 +610,7 @@ The Description of TürAS-H is "Tür zwischen Andockstation und Hangar: Tür off
 
 [Hangar<-> Gamma Kreuzung]
 TürH-GK is west of Hangar. TürH-GK is east of Gamma Kreuzung. TürH-GK is a door.
-TürH-GK is locked.
+TürH-GK is closed.
 The Description of TürH-GK is "Tür zwischen Hangar und Gamma Kreuzung: Tür lässt sich nur mit einem Sicherheitsausweis oder Mobtab öffnen/schließen.".
 
 Before opening TürH-GK:
@@ -634,7 +634,7 @@ Before closing TürH-GK:
 			
 [Gamma Kreuzung <-> Gamma-Delta Korridor]
 TürGK-GDK is northwest of Gamma Kreuzung. TürGK-GDK is southeast of Gamma-Delta Korridor. TürGK-GDK is a door.
-TürGK-GDK is locked.
+TürGK-GDK is closed.
 The Description of TürGK-GDK is "Tür zwischen Gamma Kreuzung und Gamma Delta Korridor: Tür lässt sich nur mit einem Sicherheitsausweis öffnen/schließen.".
 
 Before opening TürGK-GDK:
@@ -662,7 +662,7 @@ Before closing TürGDK-DK:
 
 [Delta Kreuzung <-> Alpha-Delta Korridor]
 TürDK-ADK is southwest of Delta Kreuzung. TürDK-ADK is northeast of Alpha-Delta Korridor. TürDK-ADK is a door.
-TürDK-ADK is locked.
+TürDK-ADK is closed.
  The Description of TürDK-ADK is "Tür zwischen Delta Kreuzung und Alpha-Delta Korridor: Tür lässt sich nur mit einem Sicherheitsausweis + Mobitab öffnen/schließen.".
  
 Before opening TürDK-ADK:
@@ -678,7 +678,7 @@ Before closing TürDK-ADK:
 
 [Alpha-Delta Korridor <-> Alpha Kreuzung]
 TürADK-AK is southwest of Alpha-Delta Korridor. TürADK-AK is northeast of Alpha Kreuzung. TürADK-AK is a door.
-TürADK-AK is locked. 
+TürADK-AK is closed. 
 The Description of TürADK-AK is "Tür zwischen Alpha-Delta Korridor und Alpha Kreuzung: Tür lässt sich nur mit einem Sicherheitsausweis + Mobitab öffnen/schließen.".
 
 Before opening TürADK-AK:
@@ -694,7 +694,7 @@ Before closing TürADK-AK:
 
 [Alpha Kreuzung <-> Alpha-Beta Korridor]
 TürAK-ABK is southeast of Alpha Kreuzung. TürAK-ABK is northwest of Alpha-Beta Korridor. TürAK-ABK is a door.
-TürAK-ABK is locked. 
+TürAK-ABK is closed. 
 The Description of TürAK-ABK is "Tür zwischen Alpha Kreuzung und Alpha-Beta Korridor: Tür lässt sich nur mit einem Sicherheitsausweis + Mobitab öffnen/schließen.".
 
 Before opening TürAK-ABK:
@@ -710,7 +710,7 @@ Before closing TürAK-ABK:
 
 [Alpha-Beta Korridor<-> Beta Kreuzung]
 TürABK-BK is southeast of Alpha-Beta Korridor. TürABK-BK is northwest of Beta Kreuzung. TürABK-BK is a door.
-TürABK-BK is locked. 
+TürABK-BK is closed. 
 The Description of TürABK-BK is "Tür zwischen Alpha-Beta Korridor und Beta Kreuzung: Tür lässt sich nur mit einem Sicherheitsausweis + Mobitab öffnen/schließen.".
 
 Before opening TürABK-BK:
@@ -726,7 +726,7 @@ Before closing TürABK-BK:
 
 [Beta Kreuzung<-> Gamma-Beta Korridor]
 TürBK-GBK is northeast of Beta Kreuzung. TürBK-GBK is southwest of Gamma-Beta Korridor. TürBK-GBK is a door.
-TürBK-GBK is locked. 
+TürBK-GBK is closed. 
 The Description of TürBK-GBK is "Tür zwischen Beta Kreuzung und Gamma-Beta Korridor: Tür lässt sich nur mit einem Sicherheitsausweis öffnen/schließen.".
 
 Before opening TürBK-GBK:
@@ -740,7 +740,7 @@ Before closing TürBK-GBK:
 
 [Gamma-Beta Korridor <-> Gamma Kreuzung]
 TürGBK-GK is northeast of Gamma-Beta Korridor. TürGBK-GK is southwest of Gamma Kreuzung. TürGBK-GK is a door.
-TürGBK-GK is locked. 
+TürGBK-GK is closed. 
 The Description of TürGBK-GK is "Tür zwischen Gamma-Beta Korridor und Gamma Kreuzung: Tür lässt sich nur mit einem Sicherheitsausweis öffnen/schließen.".
 
 Before opening TürGBK-GK:
