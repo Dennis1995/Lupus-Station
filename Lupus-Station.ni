@@ -776,6 +776,7 @@ if the fass is in the Xeno-Labor begin;
 otherwise;
 	if the panel is unlocked begin; 
 	   now TürGK-XL is unlocked;
+	   now TürGK-XL is open;
 	   increase panelcounter by 1;
 	end if;
 if panelcounter is  2  begin;
