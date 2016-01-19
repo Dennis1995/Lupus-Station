@@ -406,8 +406,8 @@ Before using:
 			decrease akku2counter by 1;
 
 before inserting something into Akkubohrer:
-	if the something is not the akku1 begin;
-		if the something is not the akku2 begin;
+	if the noun is not the Akku1 begin;
+		if the noun is not the Akku2 begin;
 			say "Dies ist nicht der passende Akku." instead;
 		end if;
 	end if;
