@@ -168,8 +168,6 @@ The Spind is a container in Hangar. Spind is closed and openable. Spind is fixed
 The description of Spind is "Im Spind lagern die Mitarbeiter ihre Sachen."
 The Description of Hangar is "Ein Raum verlassen wie jeder andere. Der Spind neben der Tür im Westen lädt einen ein, um reinzugucken. ".
 
-PanelH-GK is an open container in Hangar. the panelH-GK  is unopenable. the panelH-GK  is fixed in place. 
-
 Sicherheitskarte is in Spind.
 The description of Sicherheitskarte is "Eine Sicherheitskarte mit der kann man die Türen auf der Station entsperren kann."
 
@@ -223,7 +221,6 @@ Check flipping something which is not the Fass:
 say "Du kannst nur das Fass umkippen" instead. 
 
 
-
 before pushing the fass:
 if the fass is in the Xeno-Labor begin;
 say "Das Fass steckt fest, ich kann es nicht mehr rollen.";
@@ -263,16 +260,12 @@ end if;
 end if;
 
 
-
 Section - Gamma Kreuzung
 
 Gamma Kreuzung is a room.
 
 The Description of Gamma Kreuzung is "Du befindest dich im östlichen Teil des äußeren Rings.Durchs fenster sieht man die undendlichen Weiten des Alls. 
 Nordwestlich befindet sich der Gamma Delta Korridor, östlich der Hangar und südwestlich der Gamma Beta Korridor.".
-
-PanelGK-GDK is an open container in Gamma Kreuzung. the panelGK-GDK is unopenable. the panelGK-GDK is fixed in place. 
-PanelGBK-GK is an open container in Gamma Kreuzung. the panelGBK-GK is unopenable. the panelGBK-GK is fixed in place. 
 
 
 Section - Gamma-Delta Korridor
@@ -290,7 +283,6 @@ Xeno-Karte unlock Panel.
 
 
 Gamma-Delta Korridor is a room.
-PanelGDK-DK is an open container in Gamma-Delta Korridor. the panelGDK-DK is unopenable. the panelGDK-DK is fixed in place.  
 
 
 Section - Delta Kreuzung
@@ -302,10 +294,6 @@ Section - Alpha-Delta Korridor
 
 Alpha-Delta Korridor is a room.
 The Description of Alpha-Delta Korridor is "Ein Raum mit einem Panel zum Öffnen der Tür, lediglich eine Tür im Nordosten und eine im Südwesten.".
-
-PanelADK-DK is an closed container in Alpha-Delta Korridor. the panelADK-DK is unopenable. the panelADK-DK is fixed in place.
-[---------- Von der Delta Kreuzung kommt man nicht nach süd westen, da kein panel dafür da ist, es geht aber von der anderen
-Seite. Das müsste vielleicht noch in einem beschreibenden Text erwähnt werden, wenn ide Tür locked ist]
 
 Kontaminierter Forscher is a Kontaminierter. Kontaminierter Forscher is in Alpha-Delta Korridor.
 
@@ -348,9 +336,7 @@ The Description of Gamma-Beta Korridor is "Einherrlicher Ausblick.
 Sieht man in weiter Entfernung die Erde?	
 Vielleicht sieht man, wenn man nach Nordosten geht diese besser.".
 
-
 Gamma-Beta Korridor is a room.
-PanelGBK-BK is an open container in Gamma-Beta Korridor. the panelGBK-BK is unopenable. the panelGBK-BK is fixed in place. 
 
 
 Section - Maschinenraum
@@ -626,47 +612,144 @@ TürH-GK is west of Hangar. TürH-GK is east of Gamma Kreuzung. TürH-GK is a do
 TürH-GK is locked.
 The Description of TürH-GK is "Tür zwischen Hangar und Gamma Kreuzung: Tür lässt sich nur mit einem Sicherheitsausweis oder Mobtab öffnen/schließen.".
 
+Before opening TürH-GK:
+	if Szene 2 is happening:
+		if the player is not carrying mobitab:
+			if the player is not carrying the Sicherheitskarte:
+				say "Du brauchst entweder das Mobitab oder die Sicherheitskarte, um diese Tür zu entsperren und zu passieren." instead;
+	otherwise:
+		if the player is not carrying the Sicherheitskarte:
+			say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die SIcherheitskarte bei sich tragen." instead;
+
+Before closing TürH-GK:
+	if Szene 2 is happening:
+		if the player is not carrying mobitab:
+			if the player is not carrying the Sicherheitskarte:
+				say "Du brauchst entweder das Mobitab oder die Sicherheitskarte, um diese Tür zu entsperren und zu passieren." instead;
+	otherwise:
+		if the player is not carrying the Sicherheitskarte:
+			say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+			
+			
 [Gamma Kreuzung <-> Gamma-Delta Korridor]
 TürGK-GDK is northwest of Gamma Kreuzung. TürGK-GDK is southeast of Gamma-Delta Korridor. TürGK-GDK is a door.
 TürGK-GDK is locked.
 The Description of TürGK-GDK is "Tür zwischen Gamma Kreuzung und Gamma Delta Korridor: Tür lässt sich nur mit einem Sicherheitsausweis öffnen/schließen.".
 
+Before opening TürGK-GDK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+
+Before closing TürGK-GDK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+		
+		
 [Gamma-Delta Korridor<-> Delta Kreuzung]
 TürGDK-DK is northwest of Gamma-Delta Korridor. TürGDK-DK is southeast of Delta Kreuzung. TürGDK-DK is a door.
 TürGDK-DK is locked.
 The Description of TürGDK-DK is "Tür zwischen Gamma-Deta Korridor und Delta Kreuzung: Tür lässt sich nur mit einem Sicherheitsausweis öffnen/schließen.".
+
+Before opening TürGDK-DK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+
+Before closing TürGDK-DK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+		
 
 [Delta Kreuzung <-> Alpha-Delta Korridor]
 TürDK-ADK is southwest of Delta Kreuzung. TürDK-ADK is northeast of Alpha-Delta Korridor. TürDK-ADK is a door.
 TürDK-ADK is locked.
  The Description of TürDK-ADK is "Tür zwischen Delta Kreuzung und Alpha-Delta Korridor: Tür lässt sich nur mit einem Sicherheitsausweis + Mobitab öffnen/schließen.".
  
+Before opening TürDK-ADK:
+	if PanelADK-DK is closed:
+		say "Die Tür kann nicht mit dem Sicherheitsausweis entsperrt werden! Zumindest im Moment nicht, probieren sie es einmal mit dem PanelADK-DK." instead;
+	else if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die Sicherheitskarte bei sich tragen." instead;
 
+Before closing TürDK-ADK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+		
 
 [Alpha-Delta Korridor <-> Alpha Kreuzung]
 TürADK-AK is southwest of Alpha-Delta Korridor. TürADK-AK is northeast of Alpha Kreuzung. TürADK-AK is a door.
 TürADK-AK is locked. 
 The Description of TürADK-AK is "Tür zwischen Alpha-Delta Korridor und Alpha Kreuzung: Tür lässt sich nur mit einem Sicherheitsausweis + Mobitab öffnen/schließen.".
 
+Before opening TürADK-AK:
+	if PanelAK-ADK is closed:
+		say "Die Tür kann nicht mit dem Sicherheitsausweis entsperrt werden! Zumindest im Moment nicht, probieren sie es einmal mit dem PanelAK-ADK." instead;
+	else if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+
+Before closing TürADK-AK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+		
+
 [Alpha Kreuzung <-> Alpha-Beta Korridor]
 TürAK-ABK is southeast of Alpha Kreuzung. TürAK-ABK is northwest of Alpha-Beta Korridor. TürAK-ABK is a door.
 TürAK-ABK is locked. 
 The Description of TürAK-ABK is "Tür zwischen Alpha Kreuzung und Alpha-Beta Korridor: Tür lässt sich nur mit einem Sicherheitsausweis + Mobitab öffnen/schließen.".
+
+Before opening TürAK-ABK:
+	if PanelABK-AK is closed:
+		say "Die Tür kann nicht mit dem Sicherheitsausweis entsperrt werden! Zumindest im Moment nicht, probieren sie es einmal mit dem PanelABK-AK." instead;
+	else if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+
+Before closing TürAK-ABK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+		
 
 [Alpha-Beta Korridor<-> Beta Kreuzung]
 TürABK-BK is southeast of Alpha-Beta Korridor. TürABK-BK is northwest of Beta Kreuzung. TürABK-BK is a door.
 TürABK-BK is locked. 
 The Description of TürABK-BK is "Tür zwischen Alpha-Beta Korridor und Beta Kreuzung: Tür lässt sich nur mit einem Sicherheitsausweis + Mobitab öffnen/schließen.".
 
+Before opening TürABK-BK:
+	if PanelBK-ABK is closed:
+		say "Die Tür kann nicht mit dem Sicherheitsausweis entsperrt werden! Zumindest im Moment nicht, probieren sie es einmal mit dem PanelBK-ABK." instead;
+	else if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+
+Before closing TürABK-BK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+		
+
 [Beta Kreuzung<-> Gamma-Beta Korridor]
 TürBK-GBK is northeast of Beta Kreuzung. TürBK-GBK is southwest of Gamma-Beta Korridor. TürBK-GBK is a door.
 TürBK-GBK is locked. 
 The Description of TürBK-GBK is "Tür zwischen Beta Kreuzung und Gamma-Beta Korridor: Tür lässt sich nur mit einem Sicherheitsausweis öffnen/schließen.".
 
+Before opening TürBK-GBK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+
+Before closing TürBK-GBK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+		
+
 [Gamma-Beta Korridor <-> Gamma Kreuzung]
 TürGBK-GK is northeast of Gamma-Beta Korridor. TürGBK-GK is southwest of Gamma Kreuzung. TürGBK-GK is a door.
 TürGBK-GK is locked. 
 The Description of TürGBK-GK is "Tür zwischen Gamma-Beta Korridor und Gamma Kreuzung: Tür lässt sich nur mit einem Sicherheitsausweis öffnen/schließen.".
+
+Before opening TürGBK-GK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+
+Before closing TürGBK-GK:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
+		
 
 [Gamma Kreuzung <-> Xeno-Labor]
 TürGK-XL is west of Gamma Kreuzung. TürGK-XL is east of Xeno-Labor. TürGK-XL is a door.
@@ -755,7 +838,7 @@ The Description of TürAS-KM is "Tür zwischen Andockstation und Kommunkationsmo
 Before going through the TürAS-KM:
 	if the player is not wearing the Raumanzug:
 		end the story finally saying "Du betrittst den Weltraum ohne Raumanzug und stirbst. [paragraph break] Game over."
-		
+
 
 
 Chapter - Untere Ebene
@@ -1087,95 +1170,7 @@ Check damaging Spind with something:
 	say "Der Spind kann nicht beschädigt werden!!!" instead.
 
 
-[--------Every Turn------ (alles was nach einem Zug immer überprüft wird)]
-every turn:
-	[Panel im Hangar]
-	if Sicherheitskarte is in panelH-GK begin;
-		if TürH-GK is locked begin; 
-			now TürH-GK is unlocked;
-			say "Die Tür ist nun entsperrt und die Sicherheitskarte kann wieder entnommen werden.";
-		else if the location of the player is Hangar;
-			say "Die Tür ist schon offen! Entnehmen Sie bitte ihre Karte aus dem Panel.";
-		end if;
-	end if;
-	[Panel in der Gamma Kreuzung zur Gamma-Delta Kreuzung]
-	if Sicherheitskarte is in panelGK-GDK begin;
-		if TürGK-GDK is locked begin; 
-			now TürGK-GDK is unlocked;
-			say "Die Tür ist nun entsperrt und die Sicherheitskarte kann wieder entnommen werden.";
-		else if the location of the player is Gamma Kreuzung;
-			say "Die Tür ist schon offen! Entnehmen Sie bitte ihre Karte aus dem Panel.";
-		end if;
-	end if;			
-	[Panel in der Gamma Kreuzung zum Gamma-Beta Korridor]
-	if Sicherheitskarte is in panelGBK-GK begin;
-		if TürGBK-GK is locked begin; 
-			now TürGBK-GK is unlocked;
-			say "Die Tür ist nun entsperrt und die Sicherheitskarte kann wieder entnommen werden.";
-		else if the location of the player is Gamma Kreuzung;
-			say "Die Tür ist schon offen! Entnehmen Sie bitte ihre Karte aus dem Panel.";
-		end if;
-	end if;
-	[Panel in dem Gamma-Delta Korridor zur Delta Kreuzung]
-	if Sicherheitskarte is in panelGDK-DK begin;
-		if TürGDK-DK is locked begin; 
-			now TürGDK-DK is unlocked;
-			say "Die Tür ist nun entsperrt und die Sicherheitskarte kann wieder entnommen werden.";
-		else if the location of the player is Gamma-Delta Korridor;
-			say "Die Tür ist schon offen! Entnehmen Sie bitte ihre Karte aus dem Panel.";
-		end if;
-	end if;
-	[Panel im Gamma-Beta Korridor zur Beta Kreuzung]
-	if Sicherheitskarte is in panelGBK-BK begin;
-		if TürBK-GBK is locked begin; 
-			now TürBK-GBK is unlocked;
-			say "Die Tür ist nun entsperrt und die Sicherheitskarte kann wieder entnommen werden.";
-		else if the location of the player is Gamma-Beta Korridor;
-			say "Die Tür ist schon offen! Entnehmen Sie bitte ihre Karte aus dem Panel.";
-		end if;
-	end if;					
-	[Panel in der Beta Kreuzung zum Alpha-Beta Korridor]
-	if Sicherheitskarte is in panelBK-ABK  begin;
-		if TürABK-BK is locked begin; 
-			now TürABK-BK is unlocked;
-			say "Die Tür ist nun entsperrt und die Sicherheitskarte kann wieder entnommen werden.";
-		else if the location of the player is Beta Kreuzung;
-			say "Die Tür ist schon offen! Entnehmen Sie bitte ihre Karte aus dem Panel.";
-		end if;
-	end if;	
-	[Panel im Alpha-Beta Korridor zur Alpha Kreuzung]
-	if Sicherheitskarte is in panelABK-AK  begin;
-		if TürAK-ABK is locked begin; 
-			now TürAK-ABK is unlocked;
-			say "Die Tür ist nun entsperrt und die Sicherheitskarte kann wieder entnommen werden.";
-		else if the location of the player is Alpha-Beta Korridor;
-			say "Die Tür ist schon offen! Entnehmen Sie bitte ihre Karte aus dem Panel.";
-		end if;
-	end if;		
-	[Panel in der Alpha Kreuzung zum Alpha-Delta Korridor]
-	if Sicherheitskarte is in panelAK-ADK  begin;
-		if TürADK-AK is locked begin; 
-			now TürADK-AK is unlocked;
-			say "Die Tür ist nun entsperrt und die Sicherheitskarte kann wieder entnommen werden.";
-		else if the location of the player is Alpha Kreuzung;
-			say "Die Tür ist schon offen! Entnehmen Sie bitte ihre Karte aus dem Panel.";
-		end if;
-	end if;		
-	[Panel in dem Alpha-Delta Korridor zur Delta Kreuzung]
-	if Sicherheitskarte is in panelADK-DK begin;
-		if TürDK-ADK is locked begin; 
-			now TürDK-ADK is unlocked;
-			say "Die Tür ist nun entsperrt und die Sicherheitskarte kann wieder entnommen werden.";
-		else if the location of the player is Alpha-Delta Korridor;
-			say "Die Tür ist schon offen! Entnehmen Sie bitte ihre Karte aus dem Panel.";
-		end if;
-	end if;	
-
-
-
-
-
-Part - Szenen
+Part - Szenen und mehr
 
 Szene 1 is a scene. "Szene 1: Böses Willkommen[paragraph break]Die Lupus-Station ist eine der entlegensten Raumstationen des Terrestrischen Imperiums. Sie dient ausschließlich der Forschung. Zum einen liegt sie in der Nähe eines Planeten, der fremde Lebensformen mit geringer Intelligenz hervorgebracht hat. Zum anderen befindet sich in einiger Entfernung ein besonders seltenes Raumphänomen, das erforscht werden soll. Zu diesem Zweck wurde dort eine kleine Forschungsstation errichtet. Der Transport per Raumfähre ist auf Grund von Ionenstürmen recht gefährlich, so dass ein Punkt‐zu‐Punkt‐Subraum‐Transport‐Link zur Raumstation eingerichtet worden ist.[line break]Die Protagonisten der Geschichte sind der Pilot und Spezialist für Vakuumeinsätze Barry McIntyre sowie der Ingenieur Percy Braden. Beide sind frisch von der Akademie und auf ihrem ersten Einsatz auf einer Raumstation (wenn man die Ausbildungsstation im Erdorbit einmal nicht mitzählt). Sie sollen zwei Mitarbeiter der Lupus‐Station ablösen und sind mit der Fähre auf dem Weg zur Station.[line break]Barry fliegt die Fähre, Percy übernimmt die Kommunikation. Als sie sich der Station nähern wundern sie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denken sie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Als sie aus der Fähre aussteigen, finden sie den Andock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry den Landecheck vornimmt und Percy nach dem Deckpersonal recherchiert und sich schon einmal auf der Brücke beim wachhabenden Offizier meldet (Der Spieler spielt als Percy)."
 Szene 1 begins when play begins.
