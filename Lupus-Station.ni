@@ -296,6 +296,7 @@ Alpha-Delta Korridor is a room.
 The Description of Alpha-Delta Korridor is "Ein Raum mit einem Panel zum Öffnen der Tür, lediglich eine Tür im Nordosten und eine im Südwesten.".
 
 Kontaminierter Forscher is a Kontaminierter. Kontaminierter Forscher is in Alpha-Delta Korridor.
+PanelADK-DK is an closed container in Alpha-Delta Korridor. the panelADK-DK is unopenable. the panelADK-DK is fixed in place.
 
 
 Section - Alpha Kreuzung 
