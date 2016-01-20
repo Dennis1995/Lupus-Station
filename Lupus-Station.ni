@@ -969,16 +969,16 @@ After switching off HG-Knopf:
 [Türen]
 Section - Türen
 
-TürM-LR is west of Lagerraum and east of Mensa . TürM-LR  is a door. TürM-LR is locked.
-TürLR-BGH is southeast of Lagerraum and northwest of Beta-Gewächshaus. TürLR-BGH is door. TürLR-BGH is locked.
-TürBGH-LB is northeast of Beta-Gewächshaus and southwest of Lager. TürBGH-LB is a door. TürBGH-LB is locked.
-TürLB-DGH is northwest of Lager and southeast of Delta-Gewächshaus. TürLB-DGH is a door. TürLB-DGH  is locked.
-TürDGH-LR is southwest of Delta-Gewächshaus and northeast of Lagerraum. TürDGH-LR is a door. TürDGH-LR is locked.
+TürM-LR is west of Lagerraum and east of Mensa . TürM-LR  is a door. TürM-LR is open.
+TürLR-BGH is southeast of Lagerraum and northwest of Beta-Gewächshaus. TürLR-BGH is door. TürLR-BGH is open.
+TürBGH-LB is northeast of Beta-Gewächshaus and southwest of Lager. TürBGH-LB is a door. TürBGH-LB is open.
+TürLB-DGH is northwest of Lager and southeast of Delta-Gewächshaus. TürLB-DGH is a door. TürLB-DGH  is open.
+TürDGH-LR is southwest of Delta-Gewächshaus and northeast of Lagerraum. TürDGH-LR is a door. TürDGH-LR is open.
 
-TürSKK-DK is northeast of Schwerkraftkompensator  and  southwest of Delta-KI. TürSKK-DK is a door.TürSKK-DK is locked.
-TürDK-HG is northwest of Delta-KI and southeast of Hauptgenerator.TürDK-HG is a door.TürDK-HG is locked.
-TürHG-AK is southwest of Hauptgenerator and northeast of Alpha-KI. TürHG-AK is a door.TürHG-AK is locked.
-TürAK-SKK is southeast of Alpha-KI and northwest of Schwerkraftkompensator. TürAK-SKK is a door. TürAK-SKK is locked.
+TürSKK-DK is northeast of Schwerkraftkompensator  and  southwest of Delta-KI. TürSKK-DK is a door.TürSKK-DK is open.
+TürDK-HG is northwest of Delta-KI and southeast of Hauptgenerator.TürDK-HG is a door.TürDK-HG is open.
+TürHG-AK is southwest of Hauptgenerator and northeast of Alpha-KI. TürHG-AK is a door.TürHG-AK is open.
+TürAK-SKK is southeast of Alpha-KI and northwest of Schwerkraftkompensator. TürAK-SKK is a door. TürAK-SKK is open.
 
 The Description of TürM-LR is "Tür zwischen Lagerraum und Mensa: Tür nicht verschlossen.".
 The Description of TürLR-BGH is "Tür zwischen Lagerraum und Beta-Gewächshaus: Tür nicht verschlossen.".
