@@ -40,8 +40,10 @@ The Description of Brücke is "Ein Raum übersäht mit Schaltern und Anzeigen.
 Eine Gegensprechanlage mit einem Mikrofon für Durchsagen auf der Raumstation scheint es hier auch zu geben.".
 
 [Gegensprechanlage]
+Gegensprechanlage is in Brücke,
 Gegensprechanlage is a supporter. Gegensprechanlage is fixed in place.
 Mikrofon is a thing on the Gegensprechanlage. Mikrofon is fixed in place.
+Mikrofonknopf is on Mikrofon.
 Mikrofonknopf is a device. Mikrofonknopf is switched off.
 mikrofonzaehler is a number which varies.
 mikrofonzaehler is 0.
