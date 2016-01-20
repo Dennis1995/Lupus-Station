@@ -792,6 +792,7 @@ end if;
 before going west:
 	if the fass is not in the Xeno-Labor begin;
 	   now TürGK-XL is locked;
+	   now TürGK-XL is closed;
 	end if;
 
 
