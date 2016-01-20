@@ -555,8 +555,6 @@ Spülkasten is a container. Spülkasten is fixed in place. Spülkasten is on the
 [-----Handlaserwaffe---------]
 the Handlaserwaffe is a thing. Handlaserwaffe is in the Spülkasten.
 
-beseitigteKontaminierte is a room.
-
 Understand " shoot at [something]  with [carried thing]" as shooting it with.
 Shooting it with is an action applying to one visible thing and one carried thing.
 
@@ -567,7 +565,7 @@ Check shooting something which is not a Kontaminierter with a carried thing:
 	say "Schlechte Idee" instead;
 
 Carry out shooting it with:
-	now the noun is in beseitigteKontaminierte; 
+	now the noun is nowhere; 
 	say "der Komtaminierte hat sich in Staub aufgelöst.";
 
 
