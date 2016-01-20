@@ -585,7 +585,7 @@ Section - Besatzungsquartier
 
 Besatzungsquartier is a room.
 Besatzungsquartier is above Fitnessraum.
-The Description of Besatzungsquatier is "Das muss der Besatzungsraum sein. Sehr unordentlich und hier riecht es nach Schweiß. Muss wohl vom unteren Raum kommen.".
+The Description of Besatzungsquartier is "Das muss der Besatzungsraum sein. Sehr unordentlich und hier riecht es nach Schweiß. Muss wohl vom unteren Raum kommen.".
 
 Section - Kommunikationsmodul
 
@@ -1007,7 +1007,7 @@ Section - Antennenfeld F
 
 Antennenfeld F is a room.
 Antennenfeld F is above Labor F.
-The Description of Antennen-Feld F is "Dieser Raum sieht genauso aus, wie der Raum auf der Raumstation, jede Menge Kabel und Geräte zur Funkübertragung.
+The Description of Antennenfeld F is "Dieser Raum sieht genauso aus, wie der Raum auf der Raumstation, jede Menge Kabel und Geräte zur Funkübertragung.
 Eine Leiter geht nach unten, südlich und östlich befinden sich Türen.".
 
 
