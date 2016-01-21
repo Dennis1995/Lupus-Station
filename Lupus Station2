@@ -159,7 +159,13 @@ Section - Obere Ebene Türen
 TürBRÜ-BR is a door. TürBRÜ-BR is east of Brücke and west of Besprechungsraum. TürBRÜ-BR is closed and locked. 
 The Description of TürBRÜ-BR is "Tür zwischen Brücke und Besprechungsraum: Hierzu muss der Alarm deaktiviert werden, anschließend lässt die Tür sich mit der Sicherheitskarte öffnen.".
 
+Before opening TürBrücke:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die Sicherheitskarte bei sich tragen." instead;
 
+Before closing TürBrücke:
+	if the player is not carrying the Sicherheitskarte:
+		say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
 
 Chapter - Hauptebene
 
