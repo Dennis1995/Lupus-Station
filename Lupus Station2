@@ -553,14 +553,26 @@ the description of the wandpanel is "In diesem Wandpanel verbirgt sich etwas hö
 Grüne Phiole is a thing. Grüne Phiole is in Wandpanel. 
 the description of the grüne Phiole is "Die Phiole schimmert grün. Es scheint so, als könnte ein Gas enthalten sein. Worum könnte es sich hierbei nur handeln?".
 
+Before switching on Blinkender Knopf:
+	if Szene 2 is happening:
+		say "Ich sollte lieber Percy retten." instead;
+
 After switching on Blinkender Knopf:
-	if Wandpanel is open:
-		say "Endlich Ruhe...";
-	if Wandpanel is closed:
-		say "Endlich Ruhe... Warte was hat sich dort geöffnet ...";
-		now Wandpanel is open;
-	now Alarm is nowhere;
-	now Blinkender Knopf is switched off;
+	if Szene 1 is happening:
+		if Wandpanel is closed:
+			say "Endlich Ruhe... Warte was hat sich dort geöffnet ...";
+			now Wandpanel is open;
+		else:
+			say "Der Alarm is doch schon aus und das Wandpanel offen.";
+		now Alarm is nowhere;
+		now Blinkender Knopf is switched off;
+	else if Szene 2 has ended:
+		if Alarm is in Alarm-reg:
+			now Alarm is nowhere;
+			say "Endlich Ruhe... Der Alarm ist nun aus";
+		else:
+			say "Der Alarm ist doch schon aus.";
+		now Blinkender Knopf is switched off;
 
 Scherben is a thing. Scherben is fixed in place. The description of Scherben is "Was ist denn hier passiert???"
 
