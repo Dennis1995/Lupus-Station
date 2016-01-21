@@ -486,6 +486,7 @@ Krankenbett is an enterable supporter in Med-Labor. Krankenbett is fixed in plac
 The description of Krankenbett is "Ein Bett für jemand Krankes, es sieht nicht wirklich bequem aus."
 [hier muss vielleicht noch eine Bedingung eingefügt werden, sodass letzendlich nur Percy das Bett nutzen kann]
 
+blogstate is a truth state which varies.
 
 Knopf is a device. Knopf is on Pult. Knopf is fixed in place.
 Knopf is switched off. The description of Knopf is "Ahh! Ein Knopf, um Videoblogs abzuspielen...". Knopf is undescribed.
@@ -498,8 +499,18 @@ After switching on Knopf:
 	now Alarm is in Alarm-reg;
 	repeat with i running through the Kontaminierter in Med-Labor:
 		now aufmerksam of i is true;
-	say "Durch die Lautstärke des Abspielens des Videoblogs, sind alle Kontaminierten im Raum aufmerksam auf dich geworden, sei vorsichtig."
+	say "Durch die Lautstärke des Abspielens des Videoblogs, sind alle Kontaminierten im Raum aufmerksam auf dich geworden, sei vorsichtig.";
+	now blogstate is true;
 	
+every turn:
+	[erst ab Szene 4 offen, da sonst zu viele Kontaminierte im Lager sind]
+	if Szene 4 is happening:
+		if blogstate is true:
+			if Alarm is not in Alarm-reg:
+				if TürBrücke is locked:
+					now TürBrücke is unlocked;
+					say "Die Tür zur Brücke ist nun entriegelt.";
+
 [-------------------------Alarm----------------------------------------------]
 Alarm-reg is a region.
 [------------Hier hört man überall den Alarm-------]
