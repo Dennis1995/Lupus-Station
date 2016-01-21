@@ -1270,7 +1270,7 @@ every turn:
 	if Szene 3 is happening:
 		repeat with i running through the Kontaminierter in Lager:
 			increase lagercounter by 1;
-		if lagercounter is 7:
+		if lagercounter is 8:
 		[Die zwei Türen müssen geschlossen sein]
 			if TürLB-DGH is closed:
 				if TürBGH-LB is closed:
