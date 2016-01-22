@@ -405,6 +405,11 @@ akku2counter is 5.
 Check using carried thing on something which is not a Kontaminierter:
 	say "Der Akkubohrer sollte nur auf Kontaminierte benutzt werden, ansonsten ist das eine reine Akku-Ladungs-Verschwendung..." instead.
 
+Check using Akkubohrer on something:
+	if Akku1 is not in Akkubohrer:
+		if Akku2 is not in Akkubohrer:
+			say "Du hast keinen Akku im Akkubohrer." instead;
+
 Carry out using:
 	now aufmerksam of the second noun is true;
 	now the counter of the second noun is 1;
