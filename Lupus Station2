@@ -40,7 +40,7 @@ Kontaminierter erster Offizier is a Kontaminierter in Brücke.
 
 Brücke is a room. 
 The Description of Brücke is "Ein Raum übersäht mit Schaltern und Anzeigen.
-Eine Gegensprechanlage mit einem Mikrofon für Durchsagen auf der Raumstation scheint es hier auch zu geben.".
+Eine Gegensprechanlage mit einem Mikrofon für Durchsagen auf der Raumstation scheint es hier auch zu geben. Im Osten befindet sich der Besprechungsraum".
 
 [Gegensprechanlage]
 Gegensprechanlage is in Brücke.
@@ -85,14 +85,14 @@ Section - Besprechungsraum
 Besprechungsraum is a room. 
 Besprechungsraum is above Dienstraum.
 The Description of Besprechungsraum is "Ein Raum voller Besprechungsnotizen und Stühlen.
-Der Dienstraum hier drunter hatte mehr Charm.".
+Der Dienstraum hier drunter hatte mehr Charm. Im Westen geht es zur Brücke".
 
 
 Section - Antennenfeld L
 
 Antennenfeld L is a room. 
 Antennenfeld L is above Kommunikationsmodul.
-The Description of Antennenfeld L is "Über diesem Raum scheinen die Antennen der Forschungsstation zu sein. Ein großer roter Knopf…der scheint wichtig zu sein.".
+The Description of Antennenfeld L is "Über diesem Raum scheinen die Antennen der Forschungsstation zu sein. Ein großer roter Knopf…der scheint wichtig zu sein. Unter dir geht es zurück zum Kom-Modul.".
 [counter für das Abstezen des Notrufes]
 notrufcounter is a number which varies.
 
@@ -159,11 +159,11 @@ Section - Obere Ebene Türen
 TürBRÜ-BR is a door. TürBRÜ-BR is east of Brücke and west of Besprechungsraum. TürBRÜ-BR is closed and locked. 
 The Description of TürBRÜ-BR is "Tür zwischen Brücke und Besprechungsraum: Hierzu muss der Alarm deaktiviert werden, anschließend lässt die Tür sich mit der Sicherheitskarte öffnen.".
 
-Before opening TürBrücke:
+Before opening TürBRÜ-BR:
 	if the player is not carrying the Sicherheitskarte:
 		say "Um die Tür automatisch zu entsperren, damit Sie passieren können, müssen Sie die Sicherheitskarte bei sich tragen." instead;
 
-Before closing TürBrücke:
+Before closing TürBRÜ-BR:
 	if the player is not carrying the Sicherheitskarte:
 		say "Um die Tür automatisch zu schließen, müssen Sie die Sicherheitskarte bei sich tragen." instead;
 
@@ -180,7 +180,7 @@ Before taking Mobitab:
 The Hangar is a room.
 The Spind is a container in Hangar. Spind is closed and openable. Spind is fixed in place.
 The description of Spind is "Im Spind lagern die Mitarbeiter ihre Sachen."
-The Description of Hangar is "Ein Raum verlassen wie jeder andere. Der Spind neben der Tür im Westen lädt einen ein, um reinzugucken. ".
+The Description of Hangar is "Ein Raum verlassen wie jeder andere. Der Spind neben der Tür im Westen lädt einen ein, um reinzugucken. Im Osten steht unsere Fähre und im Westen muss der Zugang zum äußeren Ring sein.".
 
 Sicherheitskarte is in Spind.
 The description of Sicherheitskarte is "Eine Sicherheitskarte mit der kann man die Türen auf der Station entsperren kann."
@@ -209,7 +209,7 @@ Fähre is a thing. Fähre is in Hangar. Fähre is fixed in place. The descriptio
 Section - Andockstation
 
 The Andockstation is a room.
-The Description of Andockstation is "Gruselig, alles ist hierverlassen und so ruhig, als ob hier nie jemand war.
+The Description of Andockstation is "Gruselig, alles ist hier verlassen und so ruhig, als ob hier nie jemand war.
 Alles sieht hier sehr durcheinander aus. In der  Ecke ein leckendes Fass…
 Wo führt eigentlich die Wartungsluke hin? Westlich geht es zum Hangar.".
 
@@ -278,7 +278,7 @@ Section - Gamma Kreuzung
 
 Gamma Kreuzung is a room.
 
-The Description of Gamma Kreuzung is "Du befindest dich im östlichen Teil des äußeren Rings.Durchs fenster sieht man die undendlichen Weiten des Alls. 
+The Description of Gamma Kreuzung is "Du befindest dich im östlichen Teil des äußeren Rings. Durch das Fenster sieht man die undendlichen Weiten des Alls. 
 Nordwestlich befindet sich der Gamma Delta Korridor, östlich der Hangar und südwestlich der Gamma Beta Korridor.".
 
 
@@ -286,7 +286,8 @@ Section - Gamma-Delta Korridor
 
 The Description of Gamma-Delta Korridor is "Who the Fu**, was ist hier passiert??
 Ein Raum voller Spuren von Laserbeschuss. Sogar den Türhebel im Nordosten hat es erwischt.
-Ist das eine Leiche vor der Tür im Nordwesten?".
+Ist das eine Leiche vor der Tür im Nordwesten?
+Südöstlich geht es zurück zur Gamma Kreuzung".
 
 Leiche is a supporter. Leiche is fixed in place.
 Leiche is in the Gamma-Delta Korridor.
@@ -304,14 +305,14 @@ Gamma-Delta Korridor is a room.
 Section - Delta Kreuzung
 
 Delta Kreuzung is a room.
-The Description of Delta Kreuzung is "Was sind das hier für Geräusche, kommen die aus dem Raum im Süden oder doch aus dem Südwesten?".
+The Description of Delta Kreuzung is "Was sind das hier für Geräusche, kommen die aus dem Raum im Süden? Südwestlich geht es zum Alpha-Delta-Korridor und südöstlich zurück zum Gamma-Delta-Korridor.".
 PanelDK-ADK is an closed container in Delta Kreuzung. The PanelDK-ADK is unopenable. The PanelDK-ADK is fixed in place. The description of the PanelDK-ADK is "Das Panel, was die Tür öffnet, ist durch den Alarm gesperrt. Vielleicht kann ich diese Blockade umgehen.". 
 
 
 Section - Alpha-Delta Korridor
 
 Alpha-Delta Korridor is a room.
-The Description of Alpha-Delta Korridor is "Ein Raum mit einem Panel zum Öffnen der Tür, lediglich eine Tür im Nordosten und eine im Südwesten.".
+The Description of Alpha-Delta Korridor is "Ein Raum mit einem Panel zum Öffnen der Tür, lediglich eine Tür im Nordosten zur Delta-Kreuzung und eine im Südwesten zur Alpha-Kreuzung.".
 
 Kontaminierter Forscher is a Kontaminierter. Kontaminierter Forscher is in Alpha-Delta Korridor.
 PanelADK-DK is an closed container in Alpha-Delta Korridor. the panelADK-DK is unopenable. the panelADK-DK is fixed in place. The description of the PanelADK-DK is "Das Panel, was die Tür öffnet, ist durch den Alarm gesperrt. Vielleicht kann ich diese Blockade umgehen.". 
@@ -322,8 +323,8 @@ Section - Alpha Kreuzung
 
 Alpha Kreuzung is room.
 The Description of Alpha Kreuzung is "Wie soll man sich hier entscheiden, wo man hingehen soll. In jede Richtung ein Raum, das ist echt verwirrend.
-Nach Osten ist ein Med-Labor ausgeschildert und im Westen  muss irgendwo die Brücke sein.
-Südöstlich ist  auch noch eine Tür, aber allen Anschein nach durch das Panel verschlossen ist."
+Im Osten ist das Med-Labor, im Westen der Dienstraum.
+Südöstlich geht’s zum Alpha-Beta-Korridor und nordöstlich zum Alpha-Delta-Korridor."
 
 PanelAK-ADK is a closed container in Alpha Kreuzung. the panelAK-ADK is unopenable. the panelAK-ADK is fixed in place. The description of the PanelAK-ADK is "Das Panel, was die Tür öffnet, ist durch den Alarm gesperrt. Vielleicht kann ich diese Blockade umgehen.".  
 Panel AK-ABK is an closed container in Alpha Kreuzung.The Panel AK-ABK is unopenable.The Panel AK-ABK is fixed in place. The description of the Panel Ak-ABK is "Das Panel, was die Tür öffnet, ist durch den Alarm gesperrt. Vielleicht kann ich diese Blockade umgehen.". 
@@ -332,7 +333,7 @@ Section - Alpha-Beta Korridor
 
 Alpha-Beta Korridor is a room.
 The Description of Alpha-Beta Korridor is "Ein schöner Ausblick nach draußen. In weiter Ferne sieht man ein Raumphänomen.
-Eine weitere Tür, die durch ein Panel geschlossen ist,  befindet sich südöstlich.".
+Nordwestlich geht es zur Alpha-Kreuzung und südwestlich zur Beta-Kreuzung.".
 
 PanelABK-AK is an closed container in Alpha-Beta Korridor. the panelABK-AK is unopenable. the panelABK-AK is fixed in place. The description of the PanelABK-Ak is "Das Panel, was die Tür öffnet, ist durch den Alarm gesperrt. Vielleicht kann ich diese Blockade umgehen.". 
 Panel ABK-BK is an closed container in the Alpha-Beta Korridor. The Panel ABK-BK is unopenable. The Panel ABK-BK is fixed in place. The description of the Panel ABK-BK is "Das Panel, was die Tür öffnet, ist durch den Alarm gesperrt. Vielleicht kann ich diese Blockade umgehen.". 
@@ -343,9 +344,9 @@ Kontaminierter Ingenieur is a Kontaminierter. Kontaminierter Ingenieur is in Alp
 Section - Beta Kreuzung 
 
 Beta Kreuzung is a room.
-The Description of Beta Kreuzung is "Es ist ganz schön laut hier, der Lärm schein aus dem nördlichen Raum zu kommen.
-Im Süden ist sogar ein Damen WC, welches aber außer Betrieb ist.
-Nordöstlich scheint es wieder zurück zur Andockstation zu gehen.".
+The Description of Beta Kreuzung is "Es ist ganz schön laut hier, der Lärm scheint aus dem nördlichen Maschinenraum zu kommen.
+Im Süden ist sogar ein Damen WC, welches aber außer Betrieb zu sein scheint.
+Nordwestlich geht es zum Alpha-Beta-Korridor und nordöstlich zum Gamma-Beta-Korridor, der zur Andockstation und Xeno-Lab führt.".
 
 PanelBK-ABK is an closed container in Beta Kreuzung. the panelBK-ABK  is unopenable. the panelBK-ABK is fixed in place. The description of the PanelBK-ABK is "Das Panel, was die Tür öffnet, ist durch den Alarm gesperrt. Vielleicht kann ich diese Blockade umgehen.".  
 
@@ -354,7 +355,7 @@ Section - Gamma-Beta Korridor
 
 The Description of Gamma-Beta Korridor is "Einherrlicher Ausblick.
 Sieht man in weiter Entfernung die Erde?	
-Vielleicht sieht man, wenn man nach Nordosten geht diese besser.".
+Südwestlich geht es zur Beta-Kreuzung und nordöstlich zur Gamma-Kreuzung.".
 
 Gamma-Beta Korridor is a room.
 
@@ -363,7 +364,7 @@ Section - Maschinenraum
 
 Maschinenraum is a room.
 Maschinenraum is above Schwerkraftkompensator.
-The Description of Maschinenraum is "Es ist sehr sehr laut und schmutzig hier. Eine Tafel zeigt viele nützliche Informationen an, ein alter Akkubohrer mit einem Akku liegt auf  dem Boden. Der Blick auf den Maschinen ist sicherlich für Ingenieure interessant.  Alles riecht nach Öl.
+The Description of Maschinenraum is "Es ist sehr sehr laut und schmutzig hier. Eine Tafel zeigt viele nützliche Informationen an, ein alter Akkubohrer mit einem Akku liegt auf  dem Boden. Der Blick auf die Maschinen ist sicherlich für Ingenieure interessant.  Alles riecht nach Öl.
 Ein Glück kann man hier die Etagen Wechseln.".
 
 Anzeigetafel is a thing. Anzeigetafel is fixed in place.
@@ -448,7 +449,7 @@ Section - Med-Labor
 
 Med-Labor is a room.
 The Description of Med-Labor is "Das Med-Labor ist spärlich ausgestattet.
-Ein Bett, ein Pult und eine riesige Kabine. Dafür hat man den Blick auf den Maschinekern. "
+Ein Bett, ein Pult und eine riesige Kabine. Dafür hat man den Blick auf den Maschinenkern. Nach Westen geht es wieder zurück zur Alpha-Kreuzung. "
 
 [---------Dekontaminationskabine---------]
 Dekontaminationskabine is an enterable container in Med-Labor. The carrying capacity of Dekontaminationskabine is 0. Dekontaminationskabine is fixed in place.
@@ -501,7 +502,7 @@ blogstate is a truth state which varies.
 
 Knopf is a device. Knopf is on Pult. Knopf is fixed in place.
 Knopf is switched off. The description of Knopf is "Ahh! Ein Knopf, um Videoblogs abzuspielen...". Knopf is undescribed.
-Pult is a supporter in Med-Labor. The description of Pult is "Auf dem Pult befindet sich ein Knopf mit der Beschriftung 'Videos'. Was der wohl macht?"
+Pult is a supporter in Med-Labor. The description of Pult is "Auf dem Pult befindet sich ein Knopf mit der Beschriftung 'Videos'. Du solltest den Knopf anschalten und dir ein wenig Zeit vertreiben."
 Pult is fixed in place.
 
 After switching on Knopf:
@@ -518,8 +519,8 @@ every turn:
 	if Szene 4 is happening:
 		if blogstate is true:
 			if Alarm is not in Alarm-reg:
-				if TürBrücke is locked:
-					now TürBrücke is unlocked;
+				if TürBRÜ-BR is locked:
+					now TürBRÜ-BR is unlocked;
 					say "Die Tür zur Brücke ist nun entriegelt.";
 
 [-------------------------Alarm----------------------------------------------]
@@ -542,7 +543,7 @@ kann nur eingefügt werden wenn der blinkende Knopf eingefügt wurde-]
 Section - Solar-Labor
 
 Solar-Labor is a room.
-The Description of Solar-Labor is "Dies scheint auch ein Forschungsraum zu sein. Auch von hier aus sieht man den Maschinekern. Anscheinend wie jeder Raum des inneren Rings auf dieser Etage.".
+The Description of Solar-Labor is "Dies scheint auch ein Forschungsraum zu sein. Auch von hier aus sieht man den Maschinekern. Anscheinend wie jeder Raum des inneren Rings auf dieser Etage. Nach Norden geht es zurück zur Delta-Kreuzung.".
 
 
 Section - Xeno-Labor
@@ -571,7 +572,7 @@ Before switching on Blinkender Knopf:
 After switching on Blinkender Knopf:
 	if Szene 1 is happening:
 		if Wandpanel is closed:
-			say "Endlich Ruhe... Warte was hat sich dort geöffnet ...";
+			say "Endlich Ruhe... Warte schimmert dort so grün aus dem Wandpanel???";
 			now Wandpanel is open;
 		else:
 			say "Der Alarm is doch schon aus und das Wandpanel offen.";
@@ -591,7 +592,7 @@ Instead of taking Grüne Phiole:
 	say "Neiiiiin.... Ich habe es fallen gelassen. Was sind das für komische Dämpfe? Oh ... mir ... geht ... es .. garnicht... gut...";
 	now Grüne Phiole is nowhere;
 	now Scherben is in Xeno-Labor;
-	now everything carried is in Xeno-Labor;
+	now everything carried is in Xeno-Labor;	
 	now the player is Barry;
 	now Kontaminierter Percy is in Xeno-Labor;
 	now Percy is nowhere;
@@ -630,21 +631,23 @@ Section - Dienstraum
 
 Dienstraum is a room.
 Dienstraum is above Mensa.
-The Description of Dienstraum is "Dieser Raum sieht nach Arbeit aus. Zum Glück kann man von hier aus nach oben, unten und in den westlichen Raum flüchten.".
+The Description of Dienstraum is "Dieser Raum sieht nach Arbeit aus. Zum Glück kann man von hier aus nach oben zum Besprechungsraum, nach unten in  die Mensa und nach Osten zur Alpha-Kreuzung flüchten.".
 
 
 Section - Besatzungsquartier
 
 Besatzungsquartier is a room.
 Besatzungsquartier is above Fitnessraum.
-The Description of Besatzungsquartier is "Das muss der Besatzungsraum sein. Sehr unordentlich und hier riecht es nach Schweiß. Muss wohl vom unteren Raum kommen.".
+The Description of Besatzungsquartier is "Das muss der Besatzungsraum sein. Sehr unordentlich und hier riecht es nach Schweiß. Muss wohl vom unteren Fitnessraum kommen.
+Nach Osten geht es zurück zum Dienstraum.".
 
 Section - Kommunikationsmodul
 
 Kommunikationsmodul is a room.
 Kommunikationsmodul is above Hilfsgeneratorraum.
-The Description of Kommunikationsmodul is "Dieser Raum scheint für die Kommunikation der Raumstation  zu sein. Soviele Lwl-Kabel und Stromkabel, die nach oben und unten führen.
-Was ist das eigentlich für ein penetrant leuchtender Knopf?".
+The Description of Kommunikationsmodul is "Dieser Raum scheint für die Kommunikation der Raumstation  zu sein. Soviele Lwl-Kabel und Stromkabel, die nach oben zum AntennenfeldL und nach unten zum Hilfsgenerator führen.
+Was ist das eigentlich für ein penetrant leuchtender Knopf?
+Im Südwesten ist doch die Wartungsluke, aber unbeschädigt. Südöstlich geht es zurück zur Andockstation.".
 
 Kontaminierter Mann is a Kontaminierter. Kontaminierter Mann is in Besatzungsquartier.
 Kontaminierte Frau is a Kontaminierter. Kontaminierte Frau is in Besatzungsquartier.
@@ -857,9 +860,9 @@ Before closing TürGBK-GK:
 		
 
 [Gamma Kreuzung <-> Xeno-Labor]
-TürGK-XL is west of Gamma Kreuzung. TürGK-XL is east of Xeno-Labor. TürGK-XL is a door.
-TürGK-XL is locked.
-The Description of TürGK-XL is "Tür zwischen Gamma Kreuzung und Xeno-Labor: Du benötigst die Xenokarte um diese Tür zu öffnen. Tür bleibt nur 5 Sekunden geöffnet und schließt dann wieder. Tür kann mit einem Fass blockiert werden, sodass die Tür für immer offen bleibt.".
+TürXenoLab is west of Gamma Kreuzung. TürXenoLab is east of Xeno-Labor. TürXenoLab is a door.
+TürXenoLab is locked.
+The Description of TürXenoLab is "Tür zwischen Gamma Kreuzung und Xeno-Labor: Du benötigst die Xenokarte um diese Tür zu öffnen. Tür bleibt nur 5 Sekunden geöffnet und schließt dann wieder. Tür kann mit einem Fass blockiert werden, sodass die Tür für immer offen bleibt.".
 
 
 [Regeln für die Xeno-Lab Tür]
@@ -875,19 +878,19 @@ the panelcounter is a number which varies.
 
 every turn:
 if the fass is in the Xeno-Labor begin;
-  now TürGK-XL is unlocked;
-  now TürGK-XL is open;
+  now TürXenoLab is unlocked;
+  now TürXenoLab is open;
   now the fass is not pushable between rooms;
 otherwise;
 	if the panel is unlocked begin; 
-	   now TürGK-XL is unlocked;
-	   now TürGK-XL is open;
+	   now TürXenoLab is unlocked;
+	   now TürXenoLab is open;
 	   increase panelcounter by 1;
 	end if;
 if panelcounter is  2  begin;
    decrease panelcounter by 2 ;
-	now türGK-XL is closed;
-	now  türGK-XL  is locked;
+	now TürXenoLab is closed;
+	now  TürXenoLab  is locked;
 	now the panel is closed;
 	now the panel is locked;
 end if;
@@ -895,27 +898,27 @@ end if;
 
 before going west:
 	if the fass is not in the Xeno-Labor begin;
-	   now TürGK-XL is locked;
-	   now TürGK-XL is closed;
+	   now TürXenoLab is locked;
+	   now TürXenoLab is closed;
 	end if;
 
 
 [Beta Kreuzung <-> Maschinenraum]
-TürBK-MR is north of Beta Kreuzung. TürBK-MR is south of Maschinenraum. TürBK-MR is a door.
-The Description of TürBK-MR is "Tür zwischen Beta Kreuzung und Maschinenraum: Tür offen.".
+TürMaschinenraum is north of Beta Kreuzung. TürMaschinenraum is south of Maschinenraum. TürMaschinenraum is a door.
+The Description of TürMaschinenraum is "Tür zwischen Beta Kreuzung und Maschinenraum: Tür offen.".
 
 [Delta Kreuzung <-> Solar-Labor]
-TürDK-SL is south of Delta Kreuzung. TürDK-SL is north of Solar-Labor. TürDK-SL is a door.
-The Description of TürDK-SL is "Tür zwischen Delta Kreuzung und Solar-Labor: Tür offen.".
+TürSolarLab is south of Delta Kreuzung. TürSolarLab is north of Solar-Labor. TürSolarLab is a door.
+The Description of TürSolarLab is "Tür zwischen Delta Kreuzung und Solar-Labor: Tür offen.".
 
 [Alpha Kreuzung <-> Med-Labor]
-TürAK-ML is east of Alpha Kreuzung. TürAK-ML is west of Med-Labor. TürAK-ML is a door.
-The Description of TürAK-ML is "Tür zwischen Alpha Kreuzung und Med-Labor: Tür offen.".
+TürMedLab is east of Alpha Kreuzung. TürMedLab is west of Med-Labor. TürMedLab is a door.
+The Description of TürMedLab is "Tür zwischen Alpha Kreuzung und Med-Labor: Tür offen.".
 
 [Beta Kreuzung <-> WC-Damen]
-TürBK-WCD is south of Beta Kreuzung. TürBK-WCD is north of WC-Damen. TürBK-WCD is a door.
-TürBK-WCD is locked.
-The Description of TürBK-WCD is "Tür zwischen Beta Kreuzung und WC-Damen: Tür lässt sich erst in Szene 4 nach Abschluss der Dekontaminierung öffnen.".
+TürWCDamen is south of Beta Kreuzung. TürWCDamen is north of WC-Damen. TürWCDamen is a door.
+TürWCDamen is locked.
+The Description of TürWCDamen is "Tür zwischen Beta Kreuzung und WC-Damen: Tür lässt sich erst in Szene 4 nach Abschluss der Dekontaminierung öffnen.".
 
 [Alpha Kreuzung <-> Dienstraum]
 TürAK-DR is west of Alpha Kreuzung. TürAK-DR is east of Dienstraum. TürAK-DR is a door.
@@ -926,25 +929,25 @@ TürDR-BQ is east of Besatzungsquartier. TürDR-BQ is west of Dienstraum. TürDR
 The Description of TürDR-BQ is "Tür zwischen Dienstraum und Besatzungsquatiert: Tür offen.".
 
 [Gamma-Delta Korridor <-> Kommunikationsmodul]
-TürGDK-KM is northeast of Gamma-Delta Korridor. TürGDK-KM is southwest of Kommunikationsmodul. TürGDK-KM is a door.
-TürGDK-KM is locked.
-The Description of TürGDK-KM is "Tür zwischen Gamma-Delta-Korridor und Kommunikationsmodul: Hebel auf dieser Seite defekt, Tür kann nur im Kommunikationsmodul geöffnet werden.".
+Wartungsluke is northeast of Gamma-Delta Korridor. Wartungsluke is southwest of Kommunikationsmodul. Wartungsluke is a door.
+Wartungsluke is locked.
+The Description of Wartungsluke is "Tür zwischen Gamma-Delta-Korridor und Kommunikationsmodul: Hebel auf dieser Seite defekt, Tür kann nur im Kommunikationsmodul geöffnet werden.".
 
-Before opening TürGDK-KM:
+Before opening Wartungsluke:
 	if the location of the player is not Kommunikationsmodul:
 		say "Von hier lässt sich die Wartungsluke zum Kom-Modul nicht öffnen, da sie durch Laserfeuer beschädigt wurde." instead;
 
 [Hangar <-> Umkleideraum]
-TürH-UR is south of Hangar. TürH-UR is north of Umkleideraum. TürH-UR is a door.
-TürH-UR is locked.
-The description of the TürH-UR is "Tür zwischen Hangar und Umkleideraum: Öffnet sich nach dem alle Kontamnierten im Lager sind.".
+TürUmkleide is south of Hangar. TürUmkleide is north of Umkleideraum. TürUmkleide is a door.
+TürUmkleide is locked.
+The description of the TürUmkleide is "Tür zwischen Hangar und Umkleideraum: Öffnet sich nach dem alle Kontamnierten im Lager sind.".
 
 
 [Andockstation <-> Kommunikationsmodul]
-TürAS-KM is northwest of Andockstation. TürAS-KM is southeast of Kommunikationsmodul. TürAS-KM is a door.
-The Description of TürAS-KM is "Tür zwischen Andockstation und Kommunkationsmodul: Bitte Raumanzug anziehen, da du im Weltall sonst nicht überlebst.".
+Außeneinstieg is northwest of Andockstation. Außeneinstieg is southeast of Kommunikationsmodul. Außeneinstieg is a door.
+The Description of Außeneinstieg is "Tür zwischen Andockstation und Kommunkationsmodul: Bitte Raumanzug anziehen, da du im Weltall sonst nicht überlebst.".
 
-Before going through the TürAS-KM:
+Before going through the Außeneinstieg:
 	if the player is not wearing the Raumanzug:
 		end the story finally saying "Du betrittst den Weltraum ohne Raumanzug und stirbst. [paragraph break] Game over."
 
@@ -957,7 +960,7 @@ Section  - Lagerraum
 
 Lagerraum is a room.
 The Description of Lagerraum is "Ein Raum vollgepackt mit Geräten und Nahrung. Anscheinend hat hier schon lange niemand aufgeräumt.
-Eine Tür zum verlassen des Raumes befindet sich im Nordosten und Südosten.".
+Eine Tür zum verlassen des Raumes befindet sich im Nordosten zum Delta-Gewächshaus und im Südosten zum Beta-Gewächshaus.".
 
 
 Section  - Delta-Gewächshaus
@@ -965,7 +968,8 @@ Section  - Delta-Gewächshaus
 Delta-Gewächshaus is a room.
 The Description of Delta-Gewächshaus is "Du befindest dich jetzt im Norden des äußeren Rings der unteren Ebene.
 Ein Raum voller Pflanzen, das sieht man selten im Weltall.
-Ob es im Raum Südöstlich von hier genauso aussieht?".
+Ob es im Lager südöstlich von hier genauso aussieht?
+Südwestlich geht es wieder zum Lagerraum.".
 
 Kontaminierter Gärtner is a Kontaminierter. Kontaminierter Gärtner is in Delta-Gewächshaus.
 
@@ -979,14 +983,15 @@ Section  - Lager
 Lager is a room.
 The Description of Lager is "Du befindest dich jetzt im Osten des äußeren Rings der unteren Ebene.
 Ein Raum ähnlich wie der Lagerraum, nur aufgeräumter und größer.
-Südwestlich scheint es wieder zum Lagerraum zu gehen.".
+Südwestlich geht es zum Beta-Gewächshaus und nordwestlich zum Delta-Gewächshaus. ".
 
 
 Section  - Beta-Gewächshaus
 
 Beta-Gewächshaus is a room.
 The Description of Beta-Gewächshaus is "Du befindest dich jetzt im Süden des äußeren Rings der unteren Ebene.
-Ein Raum wie das Delta Gewächshaus, nur es scheint hier Obst angebaut zu werden.".
+Ein Raum wie das Delta Gewächshaus, nur es scheint hier Obst angebaut zu werden.
+Nordöstlich geht es in das Lager und nordwestlich in den Lagerraum.".
 
 Kontaminierte Gärtnerin is a Kontaminierter. Kontaminierte Gärtnerin is in Beta-Gewächshaus.
 
@@ -995,9 +1000,7 @@ Kontaminierte Gärtnerin is a Kontaminierter. Kontaminierte Gärtnerin is in Bet
 Section  - Schwerkraftkompensator 
 
 Schwerkraftkompensator is a room.
-The Description of Schwerkraftkompensator is "Dieser Raum scheint die Schwerkraft auf der Forschungsstation zu regeln und die Verbindung zur Forschungsstation zu sein.
-Der Transporter sollte dorthin führen.
-Von hier aus gehen Türen in den Nordosten und Nordwesten.".
+The Description of Schwerkraftkompensator is "Dieser Raum scheint die Schwerkraft auf der Forschungsstation zu regeln und die Verbindung zur Forschungsstation zu sein. Betrete den Transporter mit GO IN und du kannst zur Forschungsstation. Von hier aus gehen Türen in den Nordosten und Nordwesten.".
 
 [------Transporter-------]
 Transporter-RS is inside of Schwerkraftkompensator. The description of Transporter-RS is "Dieses ist der Transporter, durch drücken des hier befindlichen Knopfes gelangt man von der Raumstation zur Forschungsstation."
@@ -1044,7 +1047,7 @@ Mensa is a room.
 The Description of Mensa is "Hier wurde mal gekocht und gespeist.
 Aber das ist schon länger her.
 Anstatt des Besatzungspersonal treiben sich hier nur noch Ungeziefer rum.
-Du kannst hoch zum Dienstraum oder zum äußeren Ring der unteren Ebene.".
+Du kannst hoch zum Dienstraum oder zum äußeren Ring der unteren Ebene zum Lagerraum.".
 
 
 Section  - Fitnessraum
@@ -1062,7 +1065,7 @@ The Description of Hilfsgeneratorraum is "Hier befindet sich der Hilfsgenerator,
 Über dir ist das Kommunikationsmodul.".
 
 Hilfsgenerator is a supporter. Hilfsgenerator is in Hilfsgeneratorraum. Hilfsgenerator is fixed in place.
-The description of the Hilfsgenerator is "Der Hilfsgenerator versorgt  die Station, wenn der Hauptgenerator nicht funktionsbereit ist.".
+The description of the Hilfsgenerator is "Der Hilfsgenerator versorgt  die Station, wenn der Hauptgenerator nicht funktionsbereit ist. Nach oben geht’s zum Kommunikationsmodul.".
 HG-Knopf is a device. HG-Knopf is on Hilfsgenerator. HG-Knopf is switched off.
 HG-Knopf is fixed in place. The description of HG-Knopf is "Hmm... soll dieser Knopf irgendwas mit dem Hilfsgenerator machen??"
 After switching on HG-Knopf:
@@ -1172,7 +1175,7 @@ the description of the fluchtkapsel is "Die Fluchtkapsel ist groß genug für zw
 
 Before switching on Launch-Schalter:
 	if sauerstoffabfallbeginn is 0:
-		say "Du willst schon flüchten? Versuche doch das Stationspersonal zu dekontaminieren oder wenigstens einen Notruf abzusetzen!" instead;
+		say "Du willst schon flüchten? Versuche doch das Stationspersonal sicher zu versperren oder wenigstens einen Notruf abzusetzen!" instead;
 	else if Percy is not in Fluchtkapsel:
 		say "Willst du wirklich ohne Percy flüchten??" instead;
 	else if Barry is not in Fluchtkapsel:
@@ -1211,8 +1214,7 @@ Beschädigtes Modul is a room.]
 Section - Transporterraum
 
 Transporterraum is a room.
-The Description of Transporterraum is "Dies ist die Verbindung zur Raumstation.
-Benutze den Transporter um dorthin zu gelangen.
+The Description of Transporterraum is "Dies ist die Verbindung zur Raumstation. GEH IN den Transporter um dorthin zu gelangen.
 Östlich geht’s zum Energiespeicher und über dir zum Kommunikationsmodul F.".
 
 [------Transporter-------]
@@ -1315,8 +1317,8 @@ Szene 4 is a scene. "Szene 4: Der Notruf[paragraph break]Barry geht zurück in d
 Um Kontakt zu halten und Befehle zu geben, muss Barry die Gegensprechanlage der Brücke nutzen. Durch das Versammeln der Kontaminierten hat sich der Umkleideraum und das Damen-WC geöffnet...."
 Szene 4 begins when lagerState is true.
 When Szene 4 begins:
-	now TürH-UR is open;
-	now TürBK-WCD is open;
+	now TürUmkleide is open;
+	now TürWCDamen is open;
 	
 [Backdrop]
 	
@@ -1449,3 +1451,4 @@ Generator is a thing. It is fixed in place. It is in Hauptgenerator. The Descrip
 		if i is a locked door:
 			now i is unlocked;]
 			
+
