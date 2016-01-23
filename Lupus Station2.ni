@@ -449,7 +449,8 @@ Section - Med-Labor
 
 Med-Labor is a room.
 The Description of Med-Labor is "Das Med-Labor ist spärlich ausgestattet.
-Ein Bett, ein Pult und eine riesige Kabine. Dafür hat man den Blick auf den Maschinenkern. Nach Westen geht es wieder zurück zur Alpha-Kreuzung. "
+Ein Bett, ein Pult und eine riesige Kabine. Vielleicht bekommst du ein paar Informationen von dem Pult, warum hier solche Zustände herrschenn. 
+Nach Westen geht es wieder zurück zur Alpha-Kreuzung. "
 
 [---------Dekontaminationskabine---------]
 Dekontaminationskabine is an enterable container in Med-Labor. The carrying capacity of Dekontaminationskabine is 0. Dekontaminationskabine is fixed in place.
