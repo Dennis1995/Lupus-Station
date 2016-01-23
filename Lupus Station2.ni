@@ -581,12 +581,8 @@ After switching on Blinkender Knopf:
 		now Alarm is nowhere;
 		now Blinkender Knopf is switched off;
 	else if Szene 2 has ended:
-		if Alarm is in Alarm-reg:
-			now Alarm is nowhere;
-			say "Endlich Ruhe... Der Alarm ist nun aus";
-		else:
-			say "Der Alarm ist doch schon aus.";
-		now Blinkender Knopf is switched off;
+		now Alarm is nowhere;
+		say "Endlich Ruhe... Der Alarm ist nun aus";
 
 Scherben is a thing. Scherben is fixed in place. The description of Scherben is "Was ist denn hier passiert???"
 
