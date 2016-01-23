@@ -56,6 +56,18 @@ mikrofonzaehler is 0.
 
 instead of switching on the Mikrofonknopf:
 	now  mikrofonzaehler is 1;
+	[Sicherheitstüren werden geöffnet, sodass Percy nicht eingesperrt sein kann...]
+	now TürAS-H is open; 
+	now TürH-GK is open; 
+	now TürGK-GDK is open;
+	now TürGDK-DK is open; 
+	now TürDK-ADK is open; 
+	now TürADK-AK is open; 
+	now TürAK-ABK is open; 
+	now TürABK-BK is open; 
+	now TürBK-GBK is open; 
+	now TürGBK-GK is open;
+	[Personen-Wechsel]
 	now the player is Percy;
 	now the Player is in Med-Labor;
 	say "Du gibst Percy nun Befehle, er soll den Hilfsgenerator vom Kom-Modul einschalten.";
@@ -1318,17 +1330,6 @@ Um Kontakt zu halten und Befehle zu geben, muss Barry die Gegensprechanlage der 
 When Szene 4 begins:
 	now TürH-UR is unlocked;
 	now TürBK-WCD is unlocked;
-	[Sicherheitstüren werden geöffnet, sodass Percy nicht eingesperrt sein kann...]
-	now TürAS-H is open; 
-	now TürH-GK is open; 
-	now TürGK-GDK is open;
-	now TürGDK-DK is open; 
-	now TürDK-ADK is open; 
-	now TürADK-AK is open; 
-	now TürAK-ABK is open; 
-	now TürABK-BK is open; 
-	now TürBK-GBK is open; 
-	now TürGBK-GK is open;
 	
 [Backdrop]
 	
