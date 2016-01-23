@@ -55,10 +55,10 @@ mikrofonzaehler is a number which varies.
 mikrofonzaehler is 0.
 
 instead of switching on the Mikrofonknopf:
- now  mikrofonzaehler is 1;
- now the player is Percy;
- now the Player is in Med-Labor;
-
+	now  mikrofonzaehler is 1;
+	now the player is Percy;
+	now the Player is in Med-Labor;
+	say "Du gibst Percy nun Befehle, er soll den Hilfsgenerator vom Kom-Modul einschalten.";
 
 every turn:
 if the mikrofonzaehler is 1 begin;
