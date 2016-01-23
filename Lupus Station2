@@ -572,7 +572,7 @@ Before switching on Blinkender Knopf:
 After switching on Blinkender Knopf:
 	if Szene 1 is happening:
 		if Wandpanel is closed:
-			say "Endlich Ruhe... Warte schimmert dort so grün aus dem Wandpanel???";
+			say "Endlich Ruhe... Warte was schimmert dort so grün aus dem Wandpanel???";
 			now Wandpanel is open;
 		else:
 			say "Der Alarm is doch schon aus und das Wandpanel offen.";
