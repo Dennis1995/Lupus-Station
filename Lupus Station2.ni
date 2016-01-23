@@ -553,7 +553,8 @@ Kontaminierter Percy is a Kontaminierter. The description of Kontaminierter Perc
 Xeno-Labor is a room.
 The Description of Xeno-Labor is "Beeindruckend, wie blau der leuchtet.
 Was ist das für eine seltsame Maschine, wofür die bloß da ist?
-Schaltet der blinkende Knopf diese an?".
+Schaltet der blinkende Knopf diese an? 
+Nach Osten geht es wieder zurück zur Gamma-Kreuzung.".
 
 Blinkender Knopf is a device. Blinkender Knopf is on Seltsame Maschine. Blinkender Knopf is fixed in place.
 Blinkender Knopf is switched off. The description of Blinkender Knopf is "Vielleicht hört der Alarm auf, wenn ich den Knopf drücke!".
