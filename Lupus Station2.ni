@@ -365,7 +365,7 @@ Section - Maschinenraum
 Maschinenraum is a room.
 Maschinenraum is above Schwerkraftkompensator.
 The Description of Maschinenraum is "Es ist sehr sehr laut und schmutzig hier. Eine Tafel zeigt viele nützliche Informationen an, ein alter Akkubohrer mit einem Akku liegt auf  dem Boden. Der Blick auf die Maschinen ist sicherlich für Ingenieure interessant.  Alles riecht nach Öl.
-Ein Glück kann man hier die Etagen Wechseln.".
+Ein Glück kann man hier die Etagen Wechseln oder wieder nach Süden zur Beta-Kreuzung gehen.".
 
 Anzeigetafel is a thing. Anzeigetafel is fixed in place.
 Anzeigetafel is in the Maschinenraum.The description of the Anzeigetafel is "Es fehlen sämtliche Fluchtkapseln und es sind [lagerkoncount] Kontaminierte in Lager. ".
