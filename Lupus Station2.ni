@@ -1425,7 +1425,7 @@ Carry out making noise:
 [Sauerstoffabfall]
 
 Oxygencounter is a number which varies.
-Oxygencounter is 15.
+Oxygencounter is 25.
 every turn:
 if the Oxygencounter is not -1 begin;
 	   if Oxygencounter is zero begin;
