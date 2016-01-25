@@ -192,7 +192,7 @@ every turn:
 			say "Percy folgt dir auf Schritt und Tritt.";
 
 
-Section - Obere Ebene Türen
+Section - Türen Obere Ebene RS
 
 TürBRÜ-BR is a door. TürBRÜ-BR is east of Brücke and west of Besprechungsraum. TürBRÜ-BR is closed and locked. 
 The Description of TürBRÜ-BR is "Tür zwischen Brücke und Besprechungsraum: Hierzu muss der Alarm deaktiviert werden, anschließend lässt die Tür sich mit der Sicherheitskarte öffnen.".
@@ -699,7 +699,7 @@ The Raumanzug is in Umkleideraum. Raumanzug is wearable.
 The Description of Raumanzug is "Hierbei handelt es sich tatsächlich um einen funktionsfähigen Raumanzug! Er könnte sogar in Percys Größe sein."
 
 
-Section - Türen
+Section - Türen Hauptebene RS
 
 [Andockstation <-> Hangar]
 TürAS-H is east of Hangar. TürAS-H is west of Andockstation.  TürAS-H is a door.
@@ -1115,7 +1115,7 @@ After switching off HG-Knopf:
 
 
 [Türen]
-Section - Türen
+Section - Türen Untere Ebene RS
 
 TürM-LR is west of Lagerraum and east of Mensa . TürM-LR  is a door. TürM-LR is open.
 TürLR-BGH is southeast of Lagerraum and northwest of Beta-Gewächshaus. TürLR-BGH is door. TürLR-BGH is open.
@@ -1274,7 +1274,7 @@ The Description of Energiespeicher is "Dies ist der primäre Energiespeicher der
 
 [Türen]
 
-Section - Türen 
+Section - Türen FS
 
 TürAF-FM is south of Antennenfeld F and north of Funkmodul. TürAF-FM is a door. TürAF-FM is open.
 TürAF-SM is east of Antennenfeld F and west of Solar-Modul F. TürAF-SM is a door. TürAF-SM is open.
