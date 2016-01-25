@@ -1068,6 +1068,8 @@ Hauptgenerator is a room.
 The Description of Hauptgenerator is "Der Hauptgenerator, das ist die Energiequelle der Forschungsstation.
 Türen sind im Südwesten und Südosten.".
 
+Generator is a thing. It is fixed in place. It is in Hauptgenerator. The Description is "Dies ist der Hauptgenerator, welches die Station mit Strom versorgt.".
+
 
 Section  - Alpha-KI
 
@@ -1445,12 +1447,6 @@ if the Oxygencounter is not -1 begin;
 				 decrease Oxygencounter by 1; 
 				 end if;
 end if;
-
-[-----weitere "unwichtige" Gegenstände--------------]
-
-
-Generator is a thing. It is fixed in place. It is in Hauptgenerator. The Description is "Dies ist der Hauptgenerator, welches die Station mit Strom versorgt.".
-
 
 [Test-Schleife, schließt am Anfang alle Türen auf, so muss man nicht immer alle Türen entsper- 	en, um den Code zu Testen]
 [when play begins:	
