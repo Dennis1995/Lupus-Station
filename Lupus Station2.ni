@@ -29,6 +29,31 @@ Book - Lupus Station
 
 Part -  Raumstation
 [////Raumstation der Lupus Station////]
+[Backdrop]
+	
+Fenster is a backdrop. It is in Maschinenraum and in Solar-Labor and in Xeno-Labor and in Med-Labor and in Alpha-Beta Korridor and in Energiespeicher and in Lagerraum and in Delta-Gewächshaus and in Lager and in Beta-Gewächshaus and in Gamma Kreuzung and in Gamma-Beta Korridor and in Beta Kreuzung and in Alpha-Beta Korridor and in Alpha Kreuzung and in Alpha-Delta Korridor and in Delta Kreuzung and in Gamma-Delta Korridor. 
+The Description of Fenster is "[if Fenster is in Maschinenraum and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if]
+[if Fenster is in Maschinenraum and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if]
+[if Fenster is in Solar-Labor and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if]
+[if Fenster is in Solar-Labor and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if]
+[if Fenster is in Xeno-Labor and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if]
+[if Fenster is in Xeno-Labor and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if]
+[if Fenster is in Med-Labor and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if] 
+[if Fenster is in Med-Labor and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if] 
+[if Fenster is in Alpha-Beta Korridor] Wow! Das Raumphänomen ist beeindruckend, ich habe nie was spektakuläreres gesehen. Nur Schade, dass dies hier nur ein Text-Adventure ist. [end if]
+[if Fenster is in Energiespeicher] Wow! Das Raumphänomen ist beeindruckend, ich habe nie was spektakuläreres gesehen. Nur Schade, dass dies hier nur ein Text-Adventure ist. [end if]
+[if Fenster is in Lagerraum] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]
+[if Fenster is in Delta-Gewächshaus] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]
+[if Fenster is in Lager] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]
+[if Fenster is in Beta-Gewächshaus] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]
+[if Fenster is in Gamma Kreuzung]Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
+[if Fenster is in Gamma-Beta Korridor] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
+[if Fenster is in Beta Kreuzung] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
+[if Fenster is in Alpha-Beta Korridor] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
+[if Fenster is in Alpha Kreuzung] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
+[if Fenster is in Alpha-Delta Korridor] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
+[if Fenster is in Delta Kreuzung] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
+[if Fenster is in Gamma-Delta Korridor] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]".
 
 
 Chapter - Obere Ebene
@@ -1269,33 +1294,7 @@ The Description of TürKM-FK is "Tür zwischen Kontrollmodul und Fluchtkapseln: 
 The Description of TürL-KOMF is "Tür zwischen Labor F und Kommunikationsmodul F: Tür offen.".
 
 
-
-Part - Generele Regeln
-
-[------Code für das Beschädigen Kommando für die westlichen Panels--------------]
-Understand "damage [something] with [something carried]" as damaging it with. 
-Damaging it with is an action applying to one visible thing and one carried thing.
-
-Report damaging:
-	say "Das [the noun] wurde beschädigt. Nun kann die Tür mit einem Sicherheitsausweis entsperrt werden."
-
-Carry out damaging:
-	now the noun is open;
-
-Check damaging something which is an open container with something :
-	say "Es wird keine Beschädigung benötigt." instead. 
-
-Check damaging something with something which is not mobitab:
-	say "Mit diesem Gegenstand kann nichts beschädigt werden." instead. 
-	
-Check damaging something which is not a container with something :
-	say "Hierbei handelt es sich nicht um ein Panel!" instead. 
-
-Check damaging Spind with something:
-	say "Der Spind kann nicht beschädigt werden!!!" instead.
-
-
-Part - Szenen und mehr
+Part - Szenen
 
 Szene 1 is a scene. "Szene 1: Böses Willkommen[paragraph break]Die Lupus-Station ist eine der entlegensten Raumstationen des Terrestrischen Imperiums. Sie dient ausschließlich der Forschung. Zum einen liegt sie in der Nähe eines Planeten, der fremde Lebensformen mit geringer Intelligenz hervorgebracht hat. Zum anderen befindet sich in einiger Entfernung ein besonders seltenes Raumphänomen, das erforscht werden soll. Zu diesem Zweck wurde dort eine kleine Forschungsstation errichtet. Der Transport per Raumfähre ist auf Grund von Ionenstürmen recht gefährlich, so dass ein Punkt‐zu‐Punkt‐Subraum‐Transport‐Link zur Raumstation eingerichtet worden ist.[line break]Die Protagonisten der Geschichte sind der Pilot und Spezialist für Vakuumeinsätze Barry McIntyre sowie der Ingenieur Percy Braden. Beide sind frisch von der Akademie und auf ihrem ersten Einsatz auf einer Raumstation (wenn man die Ausbildungsstation im Erdorbit einmal nicht mitzählt). Sie sollen zwei Mitarbeiter der Lupus‐Station ablösen und sind mit der Fähre auf dem Weg zur Station.[line break]Barry fliegt die Fähre, Percy übernimmt die Kommunikation. Als sie sich der Station nähern wundern sie sich, dass zwar der automatische Leitstrahl funktioniert, sie jedoch keine Antwort auf ihre Landeanfrage erhalten. Da der Leitstrahl sie führt und das automatische Andocken einleitet, denken sie sich nichts weiter und halten das für ein eventuelles Willkommensritual des Außenpostens. Als sie aus der Fähre aussteigen, finden sie den Andock‐ und Hangarbereich verlassen vor. Sie sind verwundert und einigen sich darauf, dass Barry den Landecheck vornimmt und Percy nach dem Deckpersonal recherchiert und sich schon einmal auf der Brücke beim wachhabenden Offizier meldet (Der Spieler spielt als Percy)."
 Szene 1 begins when play begins.
@@ -1328,35 +1327,33 @@ every turn:
 Szene 4 is a scene. "Szene 4: Der Notruf[paragraph break]Barry geht zurück in das Med-Labor und berät sich mit Percy. Einer von ihnen muss ins Kommunikationsmodul, um den Hilfsgenerator zu aktivieren, während der andere den Notruf auf der Brücke zeitnah absetzt.
 Um Kontakt zu halten und Befehle zu geben, muss Barry die Gegensprechanlage der Brücke nutzen. Durch das Versammeln der Kontaminierten hat sich der Umkleideraum und das Damen-WC geöffnet...."
 When Szene 4 begins:
-	now TürH-UR is unlocked;
-	now TürBK-WCD is unlocked;
+	now TürUmkleide is unlocked;
+	now TürWCDamen is unlocked;
 	
-[Backdrop]
 	
-Fenster is a backdrop. It is in Maschinenraum and in Solar-Labor and in Xeno-Labor and in Med-Labor and in Alpha-Beta Korridor and in Energiespeicher and in Lagerraum and in Delta-Gewächshaus and in Lager and in Beta-Gewächshaus and in Gamma Kreuzung and in Gamma-Beta Korridor and in Beta Kreuzung and in Alpha-Beta Korridor and in Alpha Kreuzung and in Alpha-Delta Korridor and in Delta Kreuzung and in Gamma-Delta Korridor. 
-The Description of Fenster is "[if Fenster is in Maschinenraum and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if]
-[if Fenster is in Maschinenraum and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if]
-[if Fenster is in Solar-Labor and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if]
-[if Fenster is in Solar-Labor and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if]
-[if Fenster is in Xeno-Labor and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if]
-[if Fenster is in Xeno-Labor and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if]
-[if Fenster is in Med-Labor and Szene 2 has not ended]Der Maschinenkern leuchtet blau.[end if] 
-[if Fenster is in Med-Labor and Szene 2 has ended]Der Maschinenkern leuchtet grün.[end if] 
-[if Fenster is in Alpha-Beta Korridor] Wow! Das Raumphänomen ist beeindruckend, ich habe nie was spektakuläreres gesehen. Nur Schade, dass dies hier nur ein Text-Adventure ist. [end if]
-[if Fenster is in Energiespeicher] Wow! Das Raumphänomen ist beeindruckend, ich habe nie was spektakuläreres gesehen. Nur Schade, dass dies hier nur ein Text-Adventure ist. [end if]
-[if Fenster is in Lagerraum] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]
-[if Fenster is in Delta-Gewächshaus] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]
-[if Fenster is in Lager] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]
-[if Fenster is in Beta-Gewächshaus] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]
-[if Fenster is in Gamma Kreuzung]Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
-[if Fenster is in Gamma-Beta Korridor] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
-[if Fenster is in Beta Kreuzung] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
-[if Fenster is in Alpha-Beta Korridor] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
-[if Fenster is in Alpha Kreuzung] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
-[if Fenster is in Alpha-Delta Korridor] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
-[if Fenster is in Delta Kreuzung] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende?[end if]
-[if Fenster is in Gamma-Delta Korridor] Die unendlichen Weiten des Universums kann man hier erahnen. Wo ist wohl der Anfang und wo das Ende? [end if]".
+Part - Generele Regeln und Aktionen
 
+[------Code für das Beschädigen Kommando für die westlichen Panels--------------]
+Understand "damage [something] with [something carried]" as damaging it with. 
+Damaging it with is an action applying to one visible thing and one carried thing.
+
+Report damaging:
+	say "Das [the noun] wurde beschädigt. Nun kann die Tür mit einem Sicherheitsausweis entsperrt werden."
+
+Carry out damaging:
+	now the noun is open;
+
+Check damaging something which is an open container with something :
+	say "Es wird keine Beschädigung benötigt." instead. 
+
+Check damaging something with something which is not mobitab:
+	say "Mit diesem Gegenstand kann nichts beschädigt werden." instead. 
+	
+Check damaging something which is not a container with something :
+	say "Hierbei handelt es sich nicht um ein Panel!" instead. 
+
+Check damaging Spind with something:
+	say "Der Spind kann nicht beschädigt werden!!!" instead.
 
 [------Regeln der Kontaminierten -----------]
 ausgabe is a truth state that varies. ausgabe is false.
@@ -1399,7 +1396,6 @@ every turn:
 				otherwise:
 					increase the counter of i by 1;	
 		
-
 ["Mache Geräusch" Aktion, um den Kontaminierten aufmerksam zu machen]		
 Understand "make noise" as making noise.
 Understand "mache Geräusch" as making noise.
@@ -1461,5 +1457,3 @@ Generator is a thing. It is fixed in place. It is in Hauptgenerator. The Descrip
 	repeat with i running through doors:
 		if i is a locked door:
 			now i is unlocked;]
-			
-
