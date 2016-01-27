@@ -656,7 +656,7 @@ the description of the Spülkasten is "Allen Anschein nach ist etwas im Spülkas
 
 [-----Handlaserwaffe---------]
 
-Test: Blackbox Test - Handlaserwaffe, Tester : Ömer, Datum : 20.01.2016, Ergebnis : Fehlerlose Übereinstimmung]
+[Test: Blackbox Test - Handlaserwaffe, Tester : Ömer, Datum : 20.01.2016, Ergebnis : Fehlerlose Übereinstimmung]
 
 the Handlaserwaffe is a thing. Handlaserwaffe is in the Spülkasten.
 the description of the Handlaserwaffe is "Was passiert wohl, wenn ich damit auf einen Kontaminierten schieße.“.
