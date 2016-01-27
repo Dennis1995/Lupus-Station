@@ -13,6 +13,7 @@ Percy is a person in Hangar. The description of Percy is "[if the player is Perc
 The player is Percy.
 
 [////////Regionen///////////////////]
+[Test: Blackbox Test - Raumstruktur, Tester : Ömer, Datum : 20.01.2016, Ergebnis : Fehlerlose Übereinstimmung]
 The Raumstation is a region. The  Andockstation, Hangar, Umkleideraum, Kommunikationsmodul, Dienstraum, Besatzungsquartier, WC-Damen, Besprechungsraum, Brücke, Antennenfeld L, Mensa, Fitnessraum, Umkleideraum, Hilfsgeneratorraum are in the Raumstation. 
 The Forschungsstation is a region. The Transporterraum, Energiespeicher, Kommunikationsmodul F, Labor F, Kontrollmodul, Fluchtkapseln, Antennenfeld F, Solar-Modul F, Funkmodul, Transporter-FS, Fluchtkapsel and the Pulsator-Modul are in the Forschungsstation.
 
@@ -250,6 +251,9 @@ The Andockstation is a room.
 The Description of Andockstation is "Gruselig, alles ist hier verlassen und so ruhig, als ob hier nie jemand war.
 Alles sieht hier sehr durcheinander aus. In der  Ecke ein leckendes Fass…
 Wo führt eigentlich die Wartungsluke hin? Westlich geht es zum Hangar.".
+
+[Test: Blackbox Test - Fass, Tester : Ömer, Datum : 20.01.2016, Ergebnis : Fehlerlose Übereinstimmung]
+[Test: Usability Test - Fass, Simon, Tester : Datum : 20.01.2016, Ergebnis : Zutreffend]
 
 [Regeln für das Rollen des Fasses]
 Fass is a thing. The description of the fass is "Das Fass ist stabil genug um eine Tür zu blockieren.".
@@ -530,7 +534,8 @@ every turn:
 			else:
 				now Kontaminierter Percy is nowhere;
 				now Percy is on Krankenbett;
-
+			
+[Test: Blackbox Test – Kontaminierten Standort, Tester : Ömer, Datum : 20.01.2016, Ergebnis : Fehlerlose Übereinstimmung]
 Kontaminierter Arzt is a Kontaminierter. Kontaminierter Arzt is in Med-Labor.
 
 Krankenbett is an enterable supporter in Med-Labor. Krankenbett is fixed in place. 
@@ -565,6 +570,9 @@ every turn:
 [-------------------------Alarm----------------------------------------------]
 Alarm-reg is a region.
 [------------Hier hört man überall den Alarm-------]
+
+[Test: Usability Test -  Alarm ausschalten, Tester : Christian, Datum : 20.01.2016, Ergebnis : Zutreffend]
+
  The Gamma Kreuzung, Gamma-Delta Korridor, Delta Kreuzung, Alpha-Delta Korridor, Alpha Kreuzung, Alpha-Beta Korridor, Gamma-Beta Korridor, Beta Kreuzung, Maschinenraum, Xeno-Labor, Solar-Labor, Med-Labor, Lagerraum, Delta-Gewächshaus, Lager, Beta-Gewächshaus, Alpha-KI, Hauptgenerator, Delta-KI, Schwerkraftkompensator, Transporter-RS are in Alarm-reg.
 Alarm is a backdrop in Alarm-reg.
 the description of the Alarm is " Der Alarm ist so laut das ich mich selbst nicht hören kann.".
@@ -647,6 +655,9 @@ Spülkasten is a container. Spülkasten is fixed in place. Spülkasten is on the
 the description of the Spülkasten is "Allen Anschein nach ist etwas im Spülkasten.".
 
 [-----Handlaserwaffe---------]
+
+Test: Blackbox Test - Handlaserwaffe, Tester : Ömer, Datum : 20.01.2016, Ergebnis : Fehlerlose Übereinstimmung]
+
 the Handlaserwaffe is a thing. Handlaserwaffe is in the Spülkasten.
 the description of the Handlaserwaffe is "Was passiert wohl, wenn ich damit auf einen Kontaminierten schieße.“.
 
@@ -696,6 +707,10 @@ Section - Umkleideraum
 
 Umkleideraum is a room.
 The description of the Umkleideraum is "Das hier kann nur der Umkleideraum sein, so wie es hier nach Schweiß riecht.Kaum auszuhalten.".[Muss noch in die Spezifikation aufgenommen werden ]
+
+[Test: Blackbox Test - Raumanzug, Tester : Ömer, Datum : 20.01.2016, Ergebnis : Fehlerlose Übereinstimmung]
+[Test: Usability Test - Raumanzug, Tester : Simon, Datum : 20.01.2016, Ergebnis : Zutreffend]
+
 The Raumanzug is in Umkleideraum. Raumanzug is wearable.
 The Description of Raumanzug is "Hierbei handelt es sich tatsächlich um einen funktionsfähigen Raumanzug! Er könnte sogar in Percys Größe sein."
 
@@ -967,6 +982,9 @@ TürDR-BQ is east of Besatzungsquartier. TürDR-BQ is west of Dienstraum. TürDR
 The Description of TürDR-BQ is "Tür zwischen Dienstraum und Besatzungsquatiert: Tür offen.".
 
 [Gamma-Delta Korridor <-> Kommunikationsmodul]
+
+[Test: Usability Test – Öffnungshebel der Wartungsluke, Tester : Simon, Datum : 20.01.2016, Ergebnis : Zutreffend]
+
 Wartungsluke is northeast of Gamma-Delta Korridor. Wartungsluke is southwest of Kommunikationsmodul. Wartungsluke is a door.
 Wartungsluke is locked.
 The Description of Wartungsluke is "Tür zwischen Gamma-Delta-Korridor und Kommunikationsmodul: Hebel auf dieser Seite defekt, Tür kann nur im Kommunikationsmodul geöffnet werden.".
@@ -1258,6 +1276,9 @@ The Description of Transporterraum is "Dies ist die Verbindung zur Raumstation. 
 Östlich geht’s zum Energiespeicher und über dir zum Kommunikationsmodul F.".
 
 [------Transporter-------]
+
+[Test: Usability Test - Transporter, Tester : Simon, Datum : 20.01.2016, Ergebnis : Zutreffend]
+
 Transporter-FS is inside of Transporterraum. The description of Transporter-FS is "Dieses ist der Transporter, durch drücken des hier befindlichen Knopfes gelangt man von der Forschungsstation zur Raumstation."
 
 Knopf-RS is in Transporter-FS. Knopf-RS is a device. Knopf-RS is fixed in place. Knopf-RS is switched off. 
