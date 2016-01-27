@@ -678,6 +678,11 @@ Besatzungsquartier is above Fitnessraum.
 The Description of Besatzungsquartier is "Das muss der Besatzungsraum sein. Sehr unordentlich und hier riecht es nach Schweiß. Muss wohl vom unteren Fitnessraum kommen.
 Nach Osten geht es zurück zum Dienstraum.".
 
+Kontaminierter Mann is a Kontaminierter. Kontaminierter Mann is in Besatzungsquartier.
+Kontaminierte Frau is a Kontaminierter. Kontaminierte Frau is in Besatzungsquartier.
+Kontaminierter Informatiker is a Kontaminierter. Kontaminierter Informatiker is in Besatzungsquartier.
+
+
 Section - Kommunikationsmodul
 
 Kommunikationsmodul is a room.
@@ -685,10 +690,6 @@ Kommunikationsmodul is above Hilfsgeneratorraum.
 The Description of Kommunikationsmodul is "Dieser Raum scheint für die Kommunikation der Raumstation  zu sein. Soviele Lwl-Kabel und Stromkabel, die nach oben zum AntennenfeldL und nach unten zum Hilfsgenerator führen.
 Was ist das eigentlich für ein penetrant leuchtender Knopf?
 Im Südwesten ist doch die Wartungsluke, aber unbeschädigt. Südöstlich geht es zurück zur Andockstation.".
-
-Kontaminierter Mann is a Kontaminierter. Kontaminierter Mann is in Besatzungsquartier.
-Kontaminierte Frau is a Kontaminierter. Kontaminierte Frau is in Besatzungsquartier.
-Kontaminierter Informatiker is a Kontaminierter. Kontaminierter Informatiker is in Besatzungsquartier.
 
 
 Section - Umkleideraum
