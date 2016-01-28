@@ -276,8 +276,15 @@ Flipping is an Action applying to one visible thing.
 
 after flipping:
 if something is the Fass begin;
+if the fasszustand is 0 begin;
 now fasszustand is 1;
 say "Du hast das Fass umgekippt";
+otherwise;
+if the fasszustand is 1 begin;
+now fasszustand is 0;
+say "Du hast das Fass wieder hingestellt.";
+end if;
+end if;
 end if;
 
 Check flipping something which is not the Fass:
