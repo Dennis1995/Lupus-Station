@@ -14,6 +14,9 @@ The player is Percy.
 
 [////////Regionen///////////////////]
 [Test: Blackbox Test - Raumstruktur, Tester : Ömer, Datum : 20.01.2016, Ergebnis : Fehlerlose Übereinstimmung]
+[Test: Usabilitiy Test - Korrekte Raumbezeichnungen, Simon, 24.01.2016, Ergebnis : zutreffend]
+[Test: Usabilitiy Test - Korrekte Türenbezeichnungen, Simon, 24.01.2016, Ergebnis : zutreffend]
+
 The Raumstation is a region. The  Andockstation, Hangar, Umkleideraum, Kommunikationsmodul, Dienstraum, Besatzungsquartier, WC-Damen, Besprechungsraum, Brücke, Antennenfeld L, Mensa, Fitnessraum, Umkleideraum, Hilfsgeneratorraum are in the Raumstation. 
 The Forschungsstation is a region. The Transporterraum, Energiespeicher, Kommunikationsmodul F, Labor F, Kontrollmodul, Fluchtkapseln, Antennenfeld F, Solar-Modul F, Funkmodul, Transporter-FS, Fluchtkapsel and the Pulsator-Modul are in the Forschungsstation.
 
@@ -212,6 +215,10 @@ Chapter - Hauptebene
 
 Section - Hangar
 
+[Test: Blackbox Test - Sicherheitskarte, Ömer, 20.01.2016, Ergebnis : fehlerlose Übereinstimmung]
+[Test: Blackbox Test - Spind, Tester, Ömer, 20.01.2016, Ergebnis : fehlerlose Übereinstimmung]
+
+
 Before taking Mobitab:
 	if Szene 1 is happening:
 		say "Was soll ich denn damit? Das lasse ich besser im Spind." instead;
@@ -331,6 +338,9 @@ Ein Raum voller Spuren von Laserbeschuss. Sogar den Türhebel im Nordosten hat e
 Ist das eine Leiche vor der Tür im Nordwesten?
 Südöstlich geht es zurück zur Gamma Kreuzung".
 
+[Test: Usabilitiy Test - Xeno-Karte aufnehmen, Christian, 25.01.2016, Ergebnis :zutreffend]
+[Test: Blackbox Test - Leiche, Tester, Ömer, 20.01.2016, Ergebnis : fehlerlose Übereinstimmung]
+
 Leiche is a supporter. Leiche is fixed in place.
 Leiche is in the Gamma-Delta Korridor.
 The description is "Eine Leiche, was hier bloß passiert ist?".
@@ -408,6 +418,8 @@ Maschinenraum is a room.
 Maschinenraum is above Schwerkraftkompensator.
 The Description of Maschinenraum is "Es ist sehr sehr laut und schmutzig hier. Eine Tafel zeigt viele nützliche Informationen an, ein alter Akkubohrer mit einem Akku liegt auf  dem Boden. Der Blick auf die Maschinen ist sicherlich für Ingenieure interessant.  Alles riecht nach Öl.
 Ein Glück kann man hier die Etagen Wechseln oder wieder nach Süden zur Beta-Kreuzung gehen.".
+
+[Test: Blackbox Test - Anzeigetafel, Ömer, 20.01.2016, Ergebnis : fehlerlose Übereinstimmung]
 
 Anzeigetafel is a thing. Anzeigetafel is fixed in place.
 Anzeigetafel is in the Maschinenraum.The description of the Anzeigetafel is "Es fehlen sämtliche Fluchtkapseln und es sind [lagerkoncount] Kontaminierte in Lager. ".
@@ -495,6 +507,9 @@ Ein Bett, ein Pult und eine riesige Kabine. Vielleicht bekommst du ein paar Info
 Nach Westen geht es wieder zurück zur Alpha-Kreuzung. "
 
 [---------Dekontaminationskabine---------]
+
+[Test: Usabilitiy Test - Dekontaminationskabine, Simon, 24.01.2016, Ergebnis : zuutreffend]
+
 Dekontaminationskabine is an enterable container in Med-Labor. The carrying capacity of Dekontaminationskabine is 0. Dekontaminationskabine is fixed in place.
 Dekon-Knopf is a device. Dekon-Knopf is fixed in place. The Dekontaminationskabine is openable. Dekontaminationskabine is closed.
 Dekon-Knopf is in Med-Labor. The description of Dekon-Knopf is "Dieser Knopf öffnet wohl die Kabine und lockt einen Kontaminierten hinein. Danach kann man durch erneutes Drücken die Kabine wieder schließen."
@@ -594,6 +609,9 @@ The Description of Solar-Labor is "Dies scheint auch ein Forschungsraum zu sein.
 
 
 Section - Xeno-Labor
+
+[Test: Blackbox Test - Grüne Phiole, Ömer, 20.01.2016, Ergebnis : fehlerlose Übereinstimmung]
+[Test: Usabilitiy Test - Xeno-Labor-Tür blockieren, Christian, 25.01.2016, Ergebnis : zutreffend]
 
 Kontaminierter Percy is a Kontaminierter. The description of Kontaminierter Percy is "Ist das Percy? Was ist mit ihm passiert? Er steht nur da mit einem starren Blick..."
 
