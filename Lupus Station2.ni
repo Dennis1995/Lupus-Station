@@ -72,6 +72,9 @@ The Description of Brücke is "Ein Raum übersäht mit Schaltern und Anzeigen.
 Eine Gegensprechanlage mit einem Mikrofon für Durchsagen auf der Raumstation scheint es hier auch zu geben. Im Osten befindet sich der Besprechungsraum".
 
 [Gegensprechanlage]
+
+[Test: CR - Gegensprechanlage, Tester : Simon, Datum : 23.01.2016 , Ergebnis : zutreffend]
+
 Gegensprechanlage is in Brücke.
 the description of the Gegensprechanlage is "Diese Anlage könnte zur Kommunikation genutzt werden.".
 Gegensprechanlage is a supporter. Gegensprechanlage is fixed in place.
@@ -215,6 +218,8 @@ Chapter - Hauptebene
 
 Section - Hangar
 
+[Test: CR - Sicherheitskarte, Tester : Ömer, Datum : 22.01.2016, Ergebnis : zutreffend]
+[Test: CR - MobiTab, Tester : Ömer, Datum : 22.01.2016, Ergebnis : zutreffend]
 [Test: Blackbox Test - Sicherheitskarte, Ömer, 20.01.2016, Ergebnis : fehlerlose Übereinstimmung]
 [Test: Blackbox Test - Spind, Tester, Ömer, 20.01.2016, Ergebnis : fehlerlose Übereinstimmung]
 
@@ -261,6 +266,7 @@ Wo führt eigentlich die Wartungsluke hin? Westlich geht es zum Hangar.".
 
 [Test: Blackbox Test - Fass, Tester : Ömer, Datum : 20.01.2016, Ergebnis : Fehlerlose Übereinstimmung]
 [Test: Usability Test - Fass, Simon, Tester : Datum : 20.01.2016, Ergebnis : Zutreffend]
+[Test: CR - Fass, Tester : Christian, Datum : 21.01.2016, Ergebnis : zutreffend]
 
 [Regeln für das Rollen des Fasses]
 Fass is a thing. The description of the fass is "Das Fass ist stabil genug um eine Tür zu blockieren.".
@@ -446,6 +452,9 @@ every turn:
 		          increase LagerKonCount by 1;
 
 [Akkubohrer + Akkus Sourcecode]
+
+[Test: CR - Akkubohrer, Tester : Simon, Datum : 23.01.2016, Ergebnis : zutreffend]
+
 [So kann Percy den Bohrer nicht benutzen und die Akkus leer machen]
 Before taking Akkubohrer:
 	if Szene 1 is happening:
@@ -516,6 +525,7 @@ Nach Westen geht es wieder zurück zur Alpha-Kreuzung. "
 [---------Dekontaminationskabine---------]
 
 [Test: Usabilitiy Test - Dekontaminationskabine, Simon, 24.01.2016, Ergebnis : zuutreffend]
+[Test: CR - Dekontaminierungskabine, Tester : Simon, Datum : 23.01.2016, Ergebnis : zutreffend]
 
 Dekontaminationskabine is an enterable container in Med-Labor. The carrying capacity of Dekontaminationskabine is 0. Dekontaminationskabine is fixed in place.
 Dekon-Knopf is a device. Dekon-Knopf is fixed in place. The Dekontaminationskabine is openable. Dekontaminationskabine is closed.
@@ -558,6 +568,9 @@ every turn:
 				now Percy is on Krankenbett;
 			
 [Test: Blackbox Test – Kontaminierten Standort, Tester : Ömer, Datum : 20.01.2016, Ergebnis : Fehlerlose Übereinstimmung]
+[Test: CR - Kontaminierter, Tester : Nico, Datum : 21.01.2016, Ergebnis : zutreffend]
+
+
 Kontaminierter Arzt is a Kontaminierter. Kontaminierter Arzt is in Med-Labor.
 
 Krankenbett is an enterable supporter in Med-Labor. Krankenbett is fixed in place. 
@@ -682,6 +695,7 @@ the description of the Spülkasten is "Allen Anschein nach ist etwas im Spülkas
 [-----Handlaserwaffe---------]
 
 [Test: Blackbox Test - Handlaserwaffe, Tester : Ömer, Datum : 20.01.2016, Ergebnis : Fehlerlose Übereinstimmung]
+[Test: CR - Handlaserwaffe, Tester : Christian, Datum : 22.01.2016, Ergebnis : zutreffend]
 
 the Handlaserwaffe is a thing. Handlaserwaffe is in the Spülkasten.
 the description of the Handlaserwaffe is "Was passiert wohl, wenn ich damit auf einen Kontaminierten schieße.“.
@@ -1084,6 +1098,9 @@ Schwerkraftkompensator is a room.
 The Description of Schwerkraftkompensator is "Dieser Raum scheint die Schwerkraft auf der Forschungsstation zu regeln und die Verbindung zur Forschungsstation zu sein. Betrete den Transporter mit GO IN und du kannst zur Forschungsstation. Von hier aus gehen Türen in den Nordosten und Nordwesten.".
 
 [------Transporter-------]
+
+[Test: CR - Transporter, Tester : Nico, Datum : 21.01.2016, Ergebnis : zutreffend]
+
 Transporter-RS is inside of Schwerkraftkompensator. The description of Transporter-RS is "Dieses ist der Transporter, durch drücken des hier befindlichen Knopfes gelangt man von der Raumstation zur Forschungsstation."
 
 Knopf-FS is in Transporter-RS. Knopf-FS is a device. Knopf-FS is fixed in place. Knopf-FS is switched off. 
@@ -1146,6 +1163,8 @@ Section  - Hilfsgeneratorraum
 Hilfsgeneratorraum is a room.
 The Description of Hilfsgeneratorraum is "Hier befindet sich der Hilfsgenerator, falls der Hauptgenerator ausfallen sollte.
 Über dir ist das Kommunikationsmodul.".
+
+[Test: CR - Hilfsgenerator, Tester : Simon, Datum : 23.01.2016, Ergebnis : zutreffend]
 
 Hilfsgenerator is a supporter. Hilfsgenerator is in Hilfsgeneratorraum. Hilfsgenerator is fixed in place.
 The description of the Hilfsgenerator is "Der Hilfsgenerator versorgt  die Station, wenn der Hauptgenerator nicht funktionsbereit ist. Nach oben geht’s zum Kommunikationsmodul.".
