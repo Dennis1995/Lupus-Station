@@ -1375,6 +1375,7 @@ every turn:
 
 Szene 4 is a scene. "Szene 4: Der Notruf[paragraph break]Barry geht zurück in das Med-Labor und berät sich mit Percy. Einer von ihnen muss ins Kommunikationsmodul, um den Hilfsgenerator zu aktivieren, während der andere den Notruf auf der Brücke zeitnah absetzt.
 Um Kontakt zu halten und Befehle zu geben, muss Barry die Gegensprechanlage der Brücke nutzen. Durch das Versammeln der Kontaminierten hat sich der Umkleideraum und das Damen-WC geöffnet...."
+Szene 4 begins when lagerState is true.
 When Szene 4 begins:
 	now TürUmkleide is unlocked;
 	now TürWCDamen is unlocked;
